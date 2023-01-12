@@ -106,7 +106,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.0.0-dev.3 (TBD)**
+**Version 1.0.0-dev.4 (TBD)**
 
 * **New Features**
 	* None.
@@ -119,11 +119,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.
 	* WordPress v5.2.
-	* WPSSO Core v14.4.1-dev.3.
+	* WPSSO Core v14.4.1-dev.4.
 
 == Upgrade Notice ==
 
-= 1.0.0-dev.3 =
+= 1.0.0-dev.4 =
 
 (TBD) None.
 
