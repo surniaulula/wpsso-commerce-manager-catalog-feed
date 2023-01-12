@@ -19,6 +19,69 @@ Facebook Catalog Feed XMLs for WooCommerce (Including Variations and Attributes)
 
 == Description ==
 
+<h3>E-Commerce Plugin Not Required</h3>
+
+A supported e-commerce plugin, like WooCommerce or Easy Digital Downloads, <em>is suggested but not required</em> &mdash; the WPSSO Facebook Catalog Feed XML add-on also retrieves custom product information entered in the Document SSO metabox when editing a product page.
+
+<h3>Complete WooCommerce Support</h3>
+
+WooCommerce product variations, attributes, meta data, and custom fields are all fully supported.
+
+<h3>Multilingual</h3>
+
+Facebook catalog feed XMLs are automatically created in your site's language(s) from Polylang, WPML, or the installed WordPress languages.
+
+After activating the WPSSO Facebook Catalog Feed XML add-on, see the SSO &gt; Facebook Catalog settings page for your feed URLs.
+
+<!-- /about -->
+
+<h3>No Plugin Settings to Configure</h3>
+
+The WPSSO Facebook Catalog Feed XML add-on automatically retrieves all available product information in the language (aka locale) requested.
+
+<h3>Facebook Catalog Feed XML Attributes</h3>
+
+The following XML product attributes are automatically created based on your WooCommerce, Easy Digital Downloads, and custom products (including WooCommerce product variations):
+
+* Additional image link <code>&#91;additional_image_link&#93;</code>
+* Adult oriented <code>&#91;adult&#93;</code>
+* Age group <code>&#91;age_group&#93;</code>
+* Availability <code>&#91;availability&#93;</code>
+* Brand <code>&#91;brand&#93;</code>
+* Condition <code>&#91;condition&#93;</code>
+* Color <code>&#91;color&#93;</code>
+* Description <code>&#91;description&#93;</code>
+* Energy efficiency class <code>&#91;energy_efficiency_class&#93;</code>
+* Gender <code>&#91;gender&#93;</code>
+* Google product category <code>&#91;google_product_category&#93;</code>
+* Google search index <code>&#91;canonical_link&#93;</code>
+* GTIN <code>&#91;gtin&#93;</code> (inluding UPC, EAN, and ISBN)
+* ID <code>&#91;id&#93;</code>
+* Image link <code>&#91;image_link&#93;</code>
+* Item group ID <code>&#91;item_group_id&#93;</code>
+* Link <code>&#91;link&#93;</code>
+* Material <code>&#91;material&#93;</code>
+* Maximum energy efficiency class <code>&#91;max_energy_efficiency_class&#93;</code>
+* Minimum energy efficiency class <code>&#91;min_energy_efficiency_class&#93;</code>
+* MPN <code>&#91;mpn&#93;</code>
+* Pattern <code>&#91;pattern&#93;</code>
+* Price <code>&#91;price&#93;</code>
+* Product length <code>&#91;product_length&#93;</code>
+* Product height <code>&#91;product_height&#93;</code>
+* Product type <code>&#91;product_type&#93;</code>
+* Product weight <code>&#91;product_weight&#93;</code>
+* Product width <code>&#91;product_width&#93;</code>
+* Sale price <code>&#91;sale_price&#93;</code>
+* Sale price effective date <code>&#91;sale_price_effective_date&#93;</code>
+* Shipping length <code>&#91;shipping_length&#93;</code>
+* Shipping height <code>&#91;shipping_height&#93;</code>
+* Shipping weight <code>&#91;shipping_weight&#93;</code>
+* Shipping width <code>&#91;shipping_width&#93;</code>
+* Size <code>&#91;size&#93;</code>
+* Size system <code>&#91;size_system&#93;</code>
+* Size type <code>&#91;size_type&#93;</code>
+* Title <code>&#91;title&#93;</code>
+
 <h3>WPSSO Core Required</h3>
 
 WPSSO Facebook Catalog Feed XML (WPSSO FCF) is an add-on for the [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/), which provides complete structured data for WordPress to present your content at its best on social sites and in search results – no matter how URLs are shared, reshared, messaged, posted, embedded, or crawled.
