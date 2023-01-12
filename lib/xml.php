@@ -207,6 +207,9 @@ if ( ! class_exists( 'WpssoFcfXml' ) ) {
 
 				/**
 				 * Required fields for products.
+				 *
+				 * Do not use the 'setAvailability' method as Facebook and Google use different sanitized
+				 * availability values.
 				 */
 				'og:title'                 => 'setTitle',
 				'og:description'           => 'setDescription',
@@ -214,7 +217,7 @@ if ( ! class_exists( 'WpssoFcfXml' ) ) {
 				'product:retailer_item_id' => 'setId',
 				'product:title'            => 'setTitle',
 				'product:description'      => 'setDescription',
-				'product:availability'     => 'setAvailability',
+				'product:availability'     => array( 'setAttribute', 'availability', false ),
 				'product:condition'        => 'setCondition',
 				'product:price'            => 'setPrice',
 				'product:url'              => 'setLink',
