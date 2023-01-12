@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WPSSO Facebook Catalog Feed
+ * Plugin Name: WPSSO Facebook Catalog Feed XML
  * Plugin Slug: wpsso-facebook-catalog-feed
  * Text Domain: wpsso-facebook-catalog-feed
  * Domain Path: /languages

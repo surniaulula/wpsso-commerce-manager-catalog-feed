@@ -20,7 +20,7 @@ if ( ! class_exists( 'WpssoFcfConfig' ) ) {
 					'version'     => '1.0.0',	// Plugin version.
 					'opt_version' => '1',		// Increment when changing default option values.
 					'short'       => 'WPSSO FCF',	// Short plugin name.
-					'name'        => 'WPSSO Facebook Catalog Feed',
+					'name'        => 'WPSSO Facebook Catalog Feed XML',
 					'desc'        => 'Facebook Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and Custom Products.',
 					'slug'        => 'wpsso-facebook-catalog-feed',
 					'base'        => 'wpsso-facebook-catalog-feed/wpsso-facebook-catalog-feed.php',
