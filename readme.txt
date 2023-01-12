@@ -1,5 +1,5 @@
-=== WPSSO Facebook Catalog Feed XML ===
-Plugin Name: WPSSO Facebook Catalog Feed XML
+=== WPSSO Facebook Catalog Feed ===
+Plugin Name: WPSSO Facebook Catalog Feed
 Plugin Slug: wpsso-facebook-catalog-feed
 Text Domain: wpsso-facebook-catalog-feed
 Domain Path: /languages
@@ -21,7 +21,7 @@ Facebook Catalog Feed XMLs for WooCommerce (Including Variations and Attributes)
 
 <h3>E-Commerce Plugin Not Required</h3>
 
-A supported e-commerce plugin, like WooCommerce or Easy Digital Downloads, <em>is suggested but not required</em> &mdash; the WPSSO Facebook Catalog Feed XML add-on also retrieves custom product information entered in the Document SSO metabox when editing a product page.
+A supported e-commerce plugin, like WooCommerce or Easy Digital Downloads, <em>is suggested but not required</em> &mdash; the WPSSO Facebook Catalog Feed add-on also retrieves custom product information entered in the Document SSO metabox when editing a product page.
 
 <h3>Complete WooCommerce Support</h3>
 
@@ -31,13 +31,13 @@ WooCommerce product variations, attributes, meta data, and custom fields are all
 
 Facebook catalog feed XMLs are automatically created in your site's language(s) from Polylang, WPML, or the installed WordPress languages.
 
-After activating the WPSSO Facebook Catalog Feed XML add-on, see the SSO &gt; Facebook Catalog settings page for your feed URLs.
+After activating the WPSSO Facebook Catalog Feed add-on, see the SSO &gt; Facebook Catalog settings page for your feed URLs.
 
 <!-- /about -->
 
 <h3>No Plugin Settings to Configure</h3>
 
-The WPSSO Facebook Catalog Feed XML add-on automatically retrieves all available product information in the language (aka locale) requested.
+The WPSSO Facebook Catalog Feed add-on automatically retrieves all available product information in the language (aka locale) requested.
 
 <h3>Facebook Catalog Feed XML Attributes</h3>
 
@@ -67,14 +67,14 @@ The following XML product attributes are automatically created based on your Woo
 
 <h3>WPSSO Core Required</h3>
 
-WPSSO Facebook Catalog Feed XML (WPSSO FCF) is an add-on for the [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/), which provides complete structured data for WordPress to present your content at its best on social sites and in search results – no matter how URLs are shared, reshared, messaged, posted, embedded, or crawled.
+WPSSO Facebook Catalog Feed (WPSSO FCF) is an add-on for the [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/), which provides complete structured data for WordPress to present your content at its best on social sites and in search results – no matter how URLs are shared, reshared, messaged, posted, embedded, or crawled.
 
 == Installation ==
 
 <h3 class="top">Install and Uninstall</h3>
 
-* [Install the WPSSO Facebook Catalog Feed XML add-on](https://wpsso.com/docs/plugins/wpsso-facebook-catalog-feed/installation/install-the-plugin/).
-* [Uninstall the WPSSO Facebook Catalog Feed XML add-on](https://wpsso.com/docs/plugins/wpsso-facebook-catalog-feed/installation/uninstall-the-plugin/).
+* [Install the WPSSO Facebook Catalog Feed add-on](https://wpsso.com/docs/plugins/wpsso-facebook-catalog-feed/installation/install-the-plugin/).
+* [Uninstall the WPSSO Facebook Catalog Feed add-on](https://wpsso.com/docs/plugins/wpsso-facebook-catalog-feed/installation/uninstall-the-plugin/).
 
 == Frequently Asked Questions ==
 
@@ -106,10 +106,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.0.0-dev.4 (TBD)**
+**Version 1.0.0 (2023/01/12)**
 
 * **New Features**
-	* None.
+	* Initial release.
 * **Improvements**
 	* None.
 * **Bugfixes**
@@ -119,11 +119,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.
 	* WordPress v5.2.
-	* WPSSO Core v14.4.1-dev.4.
+	* WPSSO Core v14.4.0.
 
 == Upgrade Notice ==
 
-= 1.0.0-dev.4 =
+= 1.0.0 =
 
-(TBD) None.
+(2023/01/12) Initial release.
 
