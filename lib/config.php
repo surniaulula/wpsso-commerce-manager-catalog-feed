@@ -17,10 +17,10 @@ if ( ! class_exists( 'WpssoFcfConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssofcf' => array(			// Plugin acronym.
-					'version'     => '1.0.0-dev.4',	// Plugin version.
+					'version'     => '1.0.0',	// Plugin version.
 					'opt_version' => '1',		// Increment when changing default option values.
 					'short'       => 'WPSSO FCF',	// Short plugin name.
-					'name'        => 'WPSSO Facebook Catalog Feed XML',
+					'name'        => 'WPSSO Facebook Catalog Feed',
 					'desc'        => 'Facebook Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and Custom Products.',
 					'slug'        => 'wpsso-facebook-catalog-feed',
 					'base'        => 'wpsso-facebook-catalog-feed/wpsso-facebook-catalog-feed.php',
@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoFcfConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '14.4.1-dev.4',
+							'min_version'   => '14.4.0',
 						),
 					),
 

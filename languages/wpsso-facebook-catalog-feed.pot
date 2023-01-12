@@ -1,8 +1,8 @@
-# Copyright (C) 2023 WPSSO Facebook Catalog Feed XML
-# This file is distributed under the same license as the WPSSO Facebook Catalog Feed XML package.
+# Copyright (C) 2023 WPSSO Facebook Catalog Feed
+# This file is distributed under the same license as the WPSSO Facebook Catalog Feed package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Facebook Catalog Feed XML 1.0.0-dev.4\n"
+"Project-Id-Version: WPSSO Facebook Catalog Feed 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-facebook-"
 "catalog-feed\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
@@ -30,7 +30,7 @@ msgstr ""
 
 #: gettext/gettext-lib-config.php:6
 msgctxt "plugin name"
-msgid "WPSSO Facebook Catalog Feed XML"
+msgid "WPSSO Facebook Catalog Feed"
 msgstr ""
 
 #: gettext/gettext-lib-config.php:7
@@ -162,7 +162,7 @@ msgid "Facebook Catalog Feed XML"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "WPSSO Facebook Catalog Feed XML"
+msgid "WPSSO Facebook Catalog Feed"
 msgstr ""
 
 #. Plugin URI of the plugin/theme

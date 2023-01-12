@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WPSSO Facebook Catalog Feed XML
+ * Plugin Name: WPSSO Facebook Catalog Feed
  * Plugin Slug: wpsso-facebook-catalog-feed
  * Text Domain: wpsso-facebook-catalog-feed
  * Domain Path: /languages
@@ -16,7 +16,7 @@
  * Requires At Least: 5.2
  * Tested Up To: 6.1.1
  * WC Tested Up To: 7.2.3
- * Version: 1.0.0-dev.4
+ * Version: 1.0.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
