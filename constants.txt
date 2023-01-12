@@ -1,0 +1,11 @@
+
+/**
+ * Hard-coded / fixed constants. These values cannot be modified.
+ */
+WPSSOFCF_FILEPATH
+WPSSOFCF_PLUGINBASE
+WPSSOFCF_PLUGINDIR
+WPSSOFCF_PLUGINSLUG
+WPSSOFCF_URLPATH
+WPSSOFCF_VERSION
+
