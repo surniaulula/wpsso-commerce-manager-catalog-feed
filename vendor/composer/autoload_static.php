@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitWpssoFcf
+class ComposerStaticInitWpssoCmcf
 {
     public static $files = array (
         '383eaff206634a77a1be54e64e6459c7' => __DIR__ . '/..' . '/sabre/uri/lib/functions.php',
@@ -46,9 +46,9 @@ class ComposerStaticInitWpssoFcf
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitWpssoFcf::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitWpssoFcf::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitWpssoFcf::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitWpssoCmcf::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitWpssoCmcf::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitWpssoCmcf::$classMap;
 
         }, null, ClassLoader::class);
     }

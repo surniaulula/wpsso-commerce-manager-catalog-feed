@@ -10,15 +10,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
-if ( ! class_exists( 'WpssoFcfFiltersMessages' ) ) {
+if ( ! class_exists( 'WpssoCmcfFiltersMessages' ) ) {
 
-	class WpssoFcfFiltersMessages {
+	class WpssoCmcfFiltersMessages {
 
 		private $p;	// Wpsso class object.
-		private $a;     // WpssoFcf class object.
+		private $a;     // WpssoCmcf class object.
 
 		/**
-		 * Instantiated by WpssoFcfFilters->__construct().
+		 * Instantiated by WpssoCmcfFilters->__construct().
 		 */
 		public function __construct( &$plugin, &$addon ) {
 
@@ -34,14 +34,14 @@ if ( ! class_exists( 'WpssoFcfFiltersMessages' ) ) {
 
 		public function filter_messages_info( $text, $msg_key, $info ) {
 
-			if ( 0 !== strpos( $msg_key, 'info-fcf-' ) ) {
+			if ( 0 !== strpos( $msg_key, 'info-cmcf-' ) ) {
 
 				return $text;
 			}
 
 			switch ( $msg_key ) {
 
-				case 'info-fcf-img':
+				case 'info-cmcf-img':
 
 					/**
 					 * See https://www.facebook.com/business/help/686259348512056?id=725943027795860.
@@ -77,18 +77,18 @@ if ( ! class_exists( 'WpssoFcfFiltersMessages' ) ) {
 
 		public function filter_messages_tooltip( $text, $msg_key ) {
 
-			if ( 0 !== strpos( $msg_key, 'tooltip-fcf_' ) ) {
+			if ( 0 !== strpos( $msg_key, 'tooltip-cmcf_' ) ) {
 
 				return $text;
 			}
 
 			switch ( $msg_key ) {
 
-				case 'tooltip-fcf_img_size':
+				case 'tooltip-cmcf_img_size':
 
-					$def_img_dims = $this->p->msgs->get_def_img_dims( 'fcf' );
+					$def_img_dims = $this->p->msgs->get_def_img_dims( 'cmcf' );
 
-					$text = sprintf( __( 'The dimensions used for the Facebook catalog feed XML image (default dimensions are %s).', 'wpsso-facebook-catalog-feed' ), $def_img_dims ) . ' ';
+					$text = sprintf( __( 'The dimensions used for the Facebook catalog feed XML image (default dimensions are %s).', 'wpsso-commerce-manager-catalog-feed' ), $def_img_dims ) . ' ';
 
 					break;
 
@@ -99,7 +99,7 @@ if ( ! class_exists( 'WpssoFcfFiltersMessages' ) ) {
 
 		public function filter_messages_tooltip_meta( $text, $msg_key ) {
 
-			if ( 0 !== strpos( $msg_key, 'tooltip-meta-fcf_' ) ) {
+			if ( 0 !== strpos( $msg_key, 'tooltip-meta-cmcf_' ) ) {
 
 				return $text;
 			}
@@ -109,23 +109,23 @@ if ( ! class_exists( 'WpssoFcfFiltersMessages' ) ) {
 				/**
 				 * Document SSO > Edit Media tab.
 				 */
-				case 'tooltip-meta-fcf_img_id':		// Image ID.
+				case 'tooltip-meta-cmcf_img_id':		// Image ID.
 
-					$text = __( 'A customized image ID for the Facebook merchant feed XML.', 'wpsso-facebook-catalog-feed' ) . ' ';
+					$text = __( 'A customized image ID for the Facebook merchant feed XML.', 'wpsso-commerce-manager-catalog-feed' ) . ' ';
 
-					$text .= __( 'The default value is inherited from the Schema markup or priority image.', 'wpsso-facebook-catalog-feed' ) . ' ';
+					$text .= __( 'The default value is inherited from the Schema markup or priority image.', 'wpsso-commerce-manager-catalog-feed' ) . ' ';
 
-					$text .= '<em>' . __( 'This option is disabled if a custom image URL is entered.', 'wpsso-facebook-catalog-feed' ) . '</em>';
+					$text .= '<em>' . __( 'This option is disabled if a custom image URL is entered.', 'wpsso-commerce-manager-catalog-feed' ) . '</em>';
 
 				 	break;
 
-				case 'tooltip-meta-fcf_img_url':	// or an Image URL.
+				case 'tooltip-meta-cmcf_img_url':	// or an Image URL.
 
-					$text = __( 'A customized image URL (instead of an image ID) for the Facebook catalog feed XML.', 'wpsso-facebook-catalog-feed' ) . ' ';
+					$text = __( 'A customized image URL (instead of an image ID) for the Facebook catalog feed XML.', 'wpsso-commerce-manager-catalog-feed' ) . ' ';
 
-					$text .= __( 'The default value is inherited from the Schema markup or priority image.', 'wpsso-facebook-catalog-feed' ) . ' ';
+					$text .= __( 'The default value is inherited from the Schema markup or priority image.', 'wpsso-commerce-manager-catalog-feed' ) . ' ';
 
-					$text .= '<em>' . __( 'This option is disabled if a custom image ID is selected.', 'wpsso-facebook-catalog-feed' ) . '</em>';
+					$text .= '<em>' . __( 'This option is disabled if a custom image ID is selected.', 'wpsso-commerce-manager-catalog-feed' ) . '</em>';
 
 				 	break;
 

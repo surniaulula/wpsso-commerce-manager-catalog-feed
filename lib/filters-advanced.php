@@ -10,15 +10,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
-if ( ! class_exists( 'WpssoFcfFiltersAdvanced' ) ) {
+if ( ! class_exists( 'WpssoCmcfFiltersAdvanced' ) ) {
 
-	class WpssoFcfFiltersAdvanced {
+	class WpssoCmcfFiltersAdvanced {
 
 		private $p;	// Wpsso class object.
-		private $a;	// WpssoFcf class object.
+		private $a;	// WpssoCmcf class object.
 
 		/**
-		 * Instantiated by WpssoFcfFilters->__construct().
+		 * Instantiated by WpssoCmcfFilters->__construct().
 		 */
 		public function __construct( &$plugin, &$addon ) {
 
@@ -38,11 +38,11 @@ if ( ! class_exists( 'WpssoFcfFiltersAdvanced' ) ) {
 		 */
 		public function filter_plugin_image_sizes_rows( $table_rows, $form, $network, $pp ) {
 
-			$table_rows[ 'fcf_img_size' ] = '' .
-				$form->get_th_html( _x( 'Facebook Catalog Feed XML', 'option label', 'wpsso-facebook-catalog-feed' ),
-					$css_class = '', $css_id = 'fcf_img_size' ) . ( $pp ?
-				'<td>' . $form->get_input_image_dimensions( 'fcf_img' ) . '</td>' :
-				'<td class="blank">' . $form->get_no_input_image_dimensions( 'fcf_img' ) . '</td>' );
+			$table_rows[ 'cmcf_img_size' ] = '' .
+				$form->get_th_html( _x( 'Facebook Catalog Feed XML', 'option label', 'wpsso-commerce-manager-catalog-feed' ),
+					$css_class = '', $css_id = 'cmcf_img_size' ) . ( $pp ?
+				'<td>' . $form->get_input_image_dimensions( 'cmcf_img' ) . '</td>' :
+				'<td class="blank">' . $form->get_no_input_image_dimensions( 'cmcf_img' ) . '</td>' );
 
 			return $table_rows;
 		}

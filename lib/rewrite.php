@@ -10,15 +10,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
-if ( ! class_exists( 'WpssoFcfRewrite' ) ) {
+if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 
-	class WpssoFcfRewrite {
+	class WpssoCmcfRewrite {
 
 		private $p;		// Wpsso class object.
-		private $a;		// WpssoFcf class object.
+		private $a;		// WpssoCmcf class object.
 
 		/**
-		 * Instantiated by WpssoFcf->init_objects().
+		 * Instantiated by WpssoCmcf->init_objects().
 		 */
 		public function __construct( &$plugin, &$addon ) {
 
@@ -48,7 +48,7 @@ if ( ! class_exists( 'WpssoFcfRewrite' ) ) {
 			global $wp_rewrite;
 
 			$rewrite_rules = $wp_rewrite->wp_rewrite_rules();
-			$rewrite_key   = '^(' . WPSSOFCF_PAGENAME . ')\/feed/(rss2)/([^\/]+)\.xml$';
+			$rewrite_key   = '^(' . WPSSOCMCF_PAGENAME . ')\/feed/(rss2)/([^\/]+)\.xml$';
 			$rewrite_value = 'index.php?pagename=$matches[1]&feed=$matches[2]&locale=$matches[3]';
 
 			if ( empty( $rewrite_rules[ $rewrite_key ] ) || $rewrite_value !== $rewrite_rules[ $rewrite_key ] ) {
@@ -84,7 +84,7 @@ if ( ! class_exists( 'WpssoFcfRewrite' ) ) {
 			 */
 			$request_pagename = get_query_var( 'pagename' );
 
-			if ( WPSSOFCF_PAGENAME !== $request_pagename ) {
+			if ( WPSSOCMCF_PAGENAME !== $request_pagename ) {
 
 				return;
 			}
@@ -173,7 +173,7 @@ if ( ! class_exists( 'WpssoFcfRewrite' ) ) {
 			/**
 			 * Do not use esc_xml() as this replaces XML markup by HTML entities (ie. '<' by '&lt;' for example).
 			 */
-			$attachment  = WpssoFcfXml::get();
+			$attachment  = WpssoCmcfXml::get();
 			$disposition = 'attachment';
 			$filename    = SucomUtil::sanitize_file_name( $request_pagename . '-' . $request_locale . '.xml' );
 
@@ -206,14 +206,14 @@ if ( ! class_exists( 'WpssoFcfRewrite' ) ) {
 
 			if ( ! $wp_rewrite->using_permalinks() ) {
 
-				$url = add_query_arg( array( 'pagename' => WPSSOFCF_PAGENAME, 'feed' => 'rss2', 'locale'  => $locale ), get_home_url( $blog_id ) );
+				$url = add_query_arg( array( 'pagename' => WPSSOCMCF_PAGENAME, 'feed' => 'rss2', 'locale'  => $locale ), get_home_url( $blog_id ) );
 
 			} else {
 
-				$url = get_home_url( $blog_id, WPSSOFCF_PAGENAME . '/feed/rss2/' . $locale . '.xml' );
+				$url = get_home_url( $blog_id, WPSSOCMCF_PAGENAME . '/feed/rss2/' . $locale . '.xml' );
 			}
 
-			return apply_filters( 'wpsso_facebook_catalog_feed_url', $url, $locale, WPSSOFCF_PAGENAME, $blog_id );
+			return apply_filters( 'wpsso_facebook_catalog_feed_url', $url, $locale, WPSSOCMCF_PAGENAME, $blog_id );
 		}
 	}
 }

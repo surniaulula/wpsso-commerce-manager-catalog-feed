@@ -14,9 +14,9 @@ use Vitalybaev\GoogleMerchant\Feed;
 use Vitalybaev\GoogleMerchant\Product;
 use Vitalybaev\GoogleMerchant\Product\Shipping;
 
-if ( ! class_exists( 'WpssoFcfXml' ) ) {
+if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
-	class WpssoFcfXml {
+	class WpssoCmcfXml {
 
 		static public function clear_cache( $locale = null ) {
 
@@ -34,7 +34,7 @@ if ( ! class_exists( 'WpssoFcfXml' ) ) {
 		}
 
 		/**
-		 * $read_cache = false when called by WpssoFcfFilters->filter_cache_refreshed_notice().
+		 * $read_cache = false when called by WpssoCmcfFilters->filter_cache_refreshed_notice().
 		 */
 		static public function get( $read_cache = true ) {
 
@@ -104,7 +104,7 @@ if ( ! class_exists( 'WpssoFcfXml' ) ) {
 					$wpsso->debug->log( 'getting open graph array for ' . $mod[ 'name' ] . ' id ' . $mod[ 'id' ] );
 				}
 
-				$mt_og = $wpsso->og->get_array( $mod, $size_names = 'wpsso-fcf', $md_pre = array( 'fcf', 'og' ) );
+				$mt_og = $wpsso->og->get_array( $mod, $size_names = 'wpsso-cmcf', $md_pre = array( 'cmcf', 'og' ) );
 
 				if ( empty( $mt_og[ 'product:offers' ] ) ) {
 
@@ -326,7 +326,7 @@ if ( ! class_exists( 'WpssoFcfXml' ) ) {
 				$post_id   = $mt_data[ 'product:retailer_item_id' ];
 				$mod       = $wpsso->post->get_mod( $post_id );
 				$max_nums  = $wpsso->util->get_max_nums( $mod, 'og' );
-				$mt_images = $wpsso->media->get_all_images( $max_nums[ 'og_img_max' ], $size_names = 'wpsso-fcf', $mod, $md_pre = array( 'fcf', 'og' ) );
+				$mt_images = $wpsso->media->get_all_images( $max_nums[ 'og_img_max' ], $size_names = 'wpsso-cmcf', $mod, $md_pre = array( 'cmcf', 'og' ) );
 			}
 
 			if ( is_array( $mt_images ) ) {	// Just in case.
@@ -356,7 +356,7 @@ if ( ! class_exists( 'WpssoFcfXml' ) ) {
 
 			$wpsso =& Wpsso::get_instance();
 
-			$content_maps = $wpsso->cf[ 'head' ][ 'fcf_content_map' ];
+			$content_maps = $wpsso->cf[ 'head' ][ 'cmcf_content_map' ];
 
 			foreach ( $content_maps as $mt_name => $map ) {
 

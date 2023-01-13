@@ -10,15 +10,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
-if ( ! class_exists( 'WpssoFcfActions' ) ) {
+if ( ! class_exists( 'WpssoCmcfActions' ) ) {
 
-	class WpssoFcfActions {
+	class WpssoCmcfActions {
 
 		private $p;	// Wpsso class object.
-		private $a;	// WpssoFcf class object.
+		private $a;	// WpssoCmcf class object.
 
 		/**
-		 * Instantiated by WpssoFcf->init_objects().
+		 * Instantiated by WpssoCmcf->init_objects().
 		 */
 		public function __construct( &$plugin, &$addon ) {
 
@@ -56,7 +56,7 @@ if ( ! class_exists( 'WpssoFcfActions' ) ) {
 
 				$this->p->util->maybe_set_ref( $ref_url, $mod, __( 'checking facebook catalog feeds', 'wpsso' ) );
 
-				$mt_og = $this->p->og->get_array( $mod, $size_names = 'wpsso-fcf', $md_pre = array( 'fcf', 'og' ) );
+				$mt_og = $this->p->og->get_array( $mod, $size_names = 'wpsso-cmcf', $md_pre = array( 'cmcf', 'og' ) );
 
 				$this->p->util->maybe_unset_ref( $ref_url );
 
@@ -85,7 +85,7 @@ if ( ! class_exists( 'WpssoFcfActions' ) ) {
 
 				$locale = SucomUtil::get_locale( $mod );
 
-				$xml = WpssoFcfXml::clear_cache( $locale );
+				$xml = WpssoCmcfXml::clear_cache( $locale );
 			}
 		}
 
@@ -105,7 +105,7 @@ if ( ! class_exists( 'WpssoFcfActions' ) ) {
 
 				$this->p->util->maybe_set_ref( $canonical_url, $mod, __( 'getting facebook catalog feeds images', 'wpsso' ) );
 
-				$mt_images = $this->p->media->get_all_images( $max_nums[ 'og_img_max' ], $size_names = 'wpsso-fcf', $mod, $md_pre = array( 'fcf', 'og' ) );
+				$mt_images = $this->p->media->get_all_images( $max_nums[ 'og_img_max' ], $size_names = 'wpsso-cmcf', $mod, $md_pre = array( 'cmcf', 'og' ) );
 
 				$this->p->util->maybe_unset_ref( $canonical_url );
 			}
@@ -133,7 +133,7 @@ if ( ! class_exists( 'WpssoFcfActions' ) ) {
 
 						$notice_msg .= sprintf( __( 'Facebook requires at least one %1$s attribute for each product variation in the Facebook catalog feed XML.', 'wpsso' ), '<code>image_link</code>' );
 
-						$notice_key = $mod[ 'name' ] . '-' . $mod[ 'id' ] . '-notice-missing-fcf-image';
+						$notice_key = $mod[ 'name' ] . '-' . $mod[ 'id' ] . '-notice-missing-cmcf-image';
 
 						$this->p->notice->err( $notice_msg, null, $notice_key );
 

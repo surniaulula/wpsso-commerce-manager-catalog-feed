@@ -10,15 +10,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
-if ( ! class_exists( 'WpssoFcfFiltersEdit' ) ) {
+if ( ! class_exists( 'WpssoCmcfFiltersEdit' ) ) {
 
-	class WpssoFcfFiltersEdit {
+	class WpssoCmcfFiltersEdit {
 
 		private $p;	// Wpsso class object.
-		private $a;	// WpssoFcf class object.
+		private $a;	// WpssoCmcf class object.
 
 		/**
-		 * Instantiated by WpssoFcfFilters->__construct().
+		 * Instantiated by WpssoCmcfFilters->__construct().
 		 */
 		public function __construct( &$plugin, &$addon ) {
 
@@ -48,7 +48,7 @@ if ( ! class_exists( 'WpssoFcfFiltersEdit' ) ) {
 
 				$this->p->util->maybe_set_ref( $canonical_url, $mod, __( 'getting facebook catalog feeds image', 'wpsso' ) );
 
-				$media_info = $this->p->media->get_media_info( $size_name = 'wpsso-fcf', $media_request, $mod, $md_pre = array( 'og' ) );
+				$media_info = $this->p->media->get_media_info( $size_name = 'wpsso-cmcf', $media_request, $mod, $md_pre = array( 'og' ) );
 
 			} else {
 
@@ -60,29 +60,29 @@ if ( ! class_exists( 'WpssoFcfFiltersEdit' ) ) {
 			$this->p->util->maybe_unset_ref( $canonical_url );
 
 			$form_rows = array(
-				'subsection_fcf' => array(
+				'subsection_cmcf' => array(
 					'tr_class' => 'hide_og_type hide_og_type_product',
 					'td_class' => 'subsection',
 					'header'   => 'h4',
-					'label'    => _x( 'Facebook Catalog Feed XML (Main Product)', 'metabox title', 'wpsso-facebook-catalog-feed' )
+					'label'    => _x( 'Facebook Catalog Feed XML (Main Product)', 'metabox title', 'wpsso-commerce-manager-catalog-feed' )
 				),
-				'fcf_img_info' => array(
+				'cmcf_img_info' => array(
 					'tr_class'  => 'hide_og_type hide_og_type_product',
-					'table_row' => '<td colspan="2">' . $this->p->msgs->get( 'info-fcf-img', array( 'mod' => $mod ) ) . '</td>',
+					'table_row' => '<td colspan="2">' . $this->p->msgs->get( 'info-cmcf-img', array( 'mod' => $mod ) ) . '</td>',
 				),
-				'fcf_img_id' => array(
+				'cmcf_img_id' => array(
 					'tr_class' => 'hide_og_type hide_og_type_product',
 					'th_class' => 'medium',
-					'label'    => _x( 'Image ID', 'option label', 'wpsso-facebook-catalog-feed' ),
-					'tooltip'  => 'meta-fcf_img_id',
-					'content'  => $form->get_input_image_upload( 'fcf_img', $media_info[ 'pid' ] ),
+					'label'    => _x( 'Image ID', 'option label', 'wpsso-commerce-manager-catalog-feed' ),
+					'tooltip'  => 'meta-cmcf_img_id',
+					'content'  => $form->get_input_image_upload( 'cmcf_img', $media_info[ 'pid' ] ),
 				),
-				'fcf_img_url' => array(
+				'cmcf_img_url' => array(
 					'tr_class' => 'hide_og_type hide_og_type_product',
 					'th_class' => 'medium',
-					'label'    => _x( 'or an Image URL', 'option label', 'wpsso-facebook-catalog-feed' ),
-					'tooltip'  => 'meta-fcf_img_url',
-					'content'  => $form->get_input_image_url( 'fcf_img' ),
+					'label'    => _x( 'or an Image URL', 'option label', 'wpsso-commerce-manager-catalog-feed' ),
+					'tooltip'  => 'meta-cmcf_img_url',
+					'content'  => $form->get_input_image_url( 'cmcf_img' ),
 				),
 			);
 

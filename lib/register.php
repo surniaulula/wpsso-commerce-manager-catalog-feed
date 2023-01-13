@@ -10,15 +10,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
-if ( ! class_exists( 'WpssoFcfRegister' ) ) {
+if ( ! class_exists( 'WpssoCmcfRegister' ) ) {
 
-	class WpssoFcfRegister {
+	class WpssoCmcfRegister {
 
 		public function __construct() {
 
-			register_activation_hook( WPSSOFCF_FILEPATH, array( $this, 'network_activate' ) );
+			register_activation_hook( WPSSOCMCF_FILEPATH, array( $this, 'network_activate' ) );
 
-			register_deactivation_hook( WPSSOFCF_FILEPATH, array( $this, 'network_deactivate' ) );
+			register_deactivation_hook( WPSSOCMCF_FILEPATH, array( $this, 'network_deactivate' ) );
 
 			if ( is_multisite() ) {
 
@@ -109,13 +109,13 @@ if ( ! class_exists( 'WpssoFcfRegister' ) ) {
 				 */
 				if ( class_exists( 'WpssoUtilReg' ) ) { // Since WPSSO Core v6.13.1.
 
-					$version = WpssoFcfConfig::get_version();
+					$version = WpssoCmcfConfig::get_version();
 
-					WpssoUtilReg::update_ext_version( 'wpssofcf', $version );
+					WpssoUtilReg::update_ext_version( 'wpssocmcf', $version );
 				}
 			}
 
-			WpssoFcfRewrite::add_rules();	// Adds and flushes rewrite rules only if necessary.
+			WpssoCmcfRewrite::add_rules();	// Adds and flushes rewrite rules only if necessary.
 		}
 
 		private function deactivate_plugin() {

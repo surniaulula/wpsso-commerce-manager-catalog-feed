@@ -10,18 +10,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
-if ( ! class_exists( 'WpssoFcfFilters' ) ) {
+if ( ! class_exists( 'WpssoCmcfFilters' ) ) {
 
-	class WpssoFcfFilters {
+	class WpssoCmcfFilters {
 
 		private $p;	// Wpsso class object.
-		private $a;	// WpssoFcf class object.
-		private $adv;	// WpssoFcfFiltersAdvanced class object.
-		private $edit;	// WpssoFcfFiltersEdit class object.
-		private $msgs;	// WpssoFcfFiltersMessages class object.
+		private $a;	// WpssoCmcf class object.
+		private $adv;	// WpssoCmcfFiltersAdvanced class object.
+		private $edit;	// WpssoCmcfFiltersEdit class object.
+		private $msgs;	// WpssoCmcfFiltersMessages class object.
 
 		/**
-		 * Instantiated by WpssoFcf->init_objects().
+		 * Instantiated by WpssoCmcf->init_objects().
 		 */
 		public function __construct( &$plugin, &$addon ) {
 
@@ -44,25 +44,25 @@ if ( ! class_exists( 'WpssoFcfFilters' ) ) {
 
 			if ( is_admin() ) {
 
-				require_once WPSSOFCF_PLUGINDIR . 'lib/filters-advanced.php';
+				require_once WPSSOCMCF_PLUGINDIR . 'lib/filters-advanced.php';
 
-				$this->adv = new WpssoFcfFiltersAdvanced( $plugin, $addon );
+				$this->adv = new WpssoCmcfFiltersAdvanced( $plugin, $addon );
 
-				require_once WPSSOFCF_PLUGINDIR . 'lib/filters-edit.php';
+				require_once WPSSOCMCF_PLUGINDIR . 'lib/filters-edit.php';
 
-				$this->edit = new WpssoFcfFiltersEdit( $plugin, $addon );
+				$this->edit = new WpssoCmcfFiltersEdit( $plugin, $addon );
 
-				require_once WPSSOFCF_PLUGINDIR . 'lib/filters-messages.php';
+				require_once WPSSOCMCF_PLUGINDIR . 'lib/filters-messages.php';
 
-				$this->msgs = new WpssoFcfFiltersMessages( $plugin, $addon );
+				$this->msgs = new WpssoCmcfFiltersMessages( $plugin, $addon );
 			}
 		}
 
 		public function filter_plugin_image_sizes( array $sizes ) {
 
-			$sizes[ 'fcf' ] = array(	// Option prefix.
-				'name'         => 'fcf',
-				'label_transl' => _x( 'Facebook Catalog Feed XML', 'option label', 'wpsso-facebook-catalog-feed' ),
+			$sizes[ 'cmcf' ] = array(	// Option prefix.
+				'name'         => 'cmcf',
+				'label_transl' => _x( 'Facebook Catalog Feed XML', 'option label', 'wpsso-commerce-manager-catalog-feed' ),
 			);
 
 			return $sizes;
@@ -78,14 +78,14 @@ if ( ! class_exists( 'WpssoFcfFilters' ) ) {
 
 				switch_to_locale( $locale );
 
-				$xml = WpssoFcfXml::get( $read_cache );
+				$xml = WpssoCmcfXml::get( $read_cache );
 
 				$xml_count++;
 			}
 
 			restore_current_locale();	// Calls an action to clear the SucomUtil::get_locale() cache.
 
-			$notice_msg .= sprintf( __( 'The Facebook Catalog Feed XML for %d locales has been refreshed.', 'wpsso-facebook-catalog-feed' ), $xml_count ) . ' ';
+			$notice_msg .= sprintf( __( 'The Facebook Catalog Feed XML for %d locales has been refreshed.', 'wpsso-commerce-manager-catalog-feed' ), $xml_count ) . ' ';
 
 			return $notice_msg;
 		}

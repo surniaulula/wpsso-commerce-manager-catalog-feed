@@ -10,22 +10,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
-if ( ! class_exists( 'WpssoFcfConfig' ) ) {
+if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 
-	class WpssoFcfConfig {
+	class WpssoCmcfConfig {
 
 		public static $cf = array(
 			'plugin' => array(
-				'wpssofcf' => array(			// Plugin acronym.
+				'wpssocmcf' => array(			// Plugin acronym.
 					'version'     => '1.0.0',	// Plugin version.
 					'opt_version' => '1',		// Increment when changing default option values.
 					'short'       => 'WPSSO FCF',	// Short plugin name.
-					'name'        => 'WPSSO Facebook Catalog Feed XML',
-					'desc'        => 'Facebook Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and Custom Products.',
-					'slug'        => 'wpsso-facebook-catalog-feed',
-					'base'        => 'wpsso-facebook-catalog-feed/wpsso-facebook-catalog-feed.php',
+					'name'        => 'WPSSO Commerce Manager Catalog Feed XML',
+					'desc'        => 'Facebook Commerce Manager Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and Custom Product Pages.',
+					'slug'        => 'wpsso-commerce-manager-catalog-feed',
+					'base'        => 'wpsso-commerce-manager-catalog-feed/wpsso-commerce-manager-catalog-feed.php',
 					'update_auth' => '',		// No premium version.
-					'text_domain' => 'wpsso-facebook-catalog-feed',
+					'text_domain' => 'wpsso-commerce-manager-catalog-feed',
 					'domain_path' => '/languages',
 
 					/**
@@ -60,18 +60,18 @@ if ( ! class_exists( 'WpssoFcfConfig' ) ) {
 					 */
 					'lib' => array(
 						'submenu' => array(
-							'fcf-general' => 'Facebook Catalog',
+							'cmcf-general' => 'Facebook Catalog',
 						),
 					),
 				),
 			),
 			'opt' => array(
 				'defaults' => array(
-					'fcf_img_width'  => 1200,
-					'fcf_img_height' => 628,
-					'fcf_img_crop'   => 1,
-					'fcf_img_crop_x' => 'center',
-					'fcf_img_crop_y' => 'center',
+					'cmcf_img_width'  => 1200,
+					'cmcf_img_height' => 628,
+					'cmcf_img_crop'   => 1,
+					'cmcf_img_crop_x' => 'center',
+					'cmcf_img_crop_y' => 'center',
 				),
 			),
 			'head' => array(
@@ -86,14 +86,14 @@ if ( ! class_exists( 'WpssoFcfConfig' ) ) {
 				 * See https://www.facebook.com/business/help/686259348512056?id=725943027795860.
 				 */
 				'limit_min' => array(
-					'fcf_img_width'  => 500,
-					'fcf_img_height' => 500,
+					'cmcf_img_width'  => 500,
+					'cmcf_img_height' => 500,
 				),
 
 				/**
 				 * See https://www.facebook.com/business/help/120325381656392?id=725943027795860.
 				 */
-				'fcf_content_map' => array(	// Element of 'head' array.
+				'cmcf_content_map' => array(	// Element of 'head' array.
 
 					/**
 					 * The current availability of the item. Supported values: in stock, out of stock. Out of
@@ -129,7 +129,7 @@ if ( ! class_exists( 'WpssoFcfConfig' ) ) {
 					'wpsso_g_' => array(
 						'label'  => 'Facebook Catalog Feed XML',
 						'value'  => DAY_IN_SECONDS,
-						'filter' => 'wpsso_cache_expire_fcf_xml',
+						'filter' => 'wpsso_cache_expire_cmcf_xml',
 					),
 				),
 			),
@@ -137,29 +137,29 @@ if ( ! class_exists( 'WpssoFcfConfig' ) ) {
 
 		public static function get_version( $add_slug = false ) {
 
-			$info =& self::$cf[ 'plugin' ][ 'wpssofcf' ];
+			$info =& self::$cf[ 'plugin' ][ 'wpssocmcf' ];
 
 			return $add_slug ? $info[ 'slug' ] . '-' . $info[ 'version' ] : $info[ 'version' ];
 		}
 
 		public static function set_constants( $plugin_file ) {
 
-			if ( defined( 'WPSSOFCF_VERSION' ) ) {	// Define constants only once.
+			if ( defined( 'WPSSOCMCF_VERSION' ) ) {	// Define constants only once.
 
 				return;
 			}
 
-			$info =& self::$cf[ 'plugin' ][ 'wpssofcf' ];
+			$info =& self::$cf[ 'plugin' ][ 'wpssocmcf' ];
 
 			/**
 			 * Define fixed constants.
 			 */
-			define( 'WPSSOFCF_FILEPATH', $plugin_file );
-			define( 'WPSSOFCF_PLUGINBASE', $info[ 'base' ] );	// Example: wpsso-facebook-catalog-feed/wpsso-facebook-catalog-feed.php.
-			define( 'WPSSOFCF_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_file ) ) ) );
-			define( 'WPSSOFCF_PLUGINSLUG', $info[ 'slug' ] );	// Example: wpsso-facebook-catalog-feed.
-			define( 'WPSSOFCF_URLPATH', trailingslashit( plugins_url( '', $plugin_file ) ) );
-			define( 'WPSSOFCF_VERSION', $info[ 'version' ] );
+			define( 'WPSSOCMCF_FILEPATH', $plugin_file );
+			define( 'WPSSOCMCF_PLUGINBASE', $info[ 'base' ] );	// Example: wpsso-commerce-manager-catalog-feed/wpsso-commerce-manager-catalog-feed.php.
+			define( 'WPSSOCMCF_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_file ) ) ) );
+			define( 'WPSSOCMCF_PLUGINSLUG', $info[ 'slug' ] );	// Example: wpsso-commerce-manager-catalog-feed.
+			define( 'WPSSOCMCF_URLPATH', trailingslashit( plugins_url( '', $plugin_file ) ) );
+			define( 'WPSSOCMCF_VERSION', $info[ 'version' ] );
 
 			/**
 			 * Define variable constants.
@@ -190,7 +190,7 @@ if ( ! class_exists( 'WpssoFcfConfig' ) ) {
 
 			$var_const = array();
 
-			$var_const[ 'WPSSOFCF_PAGENAME' ] = 'facebook-catalog';
+			$var_const[ 'WPSSOCMCF_PAGENAME' ] = 'facebook-catalog';
 
 			/**
 			 * Maybe override the default constant value with a pre-defined constant value.
@@ -213,12 +213,12 @@ if ( ! class_exists( 'WpssoFcfConfig' ) ) {
 		 */
 		public static function require_libs( $plugin_file ) {
 
-			require_once WPSSOFCF_PLUGINDIR . 'vendor/autoload.php';
-			require_once WPSSOFCF_PLUGINDIR . 'lib/register.php';
-			require_once WPSSOFCF_PLUGINDIR . 'lib/rewrite.php';	// Static methods required by WpssoFcfRegister->activate_plugin().
-			require_once WPSSOFCF_PLUGINDIR . 'lib/xml.php';
+			require_once WPSSOCMCF_PLUGINDIR . 'vendor/autoload.php';
+			require_once WPSSOCMCF_PLUGINDIR . 'lib/register.php';
+			require_once WPSSOCMCF_PLUGINDIR . 'lib/rewrite.php';	// Static methods required by WpssoCmcfRegister->activate_plugin().
+			require_once WPSSOCMCF_PLUGINDIR . 'lib/xml.php';
 
-			add_filter( 'wpssofcf_load_lib', array( __CLASS__, 'load_lib' ), 10, 3 );
+			add_filter( 'wpssocmcf_load_lib', array( __CLASS__, 'load_lib' ), 10, 3 );
 		}
 
 		public static function load_lib( $success = false, $filespec = '', $classname = '' ) {
@@ -238,7 +238,7 @@ if ( ! class_exists( 'WpssoFcfConfig' ) ) {
 
 			if ( ! empty( $filespec ) ) {
 
-				$file_path = WPSSOFCF_PLUGINDIR . 'lib/' . $filespec . '.php';
+				$file_path = WPSSOCMCF_PLUGINDIR . 'lib/' . $filespec . '.php';
 
 				if ( file_exists( $file_path ) ) {
 
@@ -246,7 +246,7 @@ if ( ! class_exists( 'WpssoFcfConfig' ) ) {
 
 					if ( empty( $classname ) ) {
 
-						$classname = SucomUtil::sanitize_classname( 'wpssofcf' . $filespec, $allow_underscore = false );
+						$classname = SucomUtil::sanitize_classname( 'wpssocmcf' . $filespec, $allow_underscore = false );
 					}
 
 					return $classname;

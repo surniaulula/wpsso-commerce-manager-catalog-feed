@@ -2,5 +2,5 @@
 // 
 // Extract of translatable strings from lib/abstract/com/.
 // 
-__( 'The %1$s add-on requires the %2$s plugin.', 'wpsso-facebook-catalog-feed' );
-__( 'The %1$s add-on requires %2$s version %3$s or newer (version %4$s is currently installed).', 'wpsso-facebook-catalog-feed' );
+__( 'The %1$s add-on requires the %2$s plugin.', 'wpsso-commerce-manager-catalog-feed' );
+__( 'The %1$s add-on requires %2$s version %3$s or newer (version %4$s is currently installed).', 'wpsso-commerce-manager-catalog-feed' );

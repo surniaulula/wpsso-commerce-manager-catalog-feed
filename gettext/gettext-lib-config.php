@@ -2,7 +2,7 @@
 // 
 // Extract of translatable strings from lib/config.php.
 // 
-_x( 'Facebook Catalog', 'lib file description', 'wpsso-facebook-catalog-feed' );
-_x( 'WPSSO Facebook Catalog Feed XML', 'plugin name', 'wpsso-facebook-catalog-feed' );
-_x( 'Facebook Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and Custom Products.', 'plugin description', 'wpsso-facebook-catalog-feed' );
-_x( 'WPSSO Core', 'plugin name', 'wpsso-facebook-catalog-feed' );
+_x( 'Facebook Catalog', 'lib file description', 'wpsso-commerce-manager-catalog-feed' );
+_x( 'WPSSO Commerce Manager Catalog Feed XML', 'plugin name', 'wpsso-commerce-manager-catalog-feed' );
+_x( 'Facebook Commerce Manager Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and Custom Product Pages.', 'plugin description', 'wpsso-commerce-manager-catalog-feed' );
+_x( 'WPSSO Core', 'plugin name', 'wpsso-commerce-manager-catalog-feed' );
