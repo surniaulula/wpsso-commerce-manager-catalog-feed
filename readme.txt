@@ -1,12 +1,12 @@
-=== WPSSO Facebook Catalog Feed XML ===
-Plugin Name: WPSSO Facebook Catalog Feed XML
-Plugin Slug: wpsso-facebook-catalog-feed
-Text Domain: wpsso-facebook-catalog-feed
+=== WPSSO Commerce Manager Catalog Feed XML ===
+Plugin Name: WPSSO Commerce Manager Catalog Feed XML
+Plugin Slug: wpsso-commerce-manager-catalog-feed
+Text Domain: wpsso-commerce-manager-catalog-feed
 Domain Path: /languages
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
-Assets URI: https://surniaulula.github.io/wpsso-facebook-catalog-feed/assets/
-Tags: facebook commerce manager, woocommerce, wpml, polylang, multilingual, xml, edd, easy digital downloads
+Assets URI: https://surniaulula.github.io/wpsso-commerce-manager-catalog-feed/assets/
+Tags: facebook, woocommerce, wpml, polylang, multilingual, xml, edd, easy digital downloads
 Contributors: jsmoriss
 Requires Plugins: wpsso
 Requires PHP: 7.2
@@ -15,13 +15,13 @@ Tested Up To: 6.1.1
 WC Tested Up To: 7.2.3
 Stable Tag: 1.0.0
 
-Facebook Catalog Feed XMLs for WooCommerce (Including Variations and Attributes), Easy Digital Downloads, and Custom Products.
+Facebook Commerce Manager Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and Custom Product Pages.
 
 == Description ==
 
 <h3>E-Commerce Plugin Not Required</h3>
 
-A supported e-commerce plugin, like WooCommerce or Easy Digital Downloads, <em>is suggested but not required</em> &mdash; the WPSSO Facebook Catalog Feed XML add-on also retrieves custom product information entered in the Document SSO metabox when editing a product page.
+A supported e-commerce plugin, like WooCommerce or Easy Digital Downloads, <em>is suggested but not required</em> &mdash; the WPSSO Commerce Manager Catalog Feed XML add-on also retrieves custom product information entered in the Document SSO metabox when editing a product page.
 
 <h3>Complete WooCommerce Support</h3>
 
@@ -31,13 +31,13 @@ WooCommerce product variations, attributes, meta data, and custom fields are all
 
 Facebook catalog feed XMLs are automatically created in your site's language(s) from Polylang, WPML, or the installed WordPress languages.
 
-After activating the WPSSO Facebook Catalog Feed XML add-on, see the SSO &gt; Facebook Catalog settings page for your feed URLs.
+After activating the WPSSO Commerce Manager Catalog Feed XML add-on, see the SSO &gt; Facebook Catalog settings page for your feed URLs.
 
 <!-- /about -->
 
 <h3>No Plugin Settings to Configure</h3>
 
-The WPSSO Facebook Catalog Feed XML add-on automatically retrieves all available product information in the language (aka locale) requested.
+The WPSSO Commerce Manager Catalog Feed XML add-on automatically retrieves all available product information in the language (aka locale) requested.
 
 <h3>Facebook Catalog Feed XML Attributes</h3>
 
@@ -67,20 +67,20 @@ The following XML product attributes are automatically created based on your Woo
 
 <h3>WPSSO Core Required</h3>
 
-WPSSO Facebook Catalog Feed XML (WPSSO FCF) is an add-on for the [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/), which provides complete structured data for WordPress to present your content at its best on social sites and in search results – no matter how URLs are shared, reshared, messaged, posted, embedded, or crawled.
+WPSSO Commerce Manager Catalog Feed XML (WPSSO CMCF) is an add-on for the [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/), which provides complete structured data for WordPress to present your content at its best on social sites and in search results – no matter how URLs are shared, reshared, messaged, posted, embedded, or crawled.
 
 == Installation ==
 
 <h3 class="top">Install and Uninstall</h3>
 
-* [Install the WPSSO Facebook Catalog Feed XML add-on](https://wpsso.com/docs/plugins/wpsso-facebook-catalog-feed/installation/install-the-plugin/).
-* [Uninstall the WPSSO Facebook Catalog Feed XML add-on](https://wpsso.com/docs/plugins/wpsso-facebook-catalog-feed/installation/uninstall-the-plugin/).
+* [Install the WPSSO Commerce Manager Catalog Feed XML add-on](https://wpsso.com/docs/plugins/wpsso-commerce-manager-catalog-feed/installation/install-the-plugin/).
+* [Uninstall the WPSSO Commerce Manager Catalog Feed XML add-on](https://wpsso.com/docs/plugins/wpsso-commerce-manager-catalog-feed/installation/uninstall-the-plugin/).
 
 == Frequently Asked Questions ==
 
 == Screenshots ==
 
-01. The WPSSO FCF settings page shows a complete list of available XML feed URLs.
+01. The WPSSO CMCF settings page shows a complete list of available XML feed URLs.
 
 == Changelog ==
 
@@ -95,8 +95,8 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Standard Edition Repositories</h3>
 
-* [GitHub](https://surniaulula.github.io/wpsso-facebook-catalog-feed/)
-* [WordPress.org](https://plugins.trac.wordpress.org/browser/wpsso-facebook-catalog-feed/)
+* [GitHub](https://surniaulula.github.io/wpsso-commerce-manager-catalog-feed/)
+* [WordPress.org](https://plugins.trac.wordpress.org/browser/wpsso-commerce-manager-catalog-feed/)
 
 <h3>Development Version Updates</h3>
 
