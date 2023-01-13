@@ -29,13 +29,13 @@
 
 <h3>Multilingual</h3>
 
-<p>The Facebook catalog feed XMLs are automatically created in your site's language(s) from Polylang, WPML, or the installed WordPress languages.</p>
+<p>The Facebook and Instagram product catalog feed XMLs are automatically created in your site's language(s) from Polylang, WPML, or the installed WordPress languages.</p>
 
 <p>After activating the WPSSO Commerce Manager Catalog Feed XML add-on, see the SSO &gt; Facebook Catalog settings page for your feed URLs.</p>
 
 <!-- /about -->
 
-<h3>Facebook Catalog Feed XML Attributes</h3>
+<h3>Commerce Manager Catalog Feed XML Attributes</h3>
 
 <p>The following XML product attributes are automatically created based on your WooCommerce, Easy Digital Downloads, and custom products (including WooCommerce product variations):</p>
 
