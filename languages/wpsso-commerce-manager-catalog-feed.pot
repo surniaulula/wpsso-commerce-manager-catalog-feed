@@ -1,8 +1,8 @@
-# Copyright (C) 2023 WPSSO Commerce Manager Catalog Feed
-# This file is distributed under the same license as the WPSSO Commerce Manager Catalog Feed package.
+# Copyright (C) 2023 WPSSO Commerce Manager Catalog Feed XML
+# This file is distributed under the same license as the WPSSO Commerce Manager Catalog Feed XML package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Commerce Manager Catalog Feed 1.0.0\n"
+"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 1.0.0-dev.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-commerce-"
 "manager-catalog-feed\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
@@ -30,7 +30,7 @@ msgstr ""
 
 #: gettext/gettext-lib-config.php:6
 msgctxt "plugin name"
-msgid "WPSSO Commerce Manager Catalog Feed"
+msgid "WPSSO Commerce Manager Catalog Feed XML"
 msgstr ""
 
 #: gettext/gettext-lib-config.php:7
@@ -162,7 +162,7 @@ msgid "Facebook Catalog Feed XML"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "WPSSO Commerce Manager Catalog Feed"
+msgid "WPSSO Commerce Manager Catalog Feed XML"
 msgstr ""
 
 #. Plugin URI of the plugin/theme

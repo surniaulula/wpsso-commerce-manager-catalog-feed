@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WPSSO Commerce Manager Catalog Feed
+ * Plugin Name: WPSSO Commerce Manager Catalog Feed XML
  * Plugin Slug: wpsso-commerce-manager-catalog-feed
  * Text Domain: wpsso-commerce-manager-catalog-feed
  * Domain Path: /languages
@@ -16,7 +16,7 @@
  * Requires At Least: 5.2
  * Tested Up To: 6.1.1
  * WC Tested Up To: 7.3.0
- * Version: 1.0.0
+ * Version: 1.0.0-dev.5
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
