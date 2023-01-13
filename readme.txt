@@ -1,5 +1,5 @@
-=== WPSSO Commerce Manager Catalog Feed XML ===
-Plugin Name: WPSSO Commerce Manager Catalog Feed XML
+=== WPSSO Commerce Manager Catalog Feed ===
+Plugin Name: WPSSO Commerce Manager Catalog Feed
 Plugin Slug: wpsso-commerce-manager-catalog-feed
 Text Domain: wpsso-commerce-manager-catalog-feed
 Domain Path: /languages
@@ -12,7 +12,7 @@ Requires Plugins: wpsso
 Requires PHP: 7.2
 Requires At Least: 5.2
 Tested Up To: 6.1.1
-WC Tested Up To: 7.2.3
+WC Tested Up To: 7.3.0
 Stable Tag: 1.0.0
 
 Facebook Commerce Manager Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and Custom Product Pages.

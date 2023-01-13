@@ -1,13 +1,13 @@
-<h1>WPSSO Commerce Manager Catalog Feed XML</h1>
+<h1>WPSSO Commerce Manager Catalog Feed</h1>
 
 <table>
-<tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Commerce Manager Catalog Feed XML</td></tr>
+<tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Commerce Manager Catalog Feed</td></tr>
 <tr><th align="right" valign="top" nowrap>Summary</th><td>Facebook Commerce Manager Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and Custom Product Pages.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.0.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires PHP</th><td>7.2 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>5.2 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To WordPress</th><td>6.1.1</td></tr>
-<tr><th align="right" valign="top" nowrap>Tested Up To WooCommerce</th><td>7.2.3</td></tr>
+<tr><th align="right" valign="top" nowrap>Tested Up To WooCommerce</th><td>7.3.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
 <tr><th align="right" valign="top" nowrap>License</th><td><a href="https://www.gnu.org/licenses/gpl.txt">GPLv3</a></td></tr>
 <tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>facebook, woocommerce, wpml, polylang, multilingual, xml, edd, easy digital downloads</td></tr>
