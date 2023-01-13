@@ -106,7 +106,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.0.0-dev.5 (2023/01/12)**
+**Version 1.0.0-dev.6 (2023/01/13)**
 
 * **New Features**
 	* Initial release.
@@ -123,7 +123,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.0.0-dev.5 =
+= 1.0.0-dev.6 =
 
-(2023/01/12) Initial release.
+(2023/01/13) Initial release.
 
