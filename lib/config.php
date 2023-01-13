@@ -21,7 +21,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 					'opt_version' => '1',		// Increment when changing default option values.
 					'short'       => 'WPSSO CMCF',	// Short plugin name.
 					'name'        => 'WPSSO Commerce Manager Catalog Feed XML',
-					'desc'        => 'Facebook Commerce Manager Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and Custom Product Pages.',
+					'desc'        => 'Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and Custom Product Pages.',
 					'slug'        => 'wpsso-commerce-manager-catalog-feed',
 					'base'        => 'wpsso-commerce-manager-catalog-feed/wpsso-commerce-manager-catalog-feed.php',
 					'update_auth' => '',		// No premium version.
