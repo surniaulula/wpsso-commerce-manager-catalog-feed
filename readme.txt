@@ -1,5 +1,5 @@
-=== WPSSO Commerce Manager Catalog Feed ===
-Plugin Name: WPSSO Commerce Manager Catalog Feed
+=== WPSSO Commerce Manager Catalog Feed XML ===
+Plugin Name: WPSSO Commerce Manager Catalog Feed XML
 Plugin Slug: wpsso-commerce-manager-catalog-feed
 Text Domain: wpsso-commerce-manager-catalog-feed
 Domain Path: /languages
@@ -106,7 +106,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.0.0 (2023/01/12)**
+**Version 1.0.0-dev.5 (2023/01/12)**
 
 * **New Features**
 	* Initial release.
@@ -123,7 +123,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.0.0 =
+= 1.0.0-dev.5 =
 
 (2023/01/12) Initial release.
 
