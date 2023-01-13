@@ -15,7 +15,7 @@ Tested Up To: 6.1.1
 WC Tested Up To: 7.3.0
 Stable Tag: 1.0.0
 
-Facebook Commerce Manager Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and Custom Product Pages.
+Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and Custom Product Pages.
 
 == Description ==
 
