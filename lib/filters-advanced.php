@@ -39,7 +39,7 @@ if ( ! class_exists( 'WpssoCmcfFiltersAdvanced' ) ) {
 		public function filter_plugin_image_sizes_rows( $table_rows, $form, $network, $pp ) {
 
 			$table_rows[ 'cmcf_img_size' ] = '' .
-				$form->get_th_html( _x( 'Facebook Catalog Feed XML', 'option label', 'wpsso-commerce-manager-catalog-feed' ),
+				$form->get_th_html( _x( 'Commerce Manager Catalog Feed XML', 'option label', 'wpsso-commerce-manager-catalog-feed' ),
 					$css_class = '', $css_id = 'cmcf_img_size' ) . ( $pp ?
 				'<td>' . $form->get_input_image_dimensions( 'cmcf_img' ) . '</td>' :
 				'<td class="blank">' . $form->get_no_input_image_dimensions( 'cmcf_img' ) . '</td>' );

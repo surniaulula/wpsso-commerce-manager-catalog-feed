@@ -127,7 +127,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 			'wp' => array(
 				'file' => array(
 					'wpsso_g_' => array(
-						'label'  => 'Facebook Catalog Feed XML',
+						'label'  => 'Commerce Manager Catalog Feed XML',
 						'value'  => DAY_IN_SECONDS,
 						'filter' => 'wpsso_cache_expire_cmcf_xml',
 					),

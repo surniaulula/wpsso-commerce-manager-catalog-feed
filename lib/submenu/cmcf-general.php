@@ -55,7 +55,7 @@ if ( ! class_exists( 'WpssoCmcfSubmenuCmcfGeneral' ) && class_exists( 'WpssoAdmi
 		protected function add_meta_boxes() {
 
 			$metabox_id      = 'cmcf';
-			$metabox_title   = _x( 'Facebook Catalog Feed XML', 'metabox title', 'wpsso-commerce-manager-catalog-feed' );
+			$metabox_title   = _x( 'Commerce Manager Catalog Feed XML', 'metabox title', 'wpsso-commerce-manager-catalog-feed' );
 			$metabox_screen  = $this->pagehook;
 			$metabox_context = 'normal';
 			$metabox_prio    = 'default';

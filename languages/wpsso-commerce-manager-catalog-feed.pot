@@ -71,7 +71,7 @@ msgstr ""
 
 #: lib/filters-advanced.php:42 lib/filters.php:65
 msgctxt "option label"
-msgid "Facebook Catalog Feed XML"
+msgid "Commerce Manager Catalog Feed XML"
 msgstr ""
 
 #: lib/filters-edit.php:49
@@ -84,7 +84,7 @@ msgstr ""
 
 #: lib/filters-edit.php:67
 msgctxt "metabox title"
-msgid "Facebook Catalog Feed XML (Main Product)"
+msgid "Commerce Manager Catalog Feed XML (Main Product)"
 msgstr ""
 
 #: lib/filters-edit.php:76
@@ -153,12 +153,13 @@ msgid "This option is disabled if a custom image ID is selected."
 msgstr ""
 
 #: lib/filters.php:88
-msgid "The Facebook Catalog Feed XML for %d locales has been refreshed."
+msgid ""
+"The Commerce Manager Catalog Feed XML for %d locales has been refreshed."
 msgstr ""
 
 #: lib/submenu/cmcf-general.php:58
 msgctxt "metabox title"
-msgid "Facebook Catalog Feed XML"
+msgid "Commerce Manager Catalog Feed XML"
 msgstr ""
 
 #. Plugin Name of the plugin/theme

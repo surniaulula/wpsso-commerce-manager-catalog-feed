@@ -64,7 +64,7 @@ if ( ! class_exists( 'WpssoCmcfFiltersEdit' ) ) {
 					'tr_class' => 'hide_og_type hide_og_type_product',
 					'td_class' => 'subsection',
 					'header'   => 'h4',
-					'label'    => _x( 'Facebook Catalog Feed XML (Main Product)', 'metabox title', 'wpsso-commerce-manager-catalog-feed' )
+					'label'    => _x( 'Commerce Manager Catalog Feed XML (Main Product)', 'metabox title', 'wpsso-commerce-manager-catalog-feed' )
 				),
 				'cmcf_img_info' => array(
 					'tr_class'  => 'hide_og_type hide_og_type_product',

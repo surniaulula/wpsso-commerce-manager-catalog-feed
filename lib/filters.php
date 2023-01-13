@@ -62,7 +62,7 @@ if ( ! class_exists( 'WpssoCmcfFilters' ) ) {
 
 			$sizes[ 'cmcf' ] = array(	// Option prefix.
 				'name'         => 'cmcf',
-				'label_transl' => _x( 'Facebook Catalog Feed XML', 'option label', 'wpsso-commerce-manager-catalog-feed' ),
+				'label_transl' => _x( 'Commerce Manager Catalog Feed XML', 'option label', 'wpsso-commerce-manager-catalog-feed' ),
 			);
 
 			return $sizes;
@@ -85,7 +85,7 @@ if ( ! class_exists( 'WpssoCmcfFilters' ) ) {
 
 			restore_current_locale();	// Calls an action to clear the SucomUtil::get_locale() cache.
 
-			$notice_msg .= sprintf( __( 'The Facebook Catalog Feed XML for %d locales has been refreshed.', 'wpsso-commerce-manager-catalog-feed' ), $xml_count ) . ' ';
+			$notice_msg .= sprintf( __( 'The Commerce Manager Catalog Feed XML for %d locales has been refreshed.', 'wpsso-commerce-manager-catalog-feed' ), $xml_count ) . ' ';
 
 			return $notice_msg;
 		}
