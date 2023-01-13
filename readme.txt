@@ -29,7 +29,7 @@ WooCommerce product variations, attributes, meta data, and custom fields are all
 
 <h3>Multilingual</h3>
 
-Facebook catalog feed XMLs are automatically created in your site's language(s) from Polylang, WPML, or the installed WordPress languages.
+The Facebook catalog feed XMLs are automatically created in your site's language(s) from Polylang, WPML, or the installed WordPress languages.
 
 After activating the WPSSO Commerce Manager Catalog Feed XML add-on, see the SSO &gt; Facebook Catalog settings page for your feed URLs.
 
