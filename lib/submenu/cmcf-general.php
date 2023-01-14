@@ -90,11 +90,21 @@ if ( ! class_exists( 'WpssoCmcfSubmenuCmcfGeneral' ) && class_exists( 'WpssoAdmi
 
 					foreach ( $locale_names as $locale => $native_name ) {
 
-						$url  = WpssoCmcfRewrite::get_url( $locale );
+						$url = WpssoCmcfRewrite::get_url( $locale );
+						$xml = WpssoCmcfXml::get( $read_cache = true, $locale );
+
+						$items  = substr_count( $xml, '<item>' );
+						$images = substr_count( $xml, '<g:image_link>' );
+						$size   = number_format( strlen( $xml ) );
 
 						$table_rows[ 'cmcf_url_' . $locale ] = '' .
-							$this->form->get_th_html( $native_name ) .
-							'<td>' . $this->form->get_no_input_clipboard( $url ) . '</td>';
+							$this->form->get_th_html( $native_name, $css_class = 'medium' ) .
+							'<td>' . $this->form->get_no_input_clipboard( $url ) .
+							'<p class="status-msg left">' .
+							sprintf( _x( '%1$s items, %2$s image links, %2$s bytes XML size.', 'option comment', 'wpsso'),
+								$items, $images, $size ) .
+							'</p>' .
+							'</td>';
 					}
 
 					break;

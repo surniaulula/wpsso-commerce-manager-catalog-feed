@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Commerce Manager Catalog Feed XML package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 1.0.0-b.3\n"
+"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 1.0.0-b.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-commerce-"
 "manager-catalog-feed\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
@@ -160,6 +160,11 @@ msgstr ""
 #: lib/submenu/cmcf-general.php:58
 msgctxt "metabox title"
 msgid "Commerce Manager Catalog Feed XML"
+msgstr ""
+
+#: lib/submenu/cmcf-general.php:104
+msgctxt "option comment"
+msgid "%1$s items, %2$s image links, %2$s bytes XML size."
 msgstr ""
 
 #. Plugin Name of the plugin/theme
