@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssocmcf' => array(			// Plugin acronym.
-					'version'     => '1.0.0-b.2',	// Plugin version.
+					'version'     => '1.0.0-b.3',	// Plugin version.
 					'opt_version' => '1',		// Increment when changing default option values.
 					'short'       => 'WPSSO CMCF',	// Short plugin name.
 					'name'        => 'WPSSO Commerce Manager Catalog Feed XML',
@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '14.5.0-b.2',
+							'min_version'   => '14.5.0-b.3',
 						),
 					),
 
@@ -126,10 +126,10 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 			),
 			'wp' => array(
 				'file' => array(
-					'wpsso_g_' => array(
+					'wpsso_f_' => array(
 						'label'  => 'Commerce Manager Catalog Feed XML',
 						'value'  => DAY_IN_SECONDS,
-						'filter' => 'wpsso_cache_expire_cmcf_xml',
+						'filter' => 'wpsso_cache_expire_cmcf_xml',	// See WpssoUtil->get_cache_exp_secs().
 					),
 				),
 			),
@@ -190,7 +190,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 
 			$var_const = array();
 
-			$var_const[ 'WPSSOCMCF_PAGENAME' ] = 'facebook-catalog';
+			$var_const[ 'WPSSOCMCF_PAGENAME' ] = 'commerce-manager-catalog';
 
 			/**
 			 * Maybe override the default constant value with a pre-defined constant value.
