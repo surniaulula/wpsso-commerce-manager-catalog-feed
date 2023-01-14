@@ -34,7 +34,7 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 			$this->p =& $plugin;
 			$this->a =& $addon;
 
-			add_action( 'wp_loaded', array( __CLASS__, 'add_rules' ), 1000 );
+			add_action( 'wp_loaded', array( __CLASS__, 'add_rules' ), 2000 );
 			add_action( 'template_redirect', array( __CLASS__, 'template_redirect' ), -2000 );
 
 			add_filter( 'query_vars', array( __CLASS__, 'query_vars' ) );
@@ -48,7 +48,7 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 			global $wp_rewrite;
 
 			$rewrite_rules = $wp_rewrite->wp_rewrite_rules();
-			$rewrite_key   = '^(' . WPSSOCMCF_PAGENAME . ')\/feed/(rss2)/([^\/]+)\.xml$';
+			$rewrite_key   = '^(' . WPSSOCMCF_PAGENAME . ')/feed/(rss2)/([^/]+)\.xml$';
 			$rewrite_value = 'index.php?pagename=$matches[1]&feed=$matches[2]&locale=$matches[3]';
 
 			if ( empty( $rewrite_rules[ $rewrite_key ] ) || $rewrite_value !== $rewrite_rules[ $rewrite_key ] ) {
