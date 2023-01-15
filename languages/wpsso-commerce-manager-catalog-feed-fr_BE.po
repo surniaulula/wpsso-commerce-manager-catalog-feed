@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-commerce-manager-catalog-feed\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-01-13 10:31-0800\n"
+"PO-Revision-Date: 2023-01-15 10:41-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -141,6 +141,11 @@ msgstr "Le flux XML de catalogue Gestionnaire des ventes pour %d langues a été
 msgctxt "metabox title"
 msgid "Commerce Manager Catalog Feed XML"
 msgstr "Flux XML de catalogue Gestionnaire des ventes"
+
+#: lib/submenu/cmcf-general.php:105
+msgctxt "option comment"
+msgid "%1$s items, %2$s image links, %3$s addl image links, %4$s KB feed XML size."
+msgstr "%1$s éléments, %2$s liens d'image, %3$s liens d'image supp., %4$s Ko taille de flux XML."
 
 #. Plugin Name of the plugin/theme
 msgid "WPSSO Commerce Manager Catalog Feed XML"
