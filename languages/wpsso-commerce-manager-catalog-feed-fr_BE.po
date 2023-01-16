@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-commerce-manager-catalog-feed\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-01-15 10:41-0800\n"
+"PO-Revision-Date: 2023-01-16 08:49-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -136,6 +136,18 @@ msgstr "Cette option est désactivée si un ID d'image personnalisé est sélect
 #: lib/filters.php:88
 msgid "The Commerce Manager Catalog Feed XML for %d locales has been refreshed."
 msgstr "Le flux XML de catalogue Gestionnaire des ventes pour %d langues a été actualisé."
+
+#: lib/rewrite.php:99 lib/rewrite.php:113
+msgid "%s error: %s"
+msgstr "Erreur %s: %s"
+
+#: lib/rewrite.php:100
+msgid "Requested feed type is invalid."
+msgstr "Le type de flux demandé n'est pas valide."
+
+#: lib/rewrite.php:114
+msgid "Requested locale value is empty."
+msgstr "La valeur de langue demandée est vide."
 
 #: lib/submenu/cmcf-general.php:58
 msgctxt "metabox title"
