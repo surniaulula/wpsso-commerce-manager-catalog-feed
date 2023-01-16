@@ -96,6 +96,9 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 
 			if ( 'rss2' !== $request_feed ) {
 
+				SucomUtil::safe_error_log( sprintf( __( '%s error: %s', 'wpsso-commerce-manager-catalog-feed' ),
+					__METHOD__, __( 'Requested feed type is invalid.', 'wpsso-commerce-manager-catalog-feed' ) ) );
+
 				return;
 			}
 
@@ -106,6 +109,9 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 			$request_locale = SucomUtil::sanitize_locale( $request_locale );
 
 			if ( empty( $request_locale ) ) {
+
+				SucomUtil::safe_error_log( sprintf( __( '%s error: %s', 'wpsso-commerce-manager-catalog-feed' ),
+					__METHOD__, __( 'Requested locale value is empty.', 'wpsso-commerce-manager-catalog-feed' ) ) );
 
 				return;
 			}

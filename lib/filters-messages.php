@@ -48,13 +48,13 @@ if ( ! class_exists( 'WpssoCmcfFiltersMessages' ) ) {
 					 */
 					$text = '<p class="pro-feature-msg">';
 
-					$text .= __( 'Each image must be in JPEG or PNG format and a maximum of 8 MB.', 'wpsso' ) . ' ';
+					$text .= __( 'Each image must be in JPEG or PNG format and a maximum of 8 MB.', 'wpsso-commerce-manager-catalog-feed' ) . ' ';
 
-					$text .= __( 'Images must accurately represent the exact product for sale.', 'wpsso' ) . ' ';
+					$text .= __( 'Images must accurately represent the exact product for sale.', 'wpsso-commerce-manager-catalog-feed' ) . ' ';
 
-					$text .= __( 'Don\'t include offensive content such as nudity, explicit language or violence.', 'wpsso' ) . ' ';
+					$text .= __( 'Don\'t include offensive content such as nudity, explicit language or violence.', 'wpsso-commerce-manager-catalog-feed' ) . ' ';
 
-					$text .= __( 'Don\'t include text that overlays the product, calls to action, promo codes, watermarks or time-sensitive information like temporary price drops.', 'wpsso' ) . ' ';
+					$text .= __( 'Don\'t include text that overlays the product, calls to action, promo codes, watermarks or time-sensitive information like temporary price drops.', 'wpsso-commerce-manager-catalog-feed' ) . ' ';
 
 					if ( ! empty( $this->p->avail[ 'ecom' ][ 'woocommerce' ] ) ) {
 
@@ -62,7 +62,7 @@ if ( ! class_exists( 'WpssoCmcfFiltersMessages' ) ) {
 
 							if ( $this->p->util->wc->is_mod_variable( $info[ 'mod' ] ) ) {
 
-								$text .= __( 'This is a variable product - images from product variations will supersede the main product image selected here.', 'wpsso' ) . ' ';
+								$text .= __( 'This is a variable product - images from product variations will supersede the main product image selected here.', 'wpsso-commerce-manager-catalog-feed' ) . ' ';
 							}
 						}
 					}

@@ -157,6 +157,18 @@ msgid ""
 "The Commerce Manager Catalog Feed XML for %d locales has been refreshed."
 msgstr ""
 
+#: lib/rewrite.php:99 lib/rewrite.php:113
+msgid "%s error: %s"
+msgstr ""
+
+#: lib/rewrite.php:100
+msgid "Requested feed type is invalid."
+msgstr ""
+
+#: lib/rewrite.php:114
+msgid "Requested locale value is empty."
+msgstr ""
+
 #: lib/submenu/cmcf-general.php:58
 msgctxt "metabox title"
 msgid "Commerce Manager Catalog Feed XML"
