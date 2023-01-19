@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Commerce Manager Catalog Feed XML package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 1.0.0-rc.1\n"
+"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 1.0.0-rc.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-commerce-"
 "manager-catalog-feed\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
@@ -45,25 +45,25 @@ msgctxt "plugin name"
 msgid "WPSSO Core"
 msgstr ""
 
-#: lib/actions.php:57
+#: lib/actions.php:64
 msgid "checking facebook catalog feeds"
 msgstr ""
 
-#: lib/actions.php:106
+#: lib/actions.php:122
 msgid "getting facebook catalog feeds images"
 msgstr ""
 
-#: lib/actions.php:130
+#: lib/actions.php:146
 msgid "checking facebook catalog feeds images"
 msgstr ""
 
-#: lib/actions.php:132
+#: lib/actions.php:148
 msgid ""
 "A Facebook catalog feed XML %1$s attribute could not be generated for %2$s "
 "ID %3$s."
 msgstr ""
 
-#: lib/actions.php:134
+#: lib/actions.php:150
 msgid ""
 "Facebook requires at least one %1$s attribute for each product variation in "
 "the Facebook catalog feed XML."
@@ -152,9 +152,10 @@ msgstr ""
 msgid "This option is disabled if a custom image ID is selected."
 msgstr ""
 
-#: lib/filters.php:88
+#: lib/filters.php:91
 msgid ""
-"The Commerce Manager Catalog Feed XML for %d locales has been refreshed."
+"The Facebook and Instagram Commerce Manager Catalog Feed XML for %d locales "
+"has been refreshed."
 msgstr ""
 
 #: lib/rewrite.php:99 lib/rewrite.php:113
@@ -169,12 +170,17 @@ msgstr ""
 msgid "Requested locale value is empty."
 msgstr ""
 
-#: lib/submenu/cmcf-general.php:58
+#: lib/submenu/cmcf-general.php:51
+msgctxt "submit button"
+msgid "Refresh Feed XML Cache"
+msgstr ""
+
+#: lib/submenu/cmcf-general.php:64
 msgctxt "metabox title"
 msgid "Commerce Manager Catalog Feed XML"
 msgstr ""
 
-#: lib/submenu/cmcf-general.php:105
+#: lib/submenu/cmcf-general.php:111
 msgctxt "option comment"
 msgid ""
 "%1$s items, %2$s image links, %3$s addl image links, %4$s KB feed XML size."

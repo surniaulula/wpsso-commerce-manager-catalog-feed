@@ -1,5 +1,5 @@
 <?php
-/**
+/*
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl.txt
  * Copyright 2014-2022 Jean-Sebastien Morisset (https://wpsso.com/)
@@ -68,7 +68,10 @@ if ( ! class_exists( 'WpssoCmcfFilters' ) ) {
 			return $sizes;
 		}
 
-		public function filter_cache_refreshed_notice( $notice_msg, $user_id, $read_cache = false ) {
+		/*
+		 * See WpssoCmcfActions->action_load_setting_page_refresh_feed_xml_cache().
+		 */
+		public function filter_cache_refreshed_notice( $notice_msg, $user_id = null, $read_cache = false ) {
 
 			$xml_count = 0;
 
@@ -85,7 +88,8 @@ if ( ! class_exists( 'WpssoCmcfFilters' ) ) {
 
 			restore_current_locale();	// Calls an action to clear the SucomUtil::get_locale() cache.
 
-			$notice_msg .= sprintf( __( 'The Commerce Manager Catalog Feed XML for %d locales has been refreshed.', 'wpsso-commerce-manager-catalog-feed' ), $xml_count ) . ' ';
+			$notice_msg .= sprintf( __( 'The Facebook and Instagram Commerce Manager Catalog Feed XML for %d locales has been refreshed.',
+				'wpsso-commerce-manager-catalog-feed' ), $xml_count ) . ' ';
 
 			return $notice_msg;
 		}
