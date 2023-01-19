@@ -33,7 +33,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 			$wpsso->cache->clear_cache_data( $cache_salt, $file_name_ext );
 		}
 
-		/**
+		/*
 		 * $read_cache = false when called by WpssoCmcfFilters->filter_cache_refreshed_notice().
 		 */
 		static public function get( $read_cache = true, $request_locale = null ) {
@@ -60,7 +60,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 			$cache_salt     = __CLASS__ . '(locale:' . $current_locale . ')';
 			$file_name_ext  = '.xml';
 
-			/**
+			/*
 			 * Applies the 'wpsso_cache_expire_cmcf_xml' ( WEEK_IN_SECONDS, $cache_type, $mod = false ) filter.
 			 */
 			$cache_exp_secs = $wpsso->util->get_cache_exp_secs( $cache_md5_pre, $cache_type );
@@ -154,7 +154,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 			return $xml;
 		}
 
-		/**
+		/*
 		 * See https://developer.wordpress.org/reference/classes/wp_meta_query/.
 		 */
 		static private function get_meta_query() {
@@ -214,7 +214,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 			$rss2_feed->addProduct( $product );
 		}
 
-		/**
+		/*
 		 * See https://www.facebook.com/business/help/120325381656392?id=725943027795860.
 		 */
 		static private function add_product_data( &$product, $mt_data, &$dupe_check = array() ) {
@@ -223,7 +223,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 			$names = array(
 
-				/**
+				/*
 				 * Required fields for products.
 				 *
 				 * Do not use the 'setAvailability' method as Facebook and Google use different sanitized
@@ -240,13 +240,13 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 				'product:price'            => 'setPrice',
 				'product:url'              => 'setLink',
 
-				/**
+				/*
 				 * Additional required fields for checkout on Facebook and Instagram (US only).
 				 */
 				'product:category' => 'setGoogleCategory',
 				'product:size'     => 'setSize',
 
-				/**
+				/*
 				 * The brand name, unique manufacturer part number (MPN) or Global Trade Item Number (GTIN) of the
 				 * item. You only need to enter one of these, not all of them. For GTIN, enter the item's UPC, EAN,
 				 * JAN or ISBN. Character limit: 100.
@@ -262,7 +262,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 				'product:gtin8'       => array( 'addAttribute', 'brand', false ),	// One or more.
 				'product:gtin'        => array( 'addAttribute', 'brand', false ),	// One or more.
 
-				/**
+				/*
 				 * Optional fields for products.
 				 */
 				'product:sale_price'            => 'setSalePrice',
@@ -308,7 +308,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 							continue;
 						}
 
-						/**
+						/*
 						 * Call method from Vitalybaev\GoogleMerchant\Product().
 						 */
 						if ( method_exists( $product, $method_name ) ) {	// Just in case.

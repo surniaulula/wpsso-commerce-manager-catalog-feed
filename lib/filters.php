@@ -20,7 +20,7 @@ if ( ! class_exists( 'WpssoCmcfFilters' ) ) {
 		private $edit;	// WpssoCmcfFiltersEdit class object.
 		private $msgs;	// WpssoCmcfFiltersMessages class object.
 
-		/**
+		/*
 		 * Instantiated by WpssoCmcf->init_objects().
 		 */
 		public function __construct( &$plugin, &$addon ) {

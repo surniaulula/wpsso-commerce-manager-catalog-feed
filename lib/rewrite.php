@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 		private $p;		// Wpsso class object.
 		private $a;		// WpssoCmcf class object.
 
-		/**
+		/*
 		 * Instantiated by WpssoCmcf->init_objects().
 		 */
 		public function __construct( &$plugin, &$addon ) {
@@ -40,7 +40,7 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 			add_filter( 'query_vars', array( __CLASS__, 'query_vars' ), 2000 );
 		}
 
-		/**
+		/*
 		 * Adds and flushes rewrite rules only if necessary.
 		 */
 		static public function add_rules() {
@@ -59,7 +59,7 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 			}
 		}
 
-		/**
+		/*
 		 * Add the 'locale' query variable.
 		 * 
 		 * The 'pagename' and 'feed' variables should already be defined by WordPress - include them just in case.
@@ -79,7 +79,7 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 
 		static public function template_redirect() {
 
-			/**
+			/*
 			 * Make sure the requested pagename is valid.
 			 */
 			$request_pagename = get_query_var( 'pagename' );
@@ -89,7 +89,7 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 				return;
 			}
 
-			/**
+			/*
 			 * Make sure the requested feed is valid.
 			 */
 			$request_feed = get_query_var( 'feed' );
@@ -102,7 +102,7 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 				return;
 			}
 
-			/**
+			/*
 			 * Make sure the requested locale is valid, otherwise redirect using the default locale.
 			 */
 			$request_locale = get_query_var( 'locale' );
@@ -214,7 +214,7 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 				$url = get_home_url( $blog_id, WPSSOCMCF_PAGENAME . '/feed/rss2/' . $locale . '.xml' );
 			}
 
-			return apply_filters( 'wpsso_facebook_catalog_feed_url', $url, $locale, WPSSOCMCF_PAGENAME, $blog_id );
+			return apply_filters( 'wpsso_commerce_manager_catalog_feed_url', $url, $locale, WPSSOCMCF_PAGENAME, $blog_id );
 		}
 	}
 }

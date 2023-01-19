@@ -70,7 +70,7 @@ if ( ! class_exists( 'WpssoCmcf' ) ) {
 			load_plugin_textdomain( 'wpsso-commerce-manager-catalog-feed', false, 'wpsso-commerce-manager-catalog-feed/languages/' );
 		}
 
-		/**
+		/*
 		 * Require library files with functions or static methods in require_libs().
 		 *
 		 * Require and instantiate library files with dynamic methods in init_objects().
@@ -97,7 +97,7 @@ if ( ! class_exists( 'WpssoCmcf' ) ) {
 
 			$this->filters = new WpssoCmcfFilters( $this->p, $this );
 
-			/**
+			/*
 			 * lib/rewrite.php already loaded in require_libs() for WpssoCmcfRegister->activate_plugin().
 			 */
 			$this->rewrite = new WpssoCmcfRewrite( $this->p, $this );

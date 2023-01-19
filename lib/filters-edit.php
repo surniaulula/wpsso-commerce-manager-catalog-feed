@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoCmcfFiltersEdit' ) ) {
 		private $p;	// Wpsso class object.
 		private $a;	// WpssoCmcf class object.
 
-		/**
+		/*
 		 * Instantiated by WpssoCmcfFilters->__construct().
 		 */
 		public function __construct( &$plugin, &$addon ) {

@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoCmcfFiltersAdvanced' ) ) {
 		private $p;	// Wpsso class object.
 		private $a;	// WpssoCmcf class object.
 
-		/**
+		/*
 		 * Instantiated by WpssoCmcfFilters->__construct().
 		 */
 		public function __construct( &$plugin, &$addon ) {
@@ -33,7 +33,7 @@ if ( ! class_exists( 'WpssoCmcfFiltersAdvanced' ) ) {
 			}
 		}
 
-		/**
+		/*
 		 * SSO > Advanced Settings > Plugin Settings > Image Sizes tab.
 		 */
 		public function filter_plugin_image_sizes_rows( $table_rows, $form, $network, $pp ) {

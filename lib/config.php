@@ -28,7 +28,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 					'text_domain' => 'wpsso-commerce-manager-catalog-feed',
 					'domain_path' => '/languages',
 
-					/**
+					/*
 					 * Required plugin and its version.
 					 */
 					'req' => array(
@@ -41,12 +41,12 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 						),
 					),
 
-					/**
+					/*
 					 * URLs or relative paths to plugin banners and icons.
 					 */
 					'assets' => array(
 
-						/**
+						/*
 						 * Icon image array keys are '1x' and '2x'.
 						 */
 						'icons' => array(
@@ -55,7 +55,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 						),
 					),
 
-					/**
+					/*
 					 * Library files loaded and instantiated by WPSSO.
 					 */
 					'lib' => array(
@@ -76,7 +76,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 			),
 			'head' => array(
 
-				/**
+				/*
 				 * For carousel ads, collection ads and Shops: Product images display in square (1:1) format. The
 				 * minimum image size is 500 x 500 px. We recommend 1024 x 1024 px for best quality.
 				 *
@@ -90,12 +90,12 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 					'cmcf_img_height' => 500,
 				),
 
-				/**
+				/*
 				 * See https://www.facebook.com/business/help/120325381656392?id=725943027795860.
 				 */
 				'cmcf_content_map' => array(	// Element of 'head' array.
 
-					/**
+					/*
 					 * The current availability of the item. Supported values: in stock, out of stock. Out of
 					 * stock items don't appear in ads, which prevents advertising items that aren't available.
 					 * They do still appear in shops on Facebook and Instagram, but are marked as sold out.
@@ -113,7 +113,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 						'https://schema.org/SoldOut'             => 'out of stock',
 					),
 
-					/**
+					/*
 					 * The condition of the item. Supported values: new, refurbished, used.
 					 */
 					'product:condition' => array(
@@ -151,7 +151,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 
 			$info =& self::$cf[ 'plugin' ][ 'wpssocmcf' ];
 
-			/**
+			/*
 			 * Define fixed constants.
 			 */
 			define( 'WPSSOCMCF_FILEPATH', $plugin_file );
@@ -161,7 +161,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 			define( 'WPSSOCMCF_URLPATH', trailingslashit( plugins_url( '', $plugin_file ) ) );
 			define( 'WPSSOCMCF_VERSION', $info[ 'version' ] );
 
-			/**
+			/*
 			 * Define variable constants.
 			 */
 			self::set_variable_constants();
@@ -174,7 +174,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 				$var_const = (array) self::get_variable_constants();
 			}
 
-			/**
+			/*
 			 * Define the variable constants, if not already defined.
 			 */
 			foreach ( $var_const as $name => $value ) {
@@ -192,7 +192,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 
 			$var_const[ 'WPSSOCMCF_PAGENAME' ] = 'commerce-manager-catalog';
 
-			/**
+			/*
 			 * Maybe override the default constant value with a pre-defined constant value.
 			 */
 			foreach ( $var_const as $name => $value ) {
@@ -206,7 +206,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 			return $var_const;
 		}
 
-		/**
+		/*
 		 * Require library files with functions or static methods in require_libs().
 		 *
 		 * Require and instantiate library files with dynamic methods in init_objects().

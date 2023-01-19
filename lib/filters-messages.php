@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoCmcfFiltersMessages' ) ) {
 		private $p;	// Wpsso class object.
 		private $a;     // WpssoCmcf class object.
 
-		/**
+		/*
 		 * Instantiated by WpssoCmcfFilters->__construct().
 		 */
 		public function __construct( &$plugin, &$addon ) {
@@ -43,7 +43,7 @@ if ( ! class_exists( 'WpssoCmcfFiltersMessages' ) ) {
 
 				case 'info-cmcf-img':
 
-					/**
+					/*
 					 * See https://www.facebook.com/business/help/686259348512056?id=725943027795860.
 					 */
 					$text = '<p class="pro-feature-msg">';
@@ -106,7 +106,7 @@ if ( ! class_exists( 'WpssoCmcfFiltersMessages' ) ) {
 
 			switch ( $msg_key ) {
 
-				/**
+				/*
 				 * Document SSO > Edit Media tab.
 				 */
 				case 'tooltip-meta-cmcf_img_id':		// Image ID.
