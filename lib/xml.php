@@ -132,10 +132,15 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 					if ( $wpsso->debug->enabled ) {
 
-						$wpsso->debug->log( 'adding multiple offers for post id ' . $post_id );
+						$wpsso->debug->log( 'adding ' . count( $mt_og[ 'product:offers' ] ) . ' offers for post id ' . $post_id );
 					}
 
 					foreach ( $mt_og[ 'product:offers' ] as $num => $mt_offer ) {
+
+						if ( $wpsso->debug->enabled ) {
+
+							$wpsso->debug->log( 'adding offer #' . $num . ' for post id ' . $post_id );
+						}
 
 						self::add_feed_product( $rss2_feed, $mt_og, $mt_offer );
 					}
@@ -196,17 +201,39 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 		static private function add_feed_product( &$rss2_feed, $mt_og, $mt_offer = null ) {
 
+			$wpsso =& Wpsso::get_instance();
+
 			$product = new Vitalybaev\GoogleMerchant\Product();
+
+			if ( $wpsso->debug->enabled ) {
+
+				$wpsso->debug->log( 'adding product data' );
+			}
 
 			self::add_product_data( $product, $mt_og, $dupe_check );
 
 			if ( is_array( $mt_offer ) ) {
 
+				if ( $wpsso->debug->enabled ) {
+
+					$wpsso->debug->log( 'adding product data from offer' );
+				}
+
 				self::add_product_data( $product, $mt_offer, $dupe_check );
+
+				if ( $wpsso->debug->enabled ) {
+
+					$wpsso->debug->log( 'adding product images from offer' );
+				}
 
 				self::add_product_images( $product, $mt_offer );
 
 			} else {
+
+				if ( $wpsso->debug->enabled ) {
+
+					$wpsso->debug->log( 'adding product images' );
+				}
 
 				self::add_product_images( $product, $mt_og );
 			}
@@ -218,6 +245,13 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 		 * See https://www.facebook.com/business/help/120325381656392?id=725943027795860.
 		 */
 		static private function add_product_data( &$product, $mt_data, &$dupe_check = array() ) {
+
+			$wpsso =& Wpsso::get_instance();
+
+			if ( $wpsso->debug->enabled ) {
+
+				$wpsso->debug->mark();
+			}
 
 			self::sanitize_mt_array( $mt_data );
 
@@ -331,6 +365,13 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 		static private function add_product_images( &$product, $mt_data ) {
 
+			$wpsso =& Wpsso::get_instance();
+
+			if ( $wpsso->debug->enabled ) {
+
+				$wpsso->debug->mark();
+			}
+
 			$mt_images = array();
 
 			if ( isset( $mt_data[ 'og:image' ] ) && is_array( $mt_data[ 'og:image' ] ) ) {
@@ -338,8 +379,6 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 				$mt_images = $mt_data[ 'og:image' ];
 
 			} elseif ( ! empty( $mt_data[ 'product:retailer_item_id' ] ) && is_numeric( $mt_data[ 'product:retailer_item_id' ] ) ) {
-
-				$wpsso =& Wpsso::get_instance();
 
 				$post_id   = $mt_data[ 'product:retailer_item_id' ];
 				$mod       = $wpsso->post->get_mod( $post_id );
@@ -374,6 +413,11 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 		static private function sanitize_mt_array( &$mt_data ) {
 
 			$wpsso =& Wpsso::get_instance();
+
+			if ( $wpsso->debug->enabled ) {
+
+				$wpsso->debug->mark();
+			}
 
 			$content_maps = $wpsso->cf[ 'head' ][ 'cmcf_content_map' ];
 
