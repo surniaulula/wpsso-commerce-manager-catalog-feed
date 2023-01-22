@@ -214,7 +214,7 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 				$url = get_home_url( $blog_id, WPSSOCMCF_PAGENAME . '/feed/rss2/' . $locale . '.xml' );
 			}
 
-			return apply_filters( 'wpsso_commerce_manager_catalog_feed_url', $url, $locale, WPSSOCMCF_PAGENAME, $blog_id );
+			return $url;
 		}
 	}
 }
