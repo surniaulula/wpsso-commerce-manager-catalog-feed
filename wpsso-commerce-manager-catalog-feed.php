@@ -13,7 +13,7 @@
  * Description: Facebook and Instagram Manager Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and Custom Product Pages.
  * Requires Plugins: wpsso
  * Requires PHP: 7.2
- * Requires At Least: 5.2
+ * Requires At Least: 5.4
  * Tested Up To: 6.1.1
  * WC Tested Up To: 7.3.0
  * Version: 1.0.1-dev.3
