@@ -94,6 +94,9 @@ if ( ! class_exists( 'WpssoCmcfActions' ) ) {
 
 				$locale = SucomUtil::get_locale( $mod );
 
+				/*
+				 * Clear the feed XML file cache for this locale.
+				 */
 				$xml = WpssoCmcfXml::clear_cache( $locale );
 			}
 		}

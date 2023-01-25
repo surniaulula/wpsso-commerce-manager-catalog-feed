@@ -49,21 +49,21 @@ msgstr ""
 msgid "checking facebook catalog feeds"
 msgstr ""
 
-#: lib/actions.php:124
+#: lib/actions.php:127
 msgid "getting facebook catalog feeds images"
 msgstr ""
 
-#: lib/actions.php:148
+#: lib/actions.php:151
 msgid "checking facebook catalog feeds images"
 msgstr ""
 
-#: lib/actions.php:150
+#: lib/actions.php:153
 msgid ""
 "A Facebook catalog feed XML %1$s attribute could not be generated for %2$s "
 "ID %3$s."
 msgstr ""
 
-#: lib/actions.php:152
+#: lib/actions.php:155
 msgid ""
 "Facebook requires at least one %1$s attribute for each product variation in "
 "the Facebook catalog feed XML."
