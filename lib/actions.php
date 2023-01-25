@@ -83,6 +83,8 @@ if ( ! class_exists( 'WpssoCmcfActions' ) ) {
 
 		/*
 		 * Once the post cache is cleared and refreshed, clear the feed XML.
+		 *
+		 * See WpssoPost->refresh_cache().
 		 */
 		public function action_refresh_post_cache( $post_id, $mod ) {
 

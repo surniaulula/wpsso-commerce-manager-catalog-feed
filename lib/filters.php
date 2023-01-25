@@ -79,14 +79,10 @@ if ( ! class_exists( 'WpssoCmcfFilters' ) ) {
 
 			foreach ( $locale_names as $locale => $native_name ) {
 
-				switch_to_locale( $locale );
-
-				$xml = WpssoCmcfXml::get( $read_cache );
+				$xml = WpssoCmcfXml::get( $read_cache, $locale );
 
 				$xml_count++;
 			}
-
-			restore_current_locale();	// Calls an action to clear the SucomUtil::get_locale() cache.
 
 			$notice_msg .= sprintf( __( 'The Facebook and Instagram Commerce Manager Catalog Feed XML for %d locales has been refreshed.',
 				'wpsso-commerce-manager-catalog-feed' ), $xml_count ) . ' ';
