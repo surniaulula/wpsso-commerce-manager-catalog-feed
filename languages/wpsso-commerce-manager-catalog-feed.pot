@@ -152,7 +152,7 @@ msgstr ""
 msgid "This option is disabled if a custom image ID is selected."
 msgstr ""
 
-#: lib/filters.php:87
+#: lib/filters.php:93
 msgid ""
 "The Facebook and Instagram Commerce Manager Catalog Feed XML for %d locales "
 "has been refreshed."
