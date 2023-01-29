@@ -48,7 +48,7 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 			global $wp_rewrite;
 
 			$rewrite_rules = $wp_rewrite->wp_rewrite_rules();
-			$rewrite_key   = '^(' . WPSSOCMCF_PAGENAME . ')/feed/(rss2)/([^/]+)\.xml$';
+			$rewrite_key   = '^(' . WPSSOCMCF_PAGENAME . ')/feed/(rss2)/([^\./]+)\.xml$';
 			$rewrite_value = 'index.php?pagename=$matches[1]&feed=$matches[2]&locale=$matches[3]';
 
 			if ( empty( $rewrite_rules[ $rewrite_key ] ) || $rewrite_value !== $rewrite_rules[ $rewrite_key ] ) {
