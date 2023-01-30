@@ -49,21 +49,21 @@ msgstr ""
 msgid "checking facebook catalog feeds"
 msgstr ""
 
-#: lib/actions.php:127
+#: lib/actions.php:125
 msgid "getting facebook catalog feeds images"
 msgstr ""
 
-#: lib/actions.php:151
+#: lib/actions.php:149
 msgid "checking facebook catalog feeds images"
 msgstr ""
 
-#: lib/actions.php:153
+#: lib/actions.php:151
 msgid ""
 "A Facebook catalog feed XML %1$s attribute could not be generated for %2$s "
 "ID %3$s."
 msgstr ""
 
-#: lib/actions.php:155
+#: lib/actions.php:153
 msgid ""
 "Facebook requires at least one %1$s attribute for each product variation in "
 "the Facebook catalog feed XML."
@@ -152,7 +152,7 @@ msgstr ""
 msgid "This option is disabled if a custom image ID is selected."
 msgstr ""
 
-#: lib/filters.php:93
+#: lib/filters.php:92
 msgid ""
 "The Facebook and Instagram Commerce Manager Catalog Feed XML for %d locales "
 "has been refreshed."

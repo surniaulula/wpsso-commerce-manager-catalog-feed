@@ -39,7 +39,7 @@ if ( ! class_exists( 'WpssoCmcfFilters' ) ) {
 
 			$this->p->util->add_plugin_filters( $this, array(
 				'plugin_image_sizes'     => 1,
-				'cache_refreshed_notice' => 3,
+				'cache_refreshed_notice' => 2,
 			) );
 
 			if ( is_admin() ) {
@@ -71,10 +71,9 @@ if ( ! class_exists( 'WpssoCmcfFilters' ) ) {
 		/*
 		 * See WpssoCmcfActions->action_load_setting_page_refresh_feed_xml_cache().
 		 */
-		public function filter_cache_refreshed_notice( $notice_msg, $user_id = null, $read_cache = false ) {
+		public function filter_cache_refreshed_notice( $notice_msg, $user_id = null ) {
 
-			$xml_count = 0;
-
+			$xml_count      = 0;
 			$current_locale = SucomUtil::get_locale();
 			$locale_names   = SucomUtil::get_available_feed_locale_names();	// Uses a local cache.
 
@@ -85,7 +84,7 @@ if ( ! class_exists( 'WpssoCmcfFilters' ) ) {
 
 			foreach ( $locale_names as $locale => $native_name ) {
 
-				$xml = WpssoCmcfXml::get( $read_cache, $locale );
+				$xml = WpssoCmcfXml::get( $read_cache = false, $locale );
 
 				$xml_count++;
 			}
