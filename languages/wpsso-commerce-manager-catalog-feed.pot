@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Commerce Manager Catalog Feed XML package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 2.0.0-dev.3\n"
+"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 2.0.0-dev.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-commerce-"
 "manager-catalog-feed\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
@@ -45,25 +45,21 @@ msgctxt "plugin name"
 msgid "WPSSO Core"
 msgstr ""
 
-#: lib/actions.php:64
+#: lib/actions.php:65
 msgid "checking facebook catalog feed"
 msgstr ""
 
-#: lib/actions.php:122
-msgid "getting facebook catalog feed images"
-msgstr ""
-
-#: lib/actions.php:147
+#: lib/actions.php:128
 msgid "checking facebook catalog feed images"
 msgstr ""
 
-#: lib/actions.php:149
+#: lib/actions.php:130
 msgid ""
 "A Facebook catalog feed XML %1$s attribute could not be generated for %2$s "
 "ID %3$s."
 msgstr ""
 
-#: lib/actions.php:151
+#: lib/actions.php:133
 msgid ""
 "Facebook requires at least one %1$s attribute for each product variation in "
 "the Facebook catalog feed XML."
@@ -75,7 +71,7 @@ msgid "Commerce Manager Catalog Feed XML"
 msgstr ""
 
 #: lib/filters-edit.php:49
-msgid "getting facebook catalog feeds image"
+msgid "getting facebook catalog feed image"
 msgstr ""
 
 #: lib/filters-edit.php:55

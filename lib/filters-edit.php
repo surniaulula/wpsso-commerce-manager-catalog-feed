@@ -46,7 +46,7 @@ if ( ! class_exists( 'WpssoCmcfFiltersEdit' ) ) {
 
 			if ( $is_product ) {
 
-				$this->p->util->maybe_set_ref( $canonical_url, $mod, __( 'getting facebook catalog feeds image', 'wpsso-commerce-manager-catalog-feed' ) );
+				$this->p->util->maybe_set_ref( $canonical_url, $mod, __( 'getting facebook catalog feed image', 'wpsso-commerce-manager-catalog-feed' ) );
 
 				$media_info = $this->p->media->get_media_info( $size_name = 'wpsso-cmcf', $media_request, $mod, $md_pre = array( 'og' ) );
 
