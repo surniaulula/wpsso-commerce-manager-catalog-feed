@@ -108,37 +108,35 @@ if ( ! class_exists( 'WpssoCmcfActions' ) ) {
 
 		private function check_product_image_urls( $mt_single ) {
 
+			$mod = $this->p->og->get_product_retailer_item_mod( $mt_single );
+
+			$ref_url = $this->p->util->maybe_set_ref( $canonical_url = '', $mod,
+				__( 'checking facebook catalog feed images', 'wpsso-commerce-manager-catalog-feed' ) );
+
 			$image_urls = $this->p->og->get_product_retailer_item_image_urls( $mt_single,
 				$size_names = 'wpsso-cmcf', $md_pre = array( 'cmcf', 'og' ) );
 
-			if ( ! empty( $image_urls ) ) {
+			if ( empty( $image_urls ) ) {
 
-				return;
+				if ( $this->p->notice->is_admin_pre_notices() ) {
 
-			} elseif ( ! $this->p->notice->is_admin_pre_notices() ) {
+					if ( ! empty( $mod[ 'post_type_label_single' ] ) ) {	// Just in case.
 
-				return;
+						$notice_msg = sprintf( __( 'A Facebook catalog feed XML %1$s attribute could not be generated for %2$s ID %3$s.',
+							'wpsso-commerce-manager-catalog-feed' ), '<code>image_link</code>',
+								$mod[ 'post_type_label_single' ], $mod[ 'id' ] ) . ' ';
+
+						$notice_msg .= sprintf( __( 'Facebook requires at least one %1$s attribute for each product variation in the Facebook catalog feed XML.',
+							'wpsso-commerce-manager-catalog-feed' ), '<code>image_link</code>' );
+
+						$notice_key = $mod[ 'name' ] . '-' . $mod[ 'id' ] . '-notice-missing-cmcf-image';
+
+						$this->p->notice->err( $notice_msg, null, $notice_key );
+					}
+				}
 			}
 
-			$mod = $this->p->og->get_product_retailer_item_mod( $mt_single );
-
-			if ( ! empty( $mod[ 'post_type_label_single' ] ) ) {
-
-				$ref_url = $this->p->util->maybe_set_ref( $canonical_url = '', $mod,
-					__( 'checking facebook catalog feed images', 'wpsso-commerce-manager-catalog-feed' ) );
-
-				$notice_msg = sprintf( __( 'A Facebook catalog feed XML %1$s attribute could not be generated for %2$s ID %3$s.',
-					'wpsso-commerce-manager-catalog-feed' ), '<code>image_link</code>', $mod[ 'post_type_label_single' ], $mod[ 'id' ] ) . ' ';
-
-				$notice_msg .= sprintf( __( 'Facebook requires at least one %1$s attribute for each product variation in the Facebook catalog feed XML.',
-					'wpsso-commerce-manager-catalog-feed' ), '<code>image_link</code>' );
-
-				$notice_key = $mod[ 'name' ] . '-' . $mod[ 'id' ] . '-notice-missing-cmcf-image';
-
-				$this->p->notice->err( $notice_msg, null, $notice_key );
-
-				$this->p->util->maybe_unset_ref( $ref_url );
-			}
+			$this->p->util->maybe_unset_ref( $ref_url );
 		}
 	}
 }
