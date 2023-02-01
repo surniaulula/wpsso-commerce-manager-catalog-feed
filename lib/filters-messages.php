@@ -48,13 +48,17 @@ if ( ! class_exists( 'WpssoCmcfFiltersMessages' ) ) {
 					 */
 					$text = '<p class="pro-feature-msg">';
 
-					$text .= __( 'Each image must be in JPEG or PNG format and a maximum of 8 MB.', 'wpsso-commerce-manager-catalog-feed' ) . ' ';
+					$text .= __( 'Each image must be in JPEG or PNG format and a maximum of 8 MB.',
+						'wpsso-commerce-manager-catalog-feed' ) . ' ';
 
-					$text .= __( 'Images must accurately represent the exact product for sale.', 'wpsso-commerce-manager-catalog-feed' ) . ' ';
+					$text .= __( 'Images must accurately represent the exact product for sale.',
+						'wpsso-commerce-manager-catalog-feed' ) . ' ';
 
-					$text .= __( 'Don\'t include offensive content such as nudity, explicit language or violence.', 'wpsso-commerce-manager-catalog-feed' ) . ' ';
+					$text .= __( 'Don\'t include offensive content such as nudity, explicit language or violence.',
+						'wpsso-commerce-manager-catalog-feed' ) . ' ';
 
-					$text .= __( 'Don\'t include text that overlays the product, calls to action, promo codes, watermarks or time-sensitive information like temporary price drops.', 'wpsso-commerce-manager-catalog-feed' ) . ' ';
+					$text .= __( 'Don\'t include text that overlays the product, calls to action, promo codes, watermarks or time-sensitive information like temporary price drops.',
+						'wpsso-commerce-manager-catalog-feed' ) . ' ';
 
 					if ( ! empty( $this->p->avail[ 'ecom' ][ 'woocommerce' ] ) ) {
 
@@ -62,7 +66,8 @@ if ( ! class_exists( 'WpssoCmcfFiltersMessages' ) ) {
 
 							if ( $this->p->util->wc->is_mod_variable( $info[ 'mod' ] ) ) {
 
-								$text .= __( 'This is a variable product - images from product variations will supersede the main product image selected here.', 'wpsso-commerce-manager-catalog-feed' ) . ' ';
+								$text .= __( 'This is a variable product - images from product variations will supersede the main product image selected here.',
+									'wpsso-commerce-manager-catalog-feed' ) . ' ';
 							}
 						}
 					}
@@ -88,7 +93,8 @@ if ( ! class_exists( 'WpssoCmcfFiltersMessages' ) ) {
 
 					$def_img_dims = $this->p->msgs->get_def_img_dims( 'cmcf' );
 
-					$text = sprintf( __( 'The dimensions used for the Facebook catalog feed XML image (default dimensions are %s).', 'wpsso-commerce-manager-catalog-feed' ), $def_img_dims ) . ' ';
+					$text = sprintf( __( 'The dimensions used for the Facebook catalog feed XML image (default dimensions are %s).',
+						'wpsso-commerce-manager-catalog-feed' ), $def_img_dims ) . ' ';
 
 					break;
 
@@ -111,21 +117,27 @@ if ( ! class_exists( 'WpssoCmcfFiltersMessages' ) ) {
 				 */
 				case 'tooltip-meta-cmcf_img_id':		// Image ID.
 
-					$text = __( 'A customized image ID for the Facebook merchant feed XML.', 'wpsso-commerce-manager-catalog-feed' ) . ' ';
+					$text = __( 'A customized image ID for the Facebook catalog feed XML.',
+						'wpsso-commerce-manager-catalog-feed' ) . ' ';
 
-					$text .= __( 'The default value is inherited from the Schema markup or priority image.', 'wpsso-commerce-manager-catalog-feed' ) . ' ';
+					$text .= __( 'The default value is inherited from the priority image.',
+						'wpsso-commerce-manager-catalog-feed' ) . ' ';
 
-					$text .= '<em>' . __( 'This option is disabled if a custom image URL is entered.', 'wpsso-commerce-manager-catalog-feed' ) . '</em>';
+					$text .= '<em>' . __( 'This option is disabled if a custom image URL is entered.',
+						'wpsso-commerce-manager-catalog-feed' ) . '</em>';
 
 				 	break;
 
 				case 'tooltip-meta-cmcf_img_url':	// or an Image URL.
 
-					$text = __( 'A customized image URL (instead of an image ID) for the Facebook catalog feed XML.', 'wpsso-commerce-manager-catalog-feed' ) . ' ';
+					$text = __( 'A customized image URL (instead of an image ID) for the Facebook catalog feed XML.',
+						'wpsso-commerce-manager-catalog-feed' ) . ' ';
 
-					$text .= __( 'The default value is inherited from the Schema markup or priority image.', 'wpsso-commerce-manager-catalog-feed' ) . ' ';
+					$text .= __( 'The default value is inherited from the priority image.',
+						'wpsso-commerce-manager-catalog-feed' ) . ' ';
 
-					$text .= '<em>' . __( 'This option is disabled if a custom image ID is selected.', 'wpsso-commerce-manager-catalog-feed' ) . '</em>';
+					$text .= '<em>' . __( 'This option is disabled if a custom image ID is selected.',
+						'wpsso-commerce-manager-catalog-feed' ) . '</em>';
 
 				 	break;
 

@@ -97,54 +97,53 @@ msgstr ""
 msgid "Each image must be in JPEG or PNG format and a maximum of 8 MB."
 msgstr ""
 
-#: lib/filters-messages.php:53
+#: lib/filters-messages.php:54
 msgid "Images must accurately represent the exact product for sale."
 msgstr ""
 
-#: lib/filters-messages.php:55
+#: lib/filters-messages.php:57
 msgid ""
 "Don't include offensive content such as nudity, explicit language or "
 "violence."
 msgstr ""
 
-#: lib/filters-messages.php:57
+#: lib/filters-messages.php:60
 msgid ""
 "Don't include text that overlays the product, calls to action, promo codes, "
 "watermarks or time-sensitive information like temporary price drops."
 msgstr ""
 
-#: lib/filters-messages.php:65
+#: lib/filters-messages.php:69
 msgid ""
 "This is a variable product - images from product variations will supersede "
 "the main product image selected here."
 msgstr ""
 
-#: lib/filters-messages.php:91
+#: lib/filters-messages.php:96
 msgid ""
 "The dimensions used for the Facebook catalog feed XML image (default "
 "dimensions are %s)."
 msgstr ""
 
-#: lib/filters-messages.php:114
-msgid "A customized image ID for the Facebook merchant feed XML."
+#: lib/filters-messages.php:120
+msgid "A customized image ID for the Facebook catalog feed XML."
 msgstr ""
 
-#: lib/filters-messages.php:116 lib/filters-messages.php:126
-msgid ""
-"The default value is inherited from the Schema markup or priority image."
+#: lib/filters-messages.php:123 lib/filters-messages.php:136
+msgid "The default value is inherited from the priority image."
 msgstr ""
 
-#: lib/filters-messages.php:118
+#: lib/filters-messages.php:126
 msgid "This option is disabled if a custom image URL is entered."
 msgstr ""
 
-#: lib/filters-messages.php:124
+#: lib/filters-messages.php:133
 msgid ""
 "A customized image URL (instead of an image ID) for the Facebook catalog "
 "feed XML."
 msgstr ""
 
-#: lib/filters-messages.php:128
+#: lib/filters-messages.php:139
 msgid "This option is disabled if a custom image ID is selected."
 msgstr ""
 
