@@ -108,7 +108,10 @@ if ( ! class_exists( 'WpssoCmcfActions' ) ) {
 
 		private function check_product_image_urls( $mt_single ) {
 
-			$mod = $this->p->og->get_product_retailer_item_mod( $mt_single );
+			if ( ! $mod = $this->p->og->get_product_retailer_item_mod( $mt_single ) ) {
+
+				return;
+			}
 
 			$ref_url = $this->p->util->maybe_set_ref( $canonical_url = '', $mod,
 				__( 'checking facebook catalog feed images', 'wpsso-commerce-manager-catalog-feed' ) );
