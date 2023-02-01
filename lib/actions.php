@@ -61,22 +61,22 @@ if ( ! class_exists( 'WpssoCmcfActions' ) ) {
 					$this->p->debug->log( 'getting open graph array for ' . $mod[ 'name' ] . ' id ' . $mod[ 'id' ] );
 				}
 
-				$this->p->util->maybe_set_ref( $ref_url, $mod, __( 'checking facebook catalog feeds', 'wpsso-commerce-manager-catalog-feed' ) );
+				$this->p->util->maybe_set_ref( $ref_url, $mod, __( 'checking facebook catalog feed', 'wpsso-commerce-manager-catalog-feed' ) );
 
 				$mt_og = $this->p->og->get_array( $mod, $size_names = 'wpsso-cmcf', $md_pre = array( 'cmcf', 'og' ) );
 
 				$this->p->util->maybe_unset_ref( $ref_url );
 
-				if ( empty( $mt_og[ 'product:offers' ] ) ) {
+				if ( ! empty( $mt_og[ 'product:variants' ] ) && is_array( $mt_og[ 'product:variants' ] ) ) {
+
+					foreach ( $mt_og[ 'product:variants' ] as $num => $mt_single ) {
+
+						$image_url = $this->get_product_image_url( $mt_single, $mod, $ref_url );
+					}
+
+				} else {
 
 					$image_url = $this->get_product_image_url( $mt_og, $mod, $ref_url );
-
-				} elseif ( is_array( $mt_og[ 'product:offers' ] ) ) {
-
-					foreach ( $mt_og[ 'product:offers' ] as $num => $mt_offer ) {
-
-						$image_url = $this->get_product_image_url( $mt_offer, $mod, $ref_url );
-					}
 				}
 			}
 		}
@@ -94,10 +94,7 @@ if ( ! class_exists( 'WpssoCmcfActions' ) ) {
 
 				$locale = SucomUtil::get_locale( $mod );
 
-				/*
-				 * Clear the feed XML file cache for this locale.
-				 */
-				$xml = WpssoCmcfXml::clear_cache( $locale );
+				$xml = WpssoCmcfXml::clear_cache( $locale );	// Clear the feed XML file cache for this locale.
 			}
 		}
 
@@ -108,25 +105,26 @@ if ( ! class_exists( 'WpssoCmcfActions' ) ) {
 			$this->p->notice->upd( $notice_msg );
 		}
 
-		private function get_product_image_url( $mt_data, $mod, $canonical_url ) {
+		private function get_product_image_url( $mt_single, $mod, $ref_url ) {
 
 			$mt_images = array();
 
-			if ( isset( $mt_data[ 'og:image' ] ) && is_array( $mt_data[ 'og:image' ] ) ) {
+			if ( isset( $mt_single[ 'og:image' ] ) && is_array( $mt_single[ 'og:image' ] ) ) {
 
-				$mt_images = $mt_data[ 'og:image' ];
+				$mt_images = $mt_single[ 'og:image' ];
 
-			} elseif ( ! empty( $mt_data[ 'product:retailer_item_id' ] ) && is_numeric( $mt_data[ 'product:retailer_item_id' ] ) ) {
+			} elseif ( ! empty( $mt_single[ 'product:retailer_item_id' ] ) && is_numeric( $mt_single[ 'product:retailer_item_id' ] ) ) {
 
-				$post_id   = $mt_data[ 'product:retailer_item_id' ];
+				$post_id   = $mt_single[ 'product:retailer_item_id' ];
 				$mod       = $this->p->post->get_mod( $post_id );	// Redefine the $mod array for the variation post ID.
 				$max_nums  = $this->p->util->get_max_nums( $mod, 'og' );
 
-				$this->p->util->maybe_set_ref( $canonical_url, $mod, __( 'getting facebook catalog feeds images', 'wpsso-commerce-manager-catalog-feed' ) );
+				$this->p->util->maybe_set_ref( $ref_url, $mod, __( 'getting facebook catalog feed images', 'wpsso-commerce-manager-catalog-feed' ) );
 
-				$mt_images = $this->p->media->get_all_images( $max_nums[ 'og_img_max' ], $size_names = 'wpsso-cmcf', $mod, $md_pre = array( 'cmcf', 'og' ) );
+				$mt_images = $this->p->media->get_all_images( $max_nums[ 'og_img_max' ],
+					$size_names = 'wpsso-cmcf', $mod, $md_pre = array( 'cmcf', 'og' ) );
 
-				$this->p->util->maybe_unset_ref( $canonical_url );
+				$this->p->util->maybe_unset_ref( $ref_url );
 			}
 
 			if ( is_array( $mt_images ) ) {	// Just in case.
@@ -146,7 +144,7 @@ if ( ! class_exists( 'WpssoCmcfActions' ) ) {
 
 					if ( ! empty( $mod[ 'post_type_label_single' ] ) ) {
 
-						$this->p->util->maybe_set_ref( $canonical_url, $mod, __( 'checking facebook catalog feeds images', 'wpsso-commerce-manager-catalog-feed' ) );
+						$this->p->util->maybe_set_ref( $ref_url, $mod, __( 'checking facebook catalog feed images', 'wpsso-commerce-manager-catalog-feed' ) );
 
 						$notice_msg = sprintf( __( 'A Facebook catalog feed XML %1$s attribute could not be generated for %2$s ID %3$s.', 'wpsso-commerce-manager-catalog-feed' ), '<code>image_link</code>', $mod[ 'post_type_label_single' ], $mod[ 'id' ] ) . ' ';
 
@@ -156,7 +154,7 @@ if ( ! class_exists( 'WpssoCmcfActions' ) ) {
 
 						$this->p->notice->err( $notice_msg, null, $notice_key );
 
-						$this->p->util->maybe_unset_ref( $canonical_url );
+						$this->p->util->maybe_unset_ref( $ref_url );
 					}
 				}
 			}
