@@ -110,15 +110,16 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.0.0-dev.3 (TBD)**
+**Version 2.0.0-dev.3 (2023/02/01)**
 
 * **New Features**
-	* None.
+	* Added support for the new 'product:variants' meta tags array in WPSSO Core v15.0.0.
 * **Improvements**
 	* None.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
+	* Removed support for the 'product:offers' meta tags array.
 	* Removed the WPSSO_FEED_XML_QUERY_CACHE_DISABLE constant.
 * **Requires At Least**
 	* PHP v7.2.
@@ -161,7 +162,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.0.0-dev.3 =
 
-(TBD) None.
+(2023/02/01) Added support for the new 'product:variants' meta tags array in WPSSO Core v15.0.0.
 
 = 1.0.1 =
 
