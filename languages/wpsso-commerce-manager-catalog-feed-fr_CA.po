@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 1.0.0\n"
+"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 2.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-commerce-manager-catalog-feed\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-01-19 12:35-0800\n"
+"PO-Revision-Date: 2023-02-02 06:59-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -42,22 +42,18 @@ msgid "WPSSO Core"
 msgstr "WPSSO Core"
 
 #: lib/actions.php:64
-msgid "checking facebook catalog feeds"
+msgid "checking facebook catalog feed"
 msgstr "vérification flux de catalogue facebook"
 
-#: lib/actions.php:122
-msgid "getting facebook catalog feeds images"
-msgstr "obtenir des images flux de catalogue facebook"
+#: lib/actions.php:117
+msgid "checking facebook catalog feed images"
+msgstr "vérification d'images flux de catalogue facebook"
 
-#: lib/actions.php:146
-msgid "checking facebook catalog feeds images"
-msgstr "vérification des images flux de catalogue facebook"
-
-#: lib/actions.php:148
+#: lib/actions.php:130
 msgid "A Facebook catalog feed XML %1$s attribute could not be generated for %2$s ID %3$s."
 msgstr "Impossible de générer l'attribut %1$s de flux XML de catalogue Facebook pour l'identifiant %2$s %3$s."
 
-#: lib/actions.php:150
+#: lib/actions.php:132
 msgid "Facebook requires at least one %1$s attribute for each product variation in the Facebook catalog feed XML."
 msgstr "Facebook exige au moins un attribut %1$s pour chaque variante de produit dans le flux XML de catalogue Facebook."
 
@@ -67,7 +63,7 @@ msgid "Commerce Manager Catalog Feed XML"
 msgstr "Flux XML de catalogue Gestionnaire des ventes"
 
 #: lib/filters-edit.php:49
-msgid "getting facebook catalog feeds image"
+msgid "getting facebook catalog feed image"
 msgstr "obtenir l'image flux de catalogue facebook"
 
 #: lib/filters-edit.php:55
@@ -93,47 +89,47 @@ msgstr "ou URL d'une image"
 msgid "Each image must be in JPEG or PNG format and a maximum of 8 MB."
 msgstr "Chaque image doit être au format JPEG ou PNG et d’une taille maximale de 8 Mo."
 
-#: lib/filters-messages.php:53
+#: lib/filters-messages.php:54
 msgid "Images must accurately represent the exact product for sale."
 msgstr "Les images doivent représenter avec précision le produit exact à vendre."
 
-#: lib/filters-messages.php:55
+#: lib/filters-messages.php:57
 msgid "Don't include offensive content such as nudity, explicit language or violence."
 msgstr "N’incluez pas de contenu offensant tel que la nudité, le langage explicite ou la violence."
 
-#: lib/filters-messages.php:57
+#: lib/filters-messages.php:60
 msgid "Don't include text that overlays the product, calls to action, promo codes, watermarks or time-sensitive information like temporary price drops."
 msgstr "N’incluez pas de texte superposant le produit, d’appels à l’action, de codes promotionnels, de filigranes ou d’informations urgentes telles que des baisses de prix temporaires."
 
-#: lib/filters-messages.php:65
+#: lib/filters-messages.php:69
 msgid "This is a variable product - images from product variations will supersede the main product image selected here."
 msgstr "Ceci est un produit variable - les images des variantes du produit remplaceront l'image du produit principale sélectionnée ici."
 
-#: lib/filters-messages.php:91
+#: lib/filters-messages.php:96
 msgid "The dimensions used for the Facebook catalog feed XML image (default dimensions are %s)."
 msgstr "Les dimensions utilisées pour l'image flux XML de catalogue Facebook (les dimensions par défaut sont %s)."
 
-#: lib/filters-messages.php:114
-msgid "A customized image ID for the Facebook merchant feed XML."
+#: lib/filters-messages.php:120
+msgid "A customized image ID for the Facebook catalog feed XML."
 msgstr "ID d'image personnalisé pour le flux XML de catalogue Facebook."
 
-#: lib/filters-messages.php:116 lib/filters-messages.php:126
-msgid "The default value is inherited from the Schema markup or priority image."
-msgstr "La valeur par défaut est héritée du balisage de Schéma ou de l'image prioritaire."
+#: lib/filters-messages.php:123 lib/filters-messages.php:136
+msgid "The default value is inherited from the priority image."
+msgstr "La valeur par défaut est héritée de l'image prioritaire."
 
-#: lib/filters-messages.php:118
+#: lib/filters-messages.php:126
 msgid "This option is disabled if a custom image URL is entered."
 msgstr "Cette option est désactivée si une URL d'image personnalisée est fournie."
 
-#: lib/filters-messages.php:124
+#: lib/filters-messages.php:133
 msgid "A customized image URL (instead of an image ID) for the Facebook catalog feed XML."
 msgstr "Une URL d'image personnalisée (au lieu d'un ID d'image) pour le flux XML de catalogue Facebook."
 
-#: lib/filters-messages.php:128
+#: lib/filters-messages.php:139
 msgid "This option is disabled if a custom image ID is selected."
 msgstr "Cette option est désactivée si un ID d'image personnalisé est sélectionné."
 
-#: lib/filters.php:91
+#: lib/filters.php:92
 msgid "The Facebook and Instagram Commerce Manager Catalog Feed XML for %d locales has been refreshed."
 msgstr "Le flux XML de catalogue Gestionnaire des ventes Facebook et Instagram pour %d langues a été actualisé."
 
