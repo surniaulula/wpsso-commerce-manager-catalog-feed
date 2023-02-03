@@ -153,15 +153,15 @@ msgid ""
 "has been refreshed."
 msgstr ""
 
-#: lib/rewrite.php:99 lib/rewrite.php:113
+#: lib/rewrite.php:115 lib/rewrite.php:129
 msgid "%s error: %s"
 msgstr ""
 
-#: lib/rewrite.php:100
+#: lib/rewrite.php:116
 msgid "Requested feed type is invalid."
 msgstr ""
 
-#: lib/rewrite.php:114
+#: lib/rewrite.php:130
 msgid "Requested locale value is empty."
 msgstr ""
 

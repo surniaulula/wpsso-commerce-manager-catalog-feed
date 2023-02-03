@@ -115,12 +115,12 @@ if ( ! class_exists( 'WpssoCmcfRegister' ) ) {
 				}
 			}
 
-			WpssoCmcfRewrite::add_rules();	// Adds and flushes rewrite rules only if necessary.
+			WpssoCmcfRewrite::add_rules();	// Add and flush rewrite rules only if necessary.
 		}
 
 		private function deactivate_plugin() {
 
-			flush_rewrite_rules( $hard = false );	// Update only the 'rewrite_rules' option.
+			flush_rewrite_rules( $hard = false );	// Update only the 'rewrite_rules' option, not the .htaccess file.
 		}
 
 		private static function uninstall_plugin() {}
