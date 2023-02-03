@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 			add_action( 'wp_loaded', array( __CLASS__, 'add_rules' ), 1000 );
 			add_action( 'template_redirect', array( __CLASS__, 'template_redirect' ), -1000 );
 
-			add_filter( 'query_vars', array( __CLASS__, 'query_vars' ), 2000 );
+			add_filter( 'query_vars', array( __CLASS__, 'query_vars' ), 1000 );
 		}
 
 		static public function add_rules() {
@@ -47,14 +47,14 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 			$rewrite_rules = $wp_rewrite->wp_rewrite_rules();
 			$rewrite_key   = '^(' . WPSSOCMCF_PAGENAME . ')/feed/(rss2)/([^\./]+)\.xml$';
 			$rewrite_value = 'index.php?pagename=$matches[1]&feed=$matches[2]&locale=$matches[3]';
-			$rewrite_flush = empty( $rewrite_rules[ $rewrite_key ] ) ? true : false;
+			$rewrite_flush = empty( $rewrite_rules[ $rewrite_key ] ) ? true : false;	// Rule does not exist.
 
 			/*
 			 * Always re-add and move the rewrite rule back to the top.
 			 */
 			add_rewrite_rule( $rewrite_key, $rewrite_value, $after = 'top' );
 
-			if ( $rewrite_flush ) {
+			if ( $rewrite_flush ) {	// Rule did not exist.
 			
 				flush_rewrite_rules( $hard = false );
 			}
