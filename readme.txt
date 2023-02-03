@@ -13,7 +13,7 @@ Requires PHP: 7.2
 Requires At Least: 5.4
 Tested Up To: 6.1.1
 WC Tested Up To: 7.3.0
-Stable Tag: 1.0.1
+Stable Tag: 2.0.0
 
 Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and Custom Product Pages.
 
@@ -132,49 +132,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WordPress v5.4.
 	* WPSSO Core v15.0.0.
 
-**Version 1.0.1 (2023/01/26)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added compatibility declaration for WooCommerce HPOS.
-	* Updated the minimum WordPress version from v5.2 to v5.4.
-* **Bugfixes**
-	* Fixed possible incorrect locale for the "Refresh Feed XML Cache" button text on sites with multiple languages.
-* **Developer Notes**
-	* Added support for a new WPSSO_FEED_XML_QUERY_CACHE_DISABLE constant (false by default).
-	* Updated the `WpssoAbstractAddOn` library class.
-* **Requires At Least**
-	* PHP v7.2.
-	* WordPress v5.4.
-	* WPSSO Core v14.7.0.
-
-**Version 1.0.0 (2023/01/20)**
-
-* **New Features**
-	* Initial release.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-* **Requires At Least**
-	* PHP v7.2.
-	* WordPress v5.2.
-	* WPSSO Core v14.5.0.
-
 == Upgrade Notice ==
 
 = 2.0.0 =
 
 (2023/02/03) Added support for the new 'product:variants' meta tags array in WPSSO Core v15.0.0.
-
-= 1.0.1 =
-
-(2023/01/26) Added compatibility declaration for WooCommerce HPOS. Updated the minimum WordPress version from v5.2 to v5.4.
-
-= 1.0.0 =
-
-(2023/01/20) Initial release.
 
