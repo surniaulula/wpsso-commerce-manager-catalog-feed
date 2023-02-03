@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Commerce Manager Catalog Feed XML package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 2.0.0-b.3\n"
+"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 2.0.0-b.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-commerce-"
 "manager-catalog-feed\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
@@ -153,15 +153,15 @@ msgid ""
 "has been refreshed."
 msgstr ""
 
-#: lib/rewrite.php:115 lib/rewrite.php:129
+#: lib/rewrite.php:100 lib/rewrite.php:114
 msgid "%s error: %s"
 msgstr ""
 
-#: lib/rewrite.php:116
+#: lib/rewrite.php:101
 msgid "Requested feed type is invalid."
 msgstr ""
 
-#: lib/rewrite.php:130
+#: lib/rewrite.php:115
 msgid "Requested locale value is empty."
 msgstr ""
 
