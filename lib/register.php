@@ -115,7 +115,7 @@ if ( ! class_exists( 'WpssoCmcfRegister' ) ) {
 				}
 			}
 
-			WpssoCmcfRewrite::add_rules();	// Add and flush rewrite rules only if necessary.
+			WpssoCmcfRewrite::maybe_add_rules();
 		}
 
 		private function deactivate_plugin() {

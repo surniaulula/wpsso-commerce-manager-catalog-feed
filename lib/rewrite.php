@@ -34,40 +34,33 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 			$this->p =& $plugin;
 			$this->a =& $addon;
 
-			add_action( 'init', array( __CLASS__, 'add_rules' ), 1000 );
 			add_action( 'template_redirect', array( __CLASS__, 'template_redirect' ), -1000 );
 
 			add_filter( 'query_vars', array( __CLASS__, 'query_vars' ), 1000 );
+
+			self::maybe_add_rules();
 		}
 
-		static public function add_rules() {
+		static public function maybe_add_rules() {
 
 			global $wp_rewrite;
 
-			$rewrite_rules = $wp_rewrite->wp_rewrite_rules();
-			$rewrite_key   = '^(' . WPSSOCMCF_PAGENAME . ')/feed/(rss2)/([^\./]+)\.xml$';
-			$rewrite_value = 'index.php?pagename=$matches[1]&feed=$matches[2]&locale=$matches[3]';
-			$rewrite_flush = empty( $rewrite_rules[ $rewrite_key ] ) ? true : false;	// Rule does not exist.
+			$rewrite_rules   = $wp_rewrite->wp_rewrite_rules();
+			$rewrite_key     = '^(' . WPSSOCMCF_PAGENAME . ')/feed/(rss2)/([^\./]+)\.xml$';
+			$rewrite_value   = 'index.php?feed_name=$matches[1]&feed_type=$matches[2]&feed_locale=$matches[3]';
+			$rewrite_missing = empty( $rewrite_rules[ $rewrite_key ] ) || $rewrite_rules[ $rewrite_key ] !== $rewrite_value ? true : false;
 
-			/*
-			 * Always re-add and move the rewrite rule back to the top.
-			 */
-			add_rewrite_rule( $rewrite_key, $rewrite_value, $after = 'top' );
+			if ( $rewrite_missing ) {
 
-			if ( $rewrite_flush ) {	// Rule did not exist.
-			
-				flush_rewrite_rules( $hard = false );
+				add_rewrite_rule( $rewrite_key, $rewrite_value, $after = 'top' );
+
+				flush_rewrite_rules( $hard = false );	// Update only the 'rewrite_rules' option, not the .htaccess file.
 			}
 		}
 
-		/*
-		 * Add the 'locale' query variable.
-		 * 
-		 * The 'pagename' and 'feed' variables should already be defined by WordPress - include them just in case.
-		 */
 		static public function query_vars( $vars ) {
 
-			foreach ( array( 'pagename', 'feed', 'locale' ) as $qv ) {
+			foreach ( array( 'feed_name', 'feed_type', 'feed_locale' ) as $qv ) {
 
 				if ( ! in_array( $qv, $vars, $strict = true ) ) {
 
@@ -81,11 +74,11 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 		static public function template_redirect() {
 
 			/*
-			 * Make sure the requested pagename is valid.
+			 * Make sure the requested feed_name is valid.
 			 */
-			$request_pagename = get_query_var( 'pagename' );
+			$request_name = get_query_var( 'feed_name' );
 
-			if ( WPSSOCMCF_PAGENAME !== $request_pagename ) {
+			if ( WPSSOCMCF_PAGENAME !== $request_name ) {
 
 				return;
 			}
@@ -93,9 +86,9 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 			/*
 			 * Make sure the requested feed is valid.
 			 */
-			$request_feed = get_query_var( 'feed' );
+			$request_type = get_query_var( 'feed_type' );
 
-			if ( 'rss2' !== $request_feed ) {
+			if ( 'rss2' !== $request_type ) {
 
 				SucomUtil::safe_error_log( sprintf( __( '%s error: %s', 'wpsso-commerce-manager-catalog-feed' ),
 					__METHOD__, __( 'Requested feed type is invalid.', 'wpsso-commerce-manager-catalog-feed' ) ) );
@@ -106,7 +99,7 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 			/*
 			 * Make sure the requested locale is valid, otherwise redirect using the default locale.
 			 */
-			$request_locale = get_query_var( 'locale' );
+			$request_locale = get_query_var( 'feed_locale' );
 			$request_locale = SucomUtil::sanitize_locale( $request_locale );
 
 			if ( empty( $request_locale ) ) {
@@ -179,7 +172,7 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 
 			$document_xml = WpssoCmcfXml::get();
 			$disposition  = 'attachment';
-			$filename     = SucomUtil::sanitize_file_name( $request_pagename . '-' . $request_locale . '.xml' );
+			$filename     = SucomUtil::sanitize_file_name( $request_name . '-' . $request_locale . '.xml' );
 
 			if ( $wpsso->debug->enabled ) {
 
@@ -208,7 +201,11 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 
 			if ( ! $wp_rewrite->using_permalinks() ) {
 
-				$url = add_query_arg( array( 'pagename' => WPSSOCMCF_PAGENAME, 'feed' => 'rss2', 'locale'  => $locale ), get_home_url( $blog_id ) );
+				$url = add_query_arg( array(
+					'feed_name'   => WPSSOCMCF_PAGENAME,
+					'feed_type'   => 'rss2',
+					'feed_locale' => $locale,
+				), get_home_url( $blog_id ) );
 
 			} else {
 
