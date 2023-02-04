@@ -112,7 +112,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.1.0-dev.1 (2023/02/04)**
+**Version 2.1.0-rc.1 (2023/02/04)**
 
 * **New Features**
 	* None.
@@ -126,7 +126,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.
 	* WordPress v5.4.
-	* WPSSO Core v15.0.0.
+	* WPSSO Core v15.0.1-rc.1.
 
 **Version 2.0.0 (2023/02/03)**
 
@@ -150,7 +150,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.1.0-dev.1 =
+= 2.1.0-rc.1 =
 
 (2023/02/04) Changed the rewrite registration hook. Updated feed query arguments.
 
