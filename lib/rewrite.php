@@ -50,9 +50,9 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 			$rewrite_value   = 'index.php?feed_name=$matches[1]&feed_type=$matches[2]&feed_locale=$matches[3]';
 			$rewrite_missing = empty( $rewrite_rules[ $rewrite_key ] ) || $rewrite_rules[ $rewrite_key ] !== $rewrite_value ? true : false;
 
-			if ( $rewrite_missing ) {
+			add_rewrite_rule( $rewrite_key, $rewrite_value, $after = 'top' );
 
-				add_rewrite_rule( $rewrite_key, $rewrite_value, $after = 'top' );
+			if ( $rewrite_missing ) {
 
 				flush_rewrite_rules( $hard = false );	// Update only the 'rewrite_rules' option, not the .htaccess file.
 			}
