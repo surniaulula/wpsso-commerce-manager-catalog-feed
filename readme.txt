@@ -13,7 +13,7 @@ Requires PHP: 7.2
 Requires At Least: 5.4
 Tested Up To: 6.1.1
 WC Tested Up To: 7.3.0
-Stable Tag: 2.1.0
+Stable Tag: 2.2.0
 
 Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and Custom Product Pages.
 
