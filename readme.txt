@@ -112,7 +112,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.3.0-dev.1 (2022/02/12)**
+**Version 2.3.0-dev.2 (2022/02/12)**
 
 * **New Features**
 	* None.
@@ -121,12 +121,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* Refactoted the `WpssoCmcfRewrite::template_redirect()` method.
-	* Refactoted the `WpssoCmcfXml::get()` method.
+	* Refactored the `WpssoCmcfRewrite::template_redirect()` method.
+	* Refactored the `WpssoCmcfXml::get()` method.
 * **Requires At Least**
 	* PHP v7.2.
 	* WordPress v5.4.
-	* WPSSO Core v15.3.0-dev.1.
+	* WPSSO Core v15.3.0-dev.2.
 
 **Version 2.2.0 (2023/02/11)**
 
@@ -181,7 +181,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.3.0-dev.1 =
+= 2.3.0-dev.2 =
 
 (2022/02/12) Updated the CMCF settings page to show a notice when a background task is active (ie. clear cache or refresh cache).
 
