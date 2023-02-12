@@ -27,7 +27,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 			$wpsso =& Wpsso::get_instance();
 
-			if ( null === $request_locale ) {
+			if ( ! $request_locale ) {
 
 				$request_locale = SucomUtil::get_locale();
 			}
@@ -38,10 +38,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 			$wpsso->cache->clear_cache_data( $cache_salt, $cache_file_ext );
 		}
 
-		/*
-		 * $read_cache = false when called by WpssoCmcfFilters->filter_cache_refreshed_notice().
-		 */
-		static public function get( $read_cache = true, $request_locale = null ) {
+		static public function get( $request_locale = null, $use_cache = true ) {
 
 			$wpsso =& Wpsso::get_instance();
 
@@ -50,34 +47,43 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			$current_locale  = SucomUtil::get_locale();
-			$original_locale = $current_locale;
+			$original_locale = SucomUtil::get_locale();
+			$current_locale  = $original_locale;
+			$request_locale  = $request_locale ? $request_locale : $current_locale;
 			$is_switched     = false;
 
-			if ( $request_locale && $request_locale !== $current_locale ) {
+			if ( $request_locale !== $current_locale ) {
+
+				if ( $wpsso->debug->enabled ) {
+
+					$wpsso->debug->log( 'switching to request locale ' . $request_locale );
+				}
 
 				$is_switched    = switch_to_locale( $request_locale );
-				$current_locale = SucomUtil::get_locale();
+				$current_locale = SucomUtil::get_locale();	// Update the current locale value.
+
+				if ( $wpsso->debug->enabled ) {
+
+					$wpsso->debug->log( 'switch to locale ' . ( $is_switched ? 'successful' : 'failed' ) );
+				}
 			}
 
-			$cache_md5_pre   = 'wpsso_f_';
-			$cache_type      = 'file';
-			$cache_salt      = __CLASS__ . '(locale:' . $current_locale . ')';
-			$cache_file_ext  = '.xml';
-
-			/*
-			 * Applies the 'wpsso_cache_expire_cmcf_xml' ( WEEK_IN_SECONDS, $cache_type, $mod = false ) filter.
-			 */
+			$cache_md5_pre  = 'wpsso_f_';
+			$cache_type     = 'file';
+			$cache_salt     = __CLASS__ . '(locale:' . $request_locale . ')';
+			$cache_file_ext = '.xml';
 			$cache_exp_secs = $wpsso->util->get_cache_exp_secs( $cache_md5_pre, $cache_type );
 
 			if ( $wpsso->debug->enabled ) {
 
-				$wpsso->debug->log( 'locale current = ' . $current_locale );
+				$wpsso->debug->log( 'original locale = ' . $original_locale );
+				$wpsso->debug->log( 'request locale = ' . $request_locale );
+				$wpsso->debug->log( 'current locale = ' . $current_locale );
 				$wpsso->debug->log( 'cache expire = ' . $cache_exp_secs );
 				$wpsso->debug->log( 'cache salt = ' . $cache_salt );
 			}
 
-			if ( $read_cache && $cache_exp_secs ) {
+			if ( $use_cache && $cache_exp_secs ) {
 
 				$xml = $wpsso->cache->get_cache_data( $cache_salt, $cache_type, $cache_exp_secs, $cache_file_ext );
 
@@ -106,6 +112,8 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 			$public_ids = WpssoPost::get_public_ids( $query_args );
 
 			if ( $wpsso->debug->enabled ) {
+
+				$wpsso->debug->log( 'adding ' . count( $public_ids ) . ' public ids' );
 
 				$wpsso->debug->log_arr( 'public_ids', $public_ids );
 			}
@@ -161,7 +169,10 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 			$xml = $rss2_feed->build();
 
-			$wpsso->cache->save_cache_data( $cache_salt, $xml, $cache_type, $cache_exp_secs, $cache_file_ext );
+			if ( $use_cache && $cache_exp_secs ) {
+
+				$wpsso->cache->save_cache_data( $cache_salt, $xml, $cache_type, $cache_exp_secs, $cache_file_ext );
+			}
 
 			if ( $is_switched ) {
 

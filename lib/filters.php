@@ -84,13 +84,16 @@ if ( ! class_exists( 'WpssoCmcfFilters' ) ) {
 
 			foreach ( $locale_names as $locale => $native_name ) {
 
-				$xml = WpssoCmcfXml::get( $read_cache = false, $locale );
+				WpssoCmcfXml::clear_cache( $locale );
+
+				$xml = WpssoCmcfXml::get( $locale );
 
 				$xml_count++;
 			}
 
-			$notice_msg .= sprintf( __( 'The Facebook and Instagram Commerce Manager Catalog Feed XML for %d locales has been refreshed.',
-				'wpsso-commerce-manager-catalog-feed' ), $xml_count ) . ' ';
+			$metabox_title = _x( 'Commerce Manager Catalog Feed XML', 'metabox title', 'wpsso-commerce-manager-catalog-feed' );
+
+			$notice_msg .= sprintf( __( '%1$s for %2$d locales has been refreshed.', 'wpsso-commerce-manager-catalog-feed' ), $xml_count, $metabox_title ) . ' ';
 
 			return $notice_msg;
 		}

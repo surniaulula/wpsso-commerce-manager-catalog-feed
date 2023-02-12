@@ -93,28 +93,49 @@ if ( ! class_exists( 'WpssoCmcfSubmenuCmcfGeneral' ) && class_exists( 'WpssoAdmi
 				case 'cmcf-general':
 
 					$locale_names = SucomUtil::get_available_feed_locale_names();
+					$doing_task   = $this->p->util->cache->doing_task();
 
-					foreach ( $locale_names as $locale => $native_name ) {
+					if ( 'clear' === $doing_task || 'refresh' === $doing_task ) {
+			
+						foreach ( $locale_names as $locale => $native_name ) {
 
-						$url = WpssoCmcfRewrite::get_url( $locale );
-						$xml = WpssoCmcfXml::get( $read_cache = true, $locale );
+							WpssoCmcfXml::clear_cache( $locale );
+						}
 
-						$item_count = substr_count( $xml, '<item>' );
-						$img_count  = substr_count( $xml, '<g:image_link>' );
-						$addl_count = substr_count( $xml, '<g:additional_image_link>' );
-						$xml_size   = number_format( strlen( $xml ) / 1024 );
+						$task_name_transl = _x( $doing_task, 'task name', 'wpsso' );
+						$metabox_title    = _x( 'Commerce Manager Catalog Feed XML', 'metabox title', 'wpsso-commerce-manager-catalog-feed' );
 
-						$table_rows[ 'cmcf_url_' . $locale ] = '' .
-							$this->form->get_th_html( $native_name, $css_class = 'medium' ) .
-							'<td>' . $this->form->get_no_input_clipboard( $url ) .
-							'<p class="status-msg">' .
-							sprintf( _x( '%1$s items, %2$s image links, %3$s addl image links, %4$s KB feed XML size.',
-								'option comment', 'wpsso-commerce-manager-catalog-feed' ),
-									$item_count, $img_count, $addl_count, $xml_size ) .
-							'</p>' .
-							'</td>';
+						$table_rows[ 'wpssocmcf_disabled' ] = '<tr><td align="center">' .
+							'<p class="status-msg">' . sprintf( __( 'A background task to %s the cache is currently running.',
+								'wpsso-commerce-manager-catalog-feed' ), $task_name_transl ) . '</p>' .
+							'<p class="status-msg">' . sprintf( __( '%s will be available when this task is complete.',
+								'wpsso-commerce-manager-catalog-feed' ), $metabox_title ) . '</p>' .
+							'</td></tr>';
+
+					} else {
+					
+						foreach ( $locale_names as $locale => $native_name ) {
+
+							$url = WpssoCmcfRewrite::get_url( $locale );
+							$xml = WpssoCmcfXml::get( $read_cache = true, $locale );
+	
+							$item_count = substr_count( $xml, '<item>' );
+							$img_count  = substr_count( $xml, '<g:image_link>' );
+							$addl_count = substr_count( $xml, '<g:additional_image_link>' );
+							$xml_size   = number_format( strlen( $xml ) / 1024 );
+	
+							$table_rows[ 'cmcf_url_' . $locale ] = '' .
+								$this->form->get_th_html( $native_name, $css_class = 'medium' ) .
+								'<td>' . $this->form->get_no_input_clipboard( $url ) .
+								'<p class="status-msg">' .
+								sprintf( _x( '%1$s feed items, %2$s image links, %3$s addl image links, %4$s KB feed size.',
+									'option comment', 'wpsso-commerce-manager-catalog-feed' ),
+										$item_count, $img_count, $addl_count, $xml_size ) .
+								'</p>' .
+								'</td>';
+						}
 					}
-
+	
 					break;
 			}
 
