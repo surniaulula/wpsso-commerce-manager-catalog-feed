@@ -97,11 +97,6 @@ if ( ! class_exists( 'WpssoCmcfSubmenuCmcfGeneral' ) && class_exists( 'WpssoAdmi
 
 					if ( 'clear' === $doing_task || 'refresh' === $doing_task ) {
 			
-						foreach ( $locale_names as $locale => $native_name ) {
-
-							WpssoCmcfXml::clear_cache( $locale );
-						}
-
 						$task_name_transl = _x( $doing_task, 'task name', 'wpsso' );
 						$metabox_title    = _x( 'Commerce Manager Catalog Feed XML', 'metabox title', 'wpsso-commerce-manager-catalog-feed' );
 
