@@ -98,7 +98,8 @@ if ( ! class_exists( 'WpssoCmcfSubmenuCmcfGeneral' ) && class_exists( 'WpssoAdmi
 					if ( 'clear' === $doing_task || 'refresh' === $doing_task ) {
 			
 						$task_name_transl = _x( $doing_task, 'task name', 'wpsso' );
-						$metabox_title    = _x( 'Commerce Manager Catalog Feed XML', 'metabox title', 'wpsso-commerce-manager-catalog-feed' );
+
+						$metabox_title = _x( 'Commerce Manager Catalog Feed XML', 'metabox title', 'wpsso-commerce-manager-catalog-feed' );
 
 						$table_rows[ 'wpssocmcf_disabled' ] = '<tr><td align="center">' .
 							'<p class="status-msg">' . sprintf( __( 'A background task to %s the cache is currently running.',
@@ -112,7 +113,7 @@ if ( ! class_exists( 'WpssoCmcfSubmenuCmcfGeneral' ) && class_exists( 'WpssoAdmi
 						foreach ( $locale_names as $locale => $native_name ) {
 
 							$url = WpssoCmcfRewrite::get_url( $locale );
-							$xml = WpssoCmcfXml::get( $read_cache = true, $locale );
+							$xml = WpssoCmcfXml::get( $locale );
 	
 							$item_count = substr_count( $xml, '<item>' );
 							$img_count  = substr_count( $xml, '<g:image_link>' );

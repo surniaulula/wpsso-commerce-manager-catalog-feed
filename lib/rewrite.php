@@ -90,8 +90,10 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 
 			if ( 'rss2' !== $request_type ) {
 
-				WpssoErrorException::http_error( 400, __( 'The Commerce Manager Catalog Feed XML requested feed type is unknown.',
-					'wpsso-commerce-manager-catalog-feed' ) );
+				$metabox_title = _x( 'Commerce Manager Catalog Feed XML', 'metabox title', 'wpsso-google-merchant-feed' );
+
+				WpssoErrorException::http_error( 400, sprintf( __( '%s requested feed type is unknown.',
+					'wpsso-commerce-manager-catalog-feed' ), $metabox_title ) );
 			}
 
 			/*
@@ -103,19 +105,23 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 
 			if ( ! isset( $locale_names[ $request_locale ] ) ) {
 
-				WpssoErrorException::http_error( 400, __( 'The Commerce Manager Catalog Feed XML requested feed locale is unknown.',
-					'wpsso-commerce-manager-catalog-feed' ) );
+				$metabox_title = _x( 'Commerce Manager Catalog Feed XML', 'metabox title', 'wpsso-google-merchant-feed' );
+
+				WpssoErrorException::http_error( 400, sprintf( __( '%s requested feed locale is unknown.',
+					'wpsso-commerce-manager-catalog-feed' ), $metabox_title ) );
 			}
 
 			$wpsso =& Wpsso::get_instance();
 
 			if ( $doing_task = $wpsso->util->cache->doing_task() ) {
 
-				WpssoCmcfXml::clear_cache( $request_locale );
+				$metabox_title = _x( 'Commerce Manager Catalog Feed XML', 'metabox title', 'wpsso-google-merchant-feed' );
+
+				WpssoErrorException::http_error( 503, sprintf( __( '%s unavailable pending completion of a maintenance task.',
+					'wpsso-commerce-manager-catalog-feed' ), $metabox_title ) );
 			}
 
-			$use_cache    = $doing_task ? false : true;
-			$document_xml = WpssoCmcfXml::get( $request_locale, $use_cache );
+			$document_xml = WpssoCmcfXml::get( $request_locale );
 			$disposition  = 'attachment';
 			$filename     = SucomUtil::sanitize_file_name( $request_name . '-' . $request_locale . '.xml' );
 

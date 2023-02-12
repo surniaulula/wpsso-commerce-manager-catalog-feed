@@ -69,6 +69,7 @@ if ( ! class_exists( 'WpssoCmcfFilters' ) ) {
 		}
 
 		/*
+		 * See WpssoUtilCache->refresh().
 		 * See WpssoCmcfActions->action_load_setting_page_refresh_feed_xml_cache().
 		 */
 		public function filter_cache_refreshed_notice( $notice_msg, $user_id = null ) {
@@ -84,7 +85,7 @@ if ( ! class_exists( 'WpssoCmcfFilters' ) ) {
 
 			foreach ( $locale_names as $locale => $native_name ) {
 
-				WpssoCmcfXml::clear_cache( $locale );
+				WpssoCmcfXml::clear_cache( $locale );	// Clear the feed XML cache file.
 
 				$xml = WpssoCmcfXml::get( $locale );
 

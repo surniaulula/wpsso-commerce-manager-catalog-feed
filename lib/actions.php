@@ -84,7 +84,7 @@ if ( ! class_exists( 'WpssoCmcfActions' ) ) {
 		}
 
 		/*
-		 * Once the post cache is cleared and refreshed, clear the feed XML.
+		 * Once the post cache is refreshed, clear the feed XML cache file.
 		 *
 		 * See WpssoPost->refresh_cache().
 		 */

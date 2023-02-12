@@ -19,7 +19,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 	class WpssoCmcfXml {
 
 		/*
-		 * Clear the feed XML file cache for this locale, or the requested locale.
+		 * Clear the feed XML cache file.
 		 *
 		 * See WpssoCmcfActions->action_refresh_post_cache().
 		 */
@@ -35,10 +35,10 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 			$cache_salt     = __CLASS__ . '(locale:' . $request_locale . ')';
 			$cache_file_ext = '.xml';
 
-			$wpsso->cache->clear_cache_data( $cache_salt, $cache_file_ext );
+			$wpsso->cache->clear_cache_data( $cache_salt, $cache_file_ext );	// Clear the feed XML cache file.
 		}
 
-		static public function get( $request_locale = null, $use_cache = true ) {
+		static public function get( $request_locale = null ) {
 
 			$wpsso =& Wpsso::get_instance();
 
@@ -83,7 +83,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 				$wpsso->debug->log( 'cache salt = ' . $cache_salt );
 			}
 
-			if ( $use_cache && $cache_exp_secs ) {
+			if ( $cache_exp_secs ) {
 
 				$xml = $wpsso->cache->get_cache_data( $cache_salt, $cache_type, $cache_exp_secs, $cache_file_ext );
 
@@ -169,7 +169,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 			$xml = $rss2_feed->build();
 
-			if ( $use_cache && $cache_exp_secs ) {
+			if ( $cache_exp_secs ) {
 
 				$wpsso->cache->save_cache_data( $cache_salt, $xml, $cache_type, $cache_exp_secs, $cache_file_ext );
 			}
