@@ -112,6 +112,22 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.3.0-dev.1 (2022/02/12)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Updated the CMCF settings page to show a notice when a background task is active (ie. clear cache or refresh cache).
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Refactoted the `WpssoCmcfRewrite::template_redirect()` method.
+	* Refactoted the `WpssoCmcfXml::get()` method.
+* **Requires At Least**
+	* PHP v7.2.
+	* WordPress v5.4.
+	* WPSSO Core v15.3.0-dev.1.
+
 **Version 2.2.0 (2023/02/11)**
 
 * **New Features**
@@ -155,15 +171,19 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Removed support for the 'product:offers' meta tags array.
 	* Removed the WPSSO_FEED_XML_QUERY_CACHE_DISABLE constant.
 	* Removed the 'wpsso_request_url_query_attrs_cache_disable' filter hook.
-	* Renamed the `WpssoGmfActions->get_product_image_url()` method to `check_product_image_urls()`.
-	* Refactored the `WpssoGmfXml::add_feed_product()` method.
-	* Refactored the `WpssoGmfXml::add_product_data()` method.
+	* Renamed the `WpssoCmcfActions->get_product_image_url()` method to `check_product_image_urls()`.
+	* Refactored the `WpssoCmcfXml::add_feed_product()` method.
+	* Refactored the `WpssoCmcfXml::add_product_data()` method.
 * **Requires At Least**
 	* PHP v7.2.
 	* WordPress v5.4.
 	* WPSSO Core v15.0.0.
 
 == Upgrade Notice ==
+
+= 2.3.0-dev.1 =
+
+(2022/02/12) Updated the CMCF settings page to show a notice when a background task is active (ie. clear cache or refresh cache).
 
 = 2.2.0 =
 
