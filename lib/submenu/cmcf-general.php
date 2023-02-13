@@ -104,7 +104,7 @@ if ( ! class_exists( 'WpssoCmcfSubmenuCmcfGeneral' ) && class_exists( 'WpssoAdmi
 				case 'cmcf-general':
 
 					if ( $this->doing_task ) {
-			
+
 						$task_name_transl = _x( $this->doing_task, 'task name', 'wpsso' );
 
 						$metabox_title = _x( 'Commerce Manager Catalog Feed XML', 'metabox title', 'wpsso-commerce-manager-catalog-feed' );
@@ -117,19 +117,19 @@ if ( ! class_exists( 'WpssoCmcfSubmenuCmcfGeneral' ) && class_exists( 'WpssoAdmi
 							'</td></tr>';
 
 					} else {
-					
+
 						$locale_names = SucomUtil::get_available_feed_locale_names();
 
 						foreach ( $locale_names as $locale => $native_name ) {
 
 							$url = WpssoCmcfRewrite::get_url( $locale );
 							$xml = WpssoCmcfXml::get( $locale );
-	
+
 							$item_count = substr_count( $xml, '<item>' );
 							$img_count  = substr_count( $xml, '<g:image_link>' );
 							$addl_count = substr_count( $xml, '<g:additional_image_link>' );
 							$xml_size   = number_format( ( strlen( $xml ) / 1024 ) );	// XML size in KB.
-	
+
 							$table_rows[ 'cmcf_url_' . $locale ] = '' .
 								$this->form->get_th_html( $native_name, $css_class = 'medium' ) .
 								'<td>' . $this->form->get_no_input_clipboard( $url ) .
@@ -140,7 +140,7 @@ if ( ! class_exists( 'WpssoCmcfSubmenuCmcfGeneral' ) && class_exists( 'WpssoAdmi
 								'</td>';
 						}
 					}
-	
+
 					break;
 			}
 
