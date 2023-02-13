@@ -112,7 +112,7 @@ if ( ! class_exists( 'WpssoCmcfSubmenuCmcfGeneral' ) && class_exists( 'WpssoAdmi
 						$table_rows[ 'wpssocmcf_disabled' ] = '<tr><td align="center">' .
 							'<p class="status-msg">' . sprintf( __( 'A background task to %s is currently running.',
 								'wpsso-commerce-manager-catalog-feed' ), $task_name_transl ) . '</p>' .
-							'<p class="status-msg">' . sprintf( __( '%s is unavailable pending completion of this maintenance task.',
+							'<p class="status-msg">' . sprintf( __( '%s is currently unavailable pending completion of a maintenance task.',
 								'wpsso-commerce-manager-catalog-feed' ), $metabox_title ) . '</p>' .
 							'</td></tr>';
 
