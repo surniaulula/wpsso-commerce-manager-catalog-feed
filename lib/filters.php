@@ -94,7 +94,7 @@ if ( ! class_exists( 'WpssoCmcfFilters' ) ) {
 
 			$metabox_title = _x( 'Commerce Manager Catalog Feed XML', 'metabox title', 'wpsso-commerce-manager-catalog-feed' );
 
-			$notice_msg .= sprintf( __( '%1$s for %2$d locales has been refreshed.', 'wpsso-commerce-manager-catalog-feed' ), $xml_count, $metabox_title ) . ' ';
+			$notice_msg .= sprintf( __( '%1$s for %2$s locales has been refreshed.', 'wpsso-commerce-manager-catalog-feed' ), $metabox_title, $xml_count ) . ' ';
 
 			return $notice_msg;
 		}

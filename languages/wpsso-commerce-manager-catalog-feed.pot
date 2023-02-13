@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Commerce Manager Catalog Feed XML package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 2.3.0-dev.4\n"
+"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 2.3.0-dev.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-commerce-"
 "manager-catalog-feed\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
@@ -148,14 +148,14 @@ msgid "This option is disabled if a custom image ID is selected."
 msgstr ""
 
 #: lib/filters.php:95 lib/rewrite.php:93 lib/rewrite.php:108
-#: lib/rewrite.php:118 lib/submenu/cmcf-general.php:64
-#: lib/submenu/cmcf-general.php:102
+#: lib/rewrite.php:118 lib/submenu/cmcf-general.php:75
+#: lib/submenu/cmcf-general.php:110
 msgctxt "metabox title"
 msgid "Commerce Manager Catalog Feed XML"
 msgstr ""
 
 #: lib/filters.php:97
-msgid "%1$s for %2$d locales has been refreshed."
+msgid "%1$s for %2$s locales has been refreshed."
 msgstr ""
 
 #: lib/rewrite.php:95
@@ -167,26 +167,25 @@ msgid "%s requested feed locale is unknown."
 msgstr ""
 
 #: lib/rewrite.php:120
-msgid "%s unavailable pending completion of a maintenance task."
+msgid "%s is unavailable pending completion of a maintenance task."
 msgstr ""
 
-#: lib/submenu/cmcf-general.php:51
+#: lib/submenu/cmcf-general.php:61
 msgctxt "submit button"
 msgid "Refresh Feed XML Cache"
 msgstr ""
 
-#: lib/submenu/cmcf-general.php:105
-msgid "A background task to %s the cache is currently running."
+#: lib/submenu/cmcf-general.php:113
+msgid "A background task to %s is currently running."
 msgstr ""
 
-#: lib/submenu/cmcf-general.php:107
-msgid "%s will be available when this task is complete."
+#: lib/submenu/cmcf-general.php:115
+msgid "%s is unavailable pending completion of this maintenance task."
 msgstr ""
 
-#: lib/submenu/cmcf-general.php:127
+#: lib/submenu/cmcf-general.php:137
 msgctxt "option comment"
-msgid ""
-"%1$s feed items, %2$s image links, %3$s addl image links, %4$s KB feed size."
+msgid "%1$s feed items, %2$s image links, and %3$s additional image links."
 msgstr ""
 
 #. Plugin Name of the plugin/theme

@@ -117,7 +117,7 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 
 				$metabox_title = _x( 'Commerce Manager Catalog Feed XML', 'metabox title', 'wpsso-google-merchant-feed' );
 
-				WpssoErrorException::http_error( 503, sprintf( __( '%s unavailable pending completion of a maintenance task.',
+				WpssoErrorException::http_error( 503, sprintf( __( '%s is unavailable pending completion of a maintenance task.',
 					'wpsso-commerce-manager-catalog-feed' ), $metabox_title ) );
 			}
 
