@@ -21,19 +21,19 @@ Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce, Easy 
 
 <!-- about -->
 
-Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and Custom Product Pages.
+**Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and Custom Product Pages.**
 
 **E-Commerce Plugin Not Required:**
 
-A supported e-commerce plugin, like WooCommerce or Easy Digital Downloads, <em>is suggested but not required</em> &mdash; the WPSSO Commerce Manager Catalog Feed XML add-on also retrieves custom product information entered in the Document SSO metabox when editing a product page.
+A supported e-commerce plugin, like WooCommerce or Easy Digital Downloads, is suggested but not required - the WPSSO Commerce Manager Catalog Feed XML add-on can also retrieve custom product information entered in the Document SSO metabox.
 
 **Complete WooCommerce Support:**
 
-WooCommerce product variations, attributes, meta data, and custom fields are all fully supported.
+WooCommerce simple products, product variations, product attributes, product meta data, and custom fields are all fully supported.
 
 <!-- /about -->
 
-**No Add-on Settings to Configure:**
+**No Settings to Configure:**
 
 The WPSSO Commerce Manager Catalog Feed XML add-on automatically retrieves all available product information in the language (aka locale) requested.
 
