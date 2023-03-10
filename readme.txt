@@ -15,17 +15,17 @@ Tested Up To: 6.1.1
 WC Tested Up To: 7.4.1
 Stable Tag: 2.3.0
 
-Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and custom product pages.
+Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce and custom product pages.
 
 == Description ==
 
 <!-- about -->
 
-**Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and custom product pages.**
+**Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce and custom product pages.**
 
 **E-Commerce Plugin Optional:**
 
-A supported e-commerce plugin, like WooCommerce or Easy Digital Downloads, is suggested but not required - the WPSSO Commerce Manager Catalog Feed XML add-on can also retrieve custom product information entered in the Document SSO metabox.
+WooCommerce is suggested but not required - the WPSSO Commerce Manager Catalog Feed XML add-on can also retrieve custom product information entered in the Document SSO metabox.
 
 **Complete WooCommerce Support:**
 
@@ -41,7 +41,7 @@ After activating the WPSSO Commerce Manager Catalog Feed XML add-on, see the SSO
 
 **Facebook and Instagram Commerce Manager Catalog Feed XML Attributes:**
 
-The following XML product attributes are automatically created from your WooCommerce, Easy Digital Downloads, and custom products:
+The following XML product attributes are automatically created from your WooCommerce and custom products:
 
 * Additional image link <code>&#91;additional_image_link&#93;</code>
 * Age group <code>&#91;age_group&#93;</code>
@@ -107,6 +107,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 <p><strong>WPSSO Core Standard edition users (ie. the plugin hosted on WordPress.org) have access to <a href="https://wordpress.org/plugins/wpsso-commerce-manager-catalog-feed/advanced/">the latest development version under the Advanced Options section</a>.</strong></p>
 
 <h3>Changelog / Release Notes</h3>
+
+**Version 2.4.0-dev.3 (TBD)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v7.2.
+	* WordPress v5.4.
+	* WPSSO Core v15.5.0-dev.3.
 
 **Version 2.3.0 (2023/02/14)**
 
@@ -176,6 +191,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v15.0.0.
 
 == Upgrade Notice ==
+
+= 2.4.0-dev.3 =
+
+(TBD) None.
 
 = 2.3.0 =
 
