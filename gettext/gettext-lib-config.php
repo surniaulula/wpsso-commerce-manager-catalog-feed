@@ -4,5 +4,5 @@
 // 
 _x( 'Facebook Catalog', 'lib file description', 'wpsso-commerce-manager-catalog-feed' );
 _x( 'WPSSO Commerce Manager Catalog Feed XML', 'plugin name', 'wpsso-commerce-manager-catalog-feed' );
-_x( 'Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and Custom Product Pages.', 'plugin description', 'wpsso-commerce-manager-catalog-feed' );
+_x( 'Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce and custom product pages.', 'plugin description', 'wpsso-commerce-manager-catalog-feed' );
 _x( 'WPSSO Core', 'plugin name', 'wpsso-commerce-manager-catalog-feed' );

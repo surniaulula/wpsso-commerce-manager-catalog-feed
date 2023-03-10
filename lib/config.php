@@ -17,11 +17,11 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssocmcf' => array(			// Plugin acronym.
-					'version'     => '2.3.0',	// Plugin version.
+					'version'     => '2.4.0-dev.3',	// Plugin version.
 					'opt_version' => '1',		// Increment when changing default option values.
 					'short'       => 'WPSSO CMCF',	// Short plugin name.
 					'name'        => 'WPSSO Commerce Manager Catalog Feed XML',
-					'desc'        => 'Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and Custom Product Pages.',
+					'desc'        => 'Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce and custom product pages.',
 					'slug'        => 'wpsso-commerce-manager-catalog-feed',
 					'base'        => 'wpsso-commerce-manager-catalog-feed/wpsso-commerce-manager-catalog-feed.php',
 					'update_auth' => '',		// No premium version.
@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '15.3.0',
+							'min_version'   => '15.5.0-dev.3',
 						),
 					),
 

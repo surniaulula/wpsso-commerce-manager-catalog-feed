@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Commerce Manager Catalog Feed XML package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 2.3.0\n"
+"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 2.4.0-dev.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-commerce-"
 "manager-catalog-feed\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
@@ -36,8 +36,8 @@ msgstr ""
 #: gettext/gettext-lib-config.php:7
 msgctxt "plugin description"
 msgid ""
-"Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce, "
-"Easy Digital Downloads, and Custom Product Pages."
+"Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce "
+"and custom product pages."
 msgstr ""
 
 #: gettext/gettext-lib-config.php:8
@@ -147,9 +147,7 @@ msgstr ""
 msgid "This option is disabled if a custom image ID is selected."
 msgstr ""
 
-#: lib/filters.php:95 lib/rewrite.php:93 lib/rewrite.php:108
-#: lib/rewrite.php:118 lib/submenu/cmcf-general.php:75
-#: lib/submenu/cmcf-general.php:110
+#: lib/filters.php:95 lib/rewrite.php:76 lib/submenu/cmcf-general.php:75
 msgctxt "metabox title"
 msgid "Commerce Manager Catalog Feed XML"
 msgstr ""
@@ -158,30 +156,34 @@ msgstr ""
 msgid "%1$s for %2$s locales has been refreshed."
 msgstr ""
 
-#: lib/rewrite.php:95
-msgid "%s requested feed type is unknown."
+#: lib/rewrite.php:102
+msgid "%1$s requested type \"%2$s\" is unknown."
 msgstr ""
 
-#: lib/rewrite.php:110
-msgid "%s requested feed locale is unknown."
+#: lib/rewrite.php:113
+msgid "%1$s requested format \"%2$s\" is unknown."
 msgstr ""
 
-#: lib/rewrite.php:120 lib/submenu/cmcf-general.php:115
+#: lib/rewrite.php:127
+msgid "%1$s requested locale \"%2$s\" is unknown."
+msgstr ""
+
+#: lib/rewrite.php:135 lib/submenu/cmcf-general.php:143
 msgid "%s is currently unavailable pending completion of a maintenance task."
 msgstr ""
 
 #: lib/submenu/cmcf-general.php:61
 msgctxt "submit button"
-msgid "Refresh Feed XML Cache"
+msgid "Refresh XML Cache"
 msgstr ""
 
-#: lib/submenu/cmcf-general.php:113
-msgid "A background task to %s is currently running."
-msgstr ""
-
-#: lib/submenu/cmcf-general.php:137
+#: lib/submenu/cmcf-general.php:124
 msgctxt "option comment"
 msgid "%1$s feed items, %2$s image links, and %3$s additional image links."
+msgstr ""
+
+#: lib/submenu/cmcf-general.php:141
+msgid "A background task to %s is currently running."
 msgstr ""
 
 #. Plugin Name of the plugin/theme
@@ -194,8 +196,8 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Facebook and Instagram Manager Catalog Feed XMLs for WooCommerce, Easy "
-"Digital Downloads, and Custom Product Pages."
+"Facebook and Instagram Manager Catalog Feed XMLs for WooCommerce and custom "
+"product pages."
 msgstr ""
 
 #. Author of the plugin/theme
