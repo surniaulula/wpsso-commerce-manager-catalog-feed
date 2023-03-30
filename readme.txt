@@ -108,7 +108,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.4.0-dev.4 (2023/03/30)**
+**Version 2.4.0-rc.1 (2023/03/30)**
 
 * **New Features**
 	* None.
@@ -198,7 +198,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.4.0-dev.4 =
+= 2.4.0-rc.1 =
 
 (2023/03/30) Added a 'feed_format' query argument to the rewrite rule.
 
