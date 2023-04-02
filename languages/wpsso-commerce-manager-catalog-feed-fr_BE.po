@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 2.4.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-commerce-manager-catalog-feed\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-04-02 11:23-0700\n"
+"PO-Revision-Date: 2023-04-02 11:51-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -33,8 +33,8 @@ msgstr "WPSSO Flux XML de catalogue Gestionnaire des ventes"
 
 #: gettext/gettext-lib-config.php:7
 msgctxt "plugin description"
-msgid "Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and Custom Product Pages."
-msgstr "Flux XML de catalogue Gestionnaire des ventes Facebook et Instagram pour WooCommerce, Easy Digital Downloads et pages de produits personnalisées."
+msgid "Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce and custom product pages."
+msgstr "Flux XML de catalogue Gestionnaire des ventes Facebook et Instagram pour WooCommerce et pages de produits personnalisées."
 
 #: gettext/gettext-lib-config.php:8
 msgctxt "plugin name"
@@ -129,9 +129,7 @@ msgstr "Une URL d'image personnalisée (au lieu d'un ID d'image) pour le flux XM
 msgid "This option is disabled if a custom image ID is selected."
 msgstr "Cette option est désactivée si un ID d'image personnalisé est sélectionné."
 
-#: lib/filters.php:95 lib/rewrite.php:93 lib/rewrite.php:108
-#: lib/rewrite.php:118 lib/submenu/cmcf-general.php:75
-#: lib/submenu/cmcf-general.php:110
+#: lib/filters.php:95 lib/rewrite.php:76 lib/submenu/cmcf-general.php:75
 msgctxt "metabox title"
 msgid "Commerce Manager Catalog Feed XML"
 msgstr "Flux XML de catalogue Gestionnaire des ventes"
@@ -140,31 +138,35 @@ msgstr "Flux XML de catalogue Gestionnaire des ventes"
 msgid "%1$s for %2$s locales has been refreshed."
 msgstr "%1$s pour %2$s locales a été actualisé."
 
-#: lib/rewrite.php:95
-msgid "%s requested feed type is unknown."
-msgstr "Le type de flux %s demandé est inconnu."
+#: lib/rewrite.php:102
+msgid "%1$s requested type \"%2$s\" is unknown."
+msgstr "%1$s type demandé \"%2$s\" est inconnu."
 
-#: lib/rewrite.php:110
-msgid "%s requested feed locale is unknown."
-msgstr "La locale du flux %s demandée est inconnue."
+#: lib/rewrite.php:113
+msgid "%1$s requested format \"%2$s\" is unknown."
+msgstr "%1$s format demandé \"%2$s\" est inconnu."
 
-#: lib/rewrite.php:120 lib/submenu/cmcf-general.php:115
+#: lib/rewrite.php:127
+msgid "%1$s requested locale \"%2$s\" is unknown."
+msgstr "%1$s locale demandée \"%2$s\" est inconnue."
+
+#: lib/rewrite.php:135 lib/submenu/cmcf-general.php:143
 msgid "%s is currently unavailable pending completion of a maintenance task."
 msgstr "%s est actuellement indisponible en attendant l'achèvement d'une tâche de maintenance."
 
 #: lib/submenu/cmcf-general.php:61
 msgctxt "submit button"
-msgid "Refresh Feed XML Cache"
-msgstr "Rafraîchir cache du flux XML"
+msgid "Refresh XML Cache"
+msgstr "Rafraîchir cache XML"
 
-#: lib/submenu/cmcf-general.php:113
-msgid "A background task to %s is currently running."
-msgstr "Une tâche en arrière-plan pour %s est en cours d'exécution."
-
-#: lib/submenu/cmcf-general.php:137
+#: lib/submenu/cmcf-general.php:124
 msgctxt "option comment"
 msgid "%1$s feed items, %2$s image links, and %3$s additional image links."
 msgstr "%1$s éléments de flux, %2$s liens d'image et %3$s liens d'image supplémentaires."
+
+#: lib/submenu/cmcf-general.php:141
+msgid "A background task to %s is currently running."
+msgstr "Une tâche en arrière-plan pour %s est en cours d'exécution."
 
 #. Plugin Name of the plugin/theme
 msgid "WPSSO Commerce Manager Catalog Feed XML"
@@ -175,8 +177,8 @@ msgid "https://wpsso.com/extend/plugins/wpsso-commerce-manager-catalog-feed/"
 msgstr "https://wpsso.com/extend/plugins/wpsso-commerce-manager-catalog-feed/"
 
 #. Description of the plugin/theme
-msgid "Facebook and Instagram Manager Catalog Feed XMLs for WooCommerce, Easy Digital Downloads, and Custom Product Pages."
-msgstr "Flux XML de catalogue Gestionnaire des ventes Facebook et Instagram pour WooCommerce, Easy Digital Downloads et pages de produits personnalisées."
+msgid "Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce and custom product pages."
+msgstr "Flux XML de catalogue Gestionnaire des ventes Facebook et Instagram pour WooCommerce et pages de produits personnalisées."
 
 #. Author of the plugin/theme
 msgid "JS Morisset"

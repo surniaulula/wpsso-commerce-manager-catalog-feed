@@ -196,8 +196,8 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Facebook and Instagram Manager Catalog Feed XMLs for WooCommerce and custom "
-"product pages."
+"Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce "
+"and custom product pages."
 msgstr ""
 
 #. Author of the plugin/theme
