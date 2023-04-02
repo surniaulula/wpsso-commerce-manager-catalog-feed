@@ -97,7 +97,7 @@ if ( ! class_exists( 'WpssoCmcfSubmenuCmcfGeneral' ) && class_exists( 'WpssoAdmi
 			if ( $this->doing_task ) {
 
 				$this->add_table_rows_doing_task( $table_rows, $metabox_title );
-			
+
 				return $table_rows;
 			}
 
@@ -132,7 +132,7 @@ if ( ! class_exists( 'WpssoCmcfSubmenuCmcfGeneral' ) && class_exists( 'WpssoAdmi
 
 			return $table_rows;
 		}
-		
+
 		private function add_table_rows_doing_task( &$table_rows, $metabox_title ) {	// Pass by reference is OK.
 
 			$task_name_transl = _x( $this->doing_task, 'task name', 'wpsso' );

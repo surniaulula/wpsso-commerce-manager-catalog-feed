@@ -96,9 +96,9 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 				$request_format = 'rss2';
 
 			} else {
-			
+
 				if ( 'feed' !== $request_type ) {
-				
+
 					WpssoErrorException::http_error( 400, sprintf( __( '%1$s requested type "%2$s" is unknown.',
 						'wpsso-commerce-manager-catalog-feed' ), $metabox_title, $request_type ) );
 				}
@@ -109,7 +109,7 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 				$request_format = get_query_var( 'feed_format' );
 
 				if ( 'rss2' !== $request_format ) {
-	
+
 					WpssoErrorException::http_error( 400, sprintf( __( '%1$s requested format "%2$s" is unknown.',
 						'wpsso-commerce-manager-catalog-feed' ), $metabox_title, $request_format ) );
 				}
