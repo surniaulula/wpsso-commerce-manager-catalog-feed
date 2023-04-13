@@ -108,7 +108,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.5.0-b.1 (2023/04/12)**
+**Version 2.5.0-rc.1 (2023/04/13)**
 
 * **New Features**
 	* None.
@@ -121,7 +121,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.
 	* WordPress v5.4.
-	* WPSSO Core v15.8.0-b.1.
+	* WPSSO Core v15.8.0-rc.1.
 
 **Version 2.4.0 (2023/03/30)**
 
@@ -213,9 +213,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.5.0-b.1 =
+= 2.5.0-rc.1 =
 
-(2023/04/12) Replaced the `WpssoCmcfXml::get_meta_query()` private method by a new public method in WPSSO Core v15.8.0.
+(2023/04/13) Replaced the `WpssoCmcfXml::get_meta_query()` private method by a new public method in WPSSO Core v15.8.0.
 
 = 2.3.0 =
 
