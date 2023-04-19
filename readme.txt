@@ -108,7 +108,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.6.0-dev.1 (2023/04/19)**
+**Version 2.6.0-dev.2 (2023/04/19)**
 
 * **New Features**
 	* None.
@@ -117,11 +117,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* Added an $og_locale argument for the WpssoAbstractWpMeta::get_column_meta_query_og_type()` method.
+	* Added a $request_locale argument for the WpssoAbstractWpMeta::get_column_meta_query_og_type()` method.
 * **Requires At Least**
 	* PHP v7.2.
 	* WordPress v5.5.
-	* WPSSO Core v15.9.0-dev.1.
+	* WPSSO Core v15.9.0-dev.2.
 
 **Version 2.5.0 (2023/04/13)**
 
@@ -228,7 +228,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.6.0-dev.1 =
+= 2.6.0-dev.2 =
 
 (2023/04/19) Added the requested locale to the XML 'meta_query' array.
 
