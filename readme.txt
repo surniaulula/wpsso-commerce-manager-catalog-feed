@@ -13,7 +13,7 @@ Requires PHP: 7.2
 Requires At Least: 5.5
 Tested Up To: 6.2.0
 WC Tested Up To: 7.6.0
-Stable Tag: 2.5.0
+Stable Tag: 2.6.0
 
 Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce and custom product pages.
 
@@ -108,7 +108,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.6.0 (2023/04/19)**
+**Version 2.6.0 (2023/04/20)**
 
 * **New Features**
 	* None.
@@ -230,7 +230,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.6.0 =
 
-(2023/04/19) Added the requested locale to the XML 'meta_query' array.
+(2023/04/20) Added the requested locale to the XML 'meta_query' array.
 
 = 2.5.0 =
 
