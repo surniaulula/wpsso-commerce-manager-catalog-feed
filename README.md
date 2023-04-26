@@ -4,7 +4,7 @@
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Commerce Manager Catalog Feed XML</td></tr>
 <tr><th align="right" valign="top" nowrap>Summary</th><td>Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce and custom product pages.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>2.6.0</td></tr>
-<tr><th align="right" valign="top" nowrap>Requires PHP</th><td>7.2 or newer</td></tr>
+<tr><th align="right" valign="top" nowrap>Requires PHP</th><td>7.2.5 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>5.5 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To WordPress</th><td>6.2.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To WooCommerce</th><td>7.6.0</td></tr>
