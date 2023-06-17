@@ -25,7 +25,7 @@ Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce and cu
 
 **E-Commerce Plugin Optional:**
 
-WooCommerce is suggested but not required - the WPSSO Commerce Manager Catalog Feed XML add-on can also retrieve custom product information entered in the Document SSO metabox.
+WooCommerce is suggested but not required - the WPSSO Commerce Manager Catalog Feed XML add-on can also use product information from custom product pages.
 
 **Complete WooCommerce Support:**
 
