@@ -9,7 +9,7 @@ Assets URI: https://surniaulula.github.io/wpsso-commerce-manager-catalog-feed/as
 Tags: facebook feed, woocommerce product feed, facebook catalog, woocommerce, instagram, wpml, polylang, easy digital downloads
 Contributors: jsmoriss
 Requires Plugins: wpsso
-Requires PHP: 7.2.5
+Requires PHP: 7.2.34
 Requires At Least: 5.5
 Tested Up To: 6.2.2
 WC Tested Up To: 7.8.2
@@ -119,7 +119,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Developer Notes**
 	* Added a $request_locale argument for the WpssoAbstractWpMeta::get_column_meta_query_og_type()` method.
 * **Requires At Least**
-	* PHP v7.2.5.
+	* PHP v7.2.34.
 	* WordPress v5.5.
 	* WPSSO Core v15.9.0.
 
