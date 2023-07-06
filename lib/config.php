@@ -180,7 +180,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 
 			if ( ! is_array( $var_const ) ) {
 
-				$var_const = (array) self::get_variable_constants();
+				$var_const = self::get_variable_constants();
 			}
 
 			/*
