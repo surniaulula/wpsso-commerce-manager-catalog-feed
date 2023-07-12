@@ -213,7 +213,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 			self::sanitize_mt_array( $mt_single );
 
-			$names = array(
+			$mt_names = array(
 
 				/*
 				 * Required fields for products.
@@ -268,7 +268,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 				'product:shipping_weight:value' => 'setShippingWeight',
 			);
 
-			foreach ( $names as $mt_name => $mixed ) {
+			foreach ( $mt_names as $mt_name => $mixed ) {
 
 				if ( isset( $mt_single[ $mt_name ] ) && '' !== $mt_single[ $mt_name ] ) {	// Not null or empty string.
 
