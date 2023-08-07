@@ -15,7 +15,7 @@ if ( ! class_exists( 'WpssoCmcfFiltersMessages' ) ) {
 	class WpssoCmcfFiltersMessages {
 
 		private $p;	// Wpsso class object.
-		private $a;     // WpssoCmcf class object.
+		private $a;	// WpssoCmcf class object.
 
 		/*
 		 * Instantiated by WpssoCmcfFilters->__construct().
