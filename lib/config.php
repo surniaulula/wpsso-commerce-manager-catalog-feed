@@ -255,7 +255,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 
 					if ( empty( $classname ) ) {
 
-						$classname = SucomUtil::sanitize_classname( 'wpssocmcf' . $filespec, $allow_underscore = false );
+						return SucomUtil::sanitize_classname( 'wpssocmcf' . $filespec, $allow_underscore = false );
 					}
 
 					return $classname;
