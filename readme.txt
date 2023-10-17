@@ -12,7 +12,7 @@ Requires Plugins: wpsso
 Requires PHP: 7.2.34
 Requires At Least: 5.5
 Tested Up To: 6.3.2
-WC Tested Up To: 8.2.0
+WC Tested Up To: 8.2.1
 Stable Tag: 2.7.0
 
 Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce and custom product pages.
