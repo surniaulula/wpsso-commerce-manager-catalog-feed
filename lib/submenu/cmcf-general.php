@@ -14,8 +14,6 @@ if ( ! class_exists( 'WpssoCmcfSubmenuCmcfGeneral' ) && class_exists( 'WpssoAdmi
 
 	class WpssoCmcfSubmenuCmcfGeneral extends WpssoAdmin {
 
-		private $doing_task = false;
-
 		public function __construct( &$plugin, $id, $name, $lib, $ext ) {
 
 			$this->p =& $plugin;
@@ -38,8 +36,6 @@ if ( ! class_exists( 'WpssoCmcfSubmenuCmcfGeneral' ) && class_exists( 'WpssoAdmi
 		 */
 		protected function add_plugin_hooks() {
 
-			$this->doing_task = $this->p->util->cache->doing_task();
-
 			$this->p->util->add_plugin_filters( $this, array(
 				'form_button_rows' => 1,	// Form buttons for this settings page.
 			), PHP_INT_MAX );			// Run filter last to remove all form buttons.
@@ -50,7 +46,7 @@ if ( ! class_exists( 'WpssoCmcfSubmenuCmcfGeneral' ) && class_exists( 'WpssoAdmi
 		 */
 		public function filter_form_button_rows( $form_button_rows ) {
 
-			if ( $this->doing_task ) {
+			if ( $this->p->util->cache->is_refresh_running() ) {
 
 				$form_button_rows = array();
 
@@ -94,9 +90,9 @@ if ( ! class_exists( 'WpssoCmcfSubmenuCmcfGeneral' ) && class_exists( 'WpssoAdmi
 
 			$table_rows = array();
 
-			if ( $this->doing_task ) {
+			if ( $this->p->util->cache->is_refresh_running() ) {
 
-				$this->add_table_rows_doing_task( $table_rows, $metabox_title );
+				$this->add_table_rows_refresh_running( $table_rows, $metabox_title );
 
 				return $table_rows;
 			}
@@ -133,9 +129,9 @@ if ( ! class_exists( 'WpssoCmcfSubmenuCmcfGeneral' ) && class_exists( 'WpssoAdmi
 			return $table_rows;
 		}
 
-		private function add_table_rows_doing_task( &$table_rows, $metabox_title ) {	// Pass by reference is OK.
+		private function add_table_rows_refresh_running( &$table_rows, $metabox_title ) {	// Pass by reference is OK.
 
-			$task_name_transl = _x( $this->doing_task, 'task name', 'wpsso' );
+			$task_name_transl = _x( 'refresh the cache', 'task name', 'wpsso' );
 
 			$table_rows[ 'wpssocmcf_disabled' ] = '<tr><td align="center">' .
 				'<p class="status-msg">' . sprintf( __( 'A background task to %s is currently running.',
