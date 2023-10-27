@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 2.7.0\n"
+"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 2.8.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-commerce-manager-catalog-feed\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-08-08 08:33-0700\n"
+"PO-Revision-Date: 2023-10-27 09:26-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.1\n"
 
 #: gettext/gettext-lib-abstract-com.php:5 lib/abstract/com/add-on.php:209
 msgid "The %1$s add-on requires the %2$s plugin."
@@ -129,7 +129,7 @@ msgstr "Une URL d'image personnalisée (au lieu d'un ID d'image) pour le flux XM
 msgid "This option is disabled if a custom image ID is selected."
 msgstr "Cette option est désactivée si un ID d'image personnalisé est sélectionné."
 
-#: lib/filters.php:103 lib/rewrite.php:76 lib/submenu/cmcf-general.php:75
+#: lib/filters.php:103 lib/rewrite.php:76 lib/submenu/cmcf-general.php:71
 msgctxt "metabox title"
 msgid "Commerce Manager Catalog Feed XML"
 msgstr "Flux XML de catalogue Gestionnaire des ventes"
@@ -150,21 +150,26 @@ msgstr "%1$s format demandé \"%2$s\" est inconnu."
 msgid "%1$s requested locale \"%2$s\" is unknown."
 msgstr "%1$s locale demandée \"%2$s\" est inconnue."
 
-#: lib/rewrite.php:135 lib/submenu/cmcf-general.php:143
-msgid "%s is currently unavailable pending completion of a maintenance task."
-msgstr "%s est actuellement indisponible en attendant l'achèvement d'une tâche de maintenance."
+#: lib/rewrite.php:135 lib/submenu/cmcf-general.php:139
+msgid "%s is currently unavailable pending completion of a cache refresh task."
+msgstr "%s est actuellement indisponible en attendant la fin d'une tâche d'actualisation du cache."
 
-#: lib/submenu/cmcf-general.php:61
+#: lib/submenu/cmcf-general.php:57
 msgctxt "submit button"
 msgid "Refresh XML Cache"
 msgstr "Rafraîchir cache XML"
 
-#: lib/submenu/cmcf-general.php:124
+#: lib/submenu/cmcf-general.php:120
 msgctxt "option comment"
 msgid "%1$s feed items, %2$s image links, and %3$s additional image links."
 msgstr "%1$s éléments de flux, %2$s liens d'image et %3$s liens d'image supplémentaires."
 
-#: lib/submenu/cmcf-general.php:141
+#: lib/submenu/cmcf-general.php:134
+msgctxt "task name"
+msgid "refresh the cache"
+msgstr "rafraîchir le cache"
+
+#: lib/submenu/cmcf-general.php:137
 msgid "A background task to %s is currently running."
 msgstr "Une tâche en arrière-plan pour %s est en cours d'exécution."
 

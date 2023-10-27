@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Commerce Manager Catalog Feed XML package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 2.8.0-dev.4\n"
+"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 2.8.0-b.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-commerce-"
 "manager-catalog-feed\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
@@ -169,7 +169,7 @@ msgid "%1$s requested locale \"%2$s\" is unknown."
 msgstr ""
 
 #: lib/rewrite.php:135 lib/submenu/cmcf-general.php:139
-msgid "%s is currently unavailable pending completion of a maintenance task."
+msgid "%s is currently unavailable pending completion of a cache refresh task."
 msgstr ""
 
 #: lib/submenu/cmcf-general.php:57

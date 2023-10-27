@@ -132,7 +132,7 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 
 			if ( $wpsso->util->cache->is_refresh_running() ) {
 
-				WpssoErrorException::http_error( 503, sprintf( __( '%s is currently unavailable pending completion of a maintenance task.',
+				WpssoErrorException::http_error( 503, sprintf( __( '%s is currently unavailable pending completion of a cache refresh task.',
 					'wpsso-commerce-manager-catalog-feed' ), $metabox_title ) );
 			}
 
