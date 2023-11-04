@@ -57,7 +57,7 @@ if ( ! class_exists( 'WpssoCmcfSubmenuFacebookCatalog' ) && class_exists( 'Wpsso
 			return $form_button_rows;
 		}
 
-		public function get_table_rows( $page_id, $metabox_id, $tab_key = '', $args = array() ) {
+		protected function get_table_rows( $page_id, $metabox_id, $tab_key = '', $args = array() ) {
 
 			$table_rows = array();
 
