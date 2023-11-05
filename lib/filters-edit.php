@@ -33,7 +33,7 @@ if ( ! class_exists( 'WpssoCmcfFiltersEdit' ) ) {
 			}
 		}
 
-		public function filter_mb_sso_edit_media_og_rows( $table_rows, $form, $head_info, $mod, $canonical_url ) {
+		public function filter_mb_sso_edit_media_og_rows( $table_rows, $form, $head_info, $mod, $args ) {
 
 			if ( ! $mod[ 'is_public' ] ) {
 
@@ -46,18 +46,20 @@ if ( ! class_exists( 'WpssoCmcfFiltersEdit' ) ) {
 
 			if ( $is_product ) {
 
-				$this->p->util->maybe_set_ref( $canonical_url, $mod, __( 'getting facebook catalog feed image', 'wpsso-commerce-manager-catalog-feed' ) );
+				$this->p->util->maybe_set_ref( $args[ 'canonical_url' ], $mod,
+					__( 'getting facebook catalog feed image', 'wpsso-commerce-manager-catalog-feed' ) );
 
 				$media_info = $this->p->media->get_media_info( $size_name = 'wpsso-cmcf', $media_request, $mod, $md_pre = array( 'og' ) );
 
 			} else {
 
-				$this->p->util->maybe_set_ref( $canonical_url, $mod, __( 'getting open graph image', 'wpsso-commerce-manager-catalog-feed' ) );
+				$this->p->util->maybe_set_ref( $args[ 'canonical_url' ], $mod,
+					__( 'getting open graph image', 'wpsso-commerce-manager-catalog-feed' ) );
 
 				$media_info = $this->p->media->get_media_info( $size_name = 'wpsso-opengraph', $media_request, $mod, $md_pre = array( 'none' ) );
 			}
 
-			$this->p->util->maybe_unset_ref( $canonical_url );
+			$this->p->util->maybe_unset_ref( $args[ 'canonical_url' ] );
 
 			$form_rows = array(
 				'subsection_cmcf' => array(
