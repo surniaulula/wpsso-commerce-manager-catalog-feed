@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Commerce Manager Catalog Feed XML package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 2.9.0-dev.10\n"
+"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 2.9.0-dev.11\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-commerce-"
 "manager-catalog-feed\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
@@ -168,25 +168,25 @@ msgstr ""
 msgid "%1$s requested locale \"%2$s\" is unknown."
 msgstr ""
 
-#: lib/rewrite.php:135 lib/submenu/facebook-catalog.php:76
+#: lib/rewrite.php:135 lib/submenu/facebook-catalog.php:67
 msgid "%s is currently unavailable pending completion of a cache refresh task."
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:58
+#: lib/submenu/facebook-catalog.php:51
 msgctxt "submit button"
 msgid "Refresh XML Cache"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:71
+#: lib/submenu/facebook-catalog.php:62
 msgctxt "task name"
 msgid "refresh the cache"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:74
+#: lib/submenu/facebook-catalog.php:65
 msgid "A background task to %s is currently running."
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:99
+#: lib/submenu/facebook-catalog.php:90
 msgctxt "option comment"
 msgid "%1$s feed items, %2$s image links, and %3$s additional image links."
 msgstr ""

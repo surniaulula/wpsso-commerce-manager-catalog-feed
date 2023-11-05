@@ -28,12 +28,12 @@ if ( ! class_exists( 'WpssoCmcfFiltersEdit' ) ) {
 			if ( is_admin() ) {
 
 				$this->p->util->add_plugin_filters( $this, array(
-					'metabox_sso_edit_media_og_rows' => 5,
+					'mb_sso_edit_media_og_rows' => 5,
 				) );
 			}
 		}
 
-		public function filter_metabox_sso_edit_media_og_rows( $table_rows, $form, $head_info, $mod, $canonical_url ) {
+		public function filter_mb_sso_edit_media_og_rows( $table_rows, $form, $head_info, $mod, $canonical_url ) {
 
 			if ( ! $mod[ 'is_public' ] ) {
 

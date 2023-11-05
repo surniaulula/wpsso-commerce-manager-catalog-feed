@@ -33,33 +33,24 @@ if ( ! class_exists( 'WpssoCmcfSubmenuFacebookCatalog' ) && class_exists( 'Wpsso
 			);
 		}
 
-		protected function add_settings_page_callbacks() {
+		protected function add_form_buttons( &$form_button_rows ) {
 
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
-
-			$this->p->util->add_plugin_filters( $this, array( 'form_button_rows' => 1 ), PHP_INT_MAX );
-		}
-
-		public function filter_form_button_rows( $form_button_rows ) {
-
+			/*
+			 * If a refresh is running, remove all buttons.
+			 */
 			if ( $this->p->util->cache->is_refresh_running() ) {
 
 				return array();
 			}
 
 			/*
-			 * Remove all action buttons from this settings page and add a "Refresh XML Cache" button.
+			 * Remove all action buttons and add a "Refresh XML Cache" button.
 			 */
 			$form_button_rows = array(
 				array(
 					'refresh_feed_xml_cache' => _x( 'Refresh XML Cache', 'submit button', 'wpsso-commerce-manager-catalog-feed' ),
 				),
 			);
-
-			return $form_button_rows;
 		}
 
 		protected function get_table_rows( $page_id, $metabox_id, $tab_key = '', $args = array() ) {
