@@ -108,7 +108,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.0.1-dev.2 (2023/11/09)**
+**Version 3.0.1-dev.3 (2023/11/10)**
 
 * **New Features**
 	* None.
@@ -121,7 +121,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.34.
 	* WordPress v5.5.
-	* WPSSO Core v17.1.0-dev.2.
+	* WPSSO Core v17.1.0-dev.3.
 
 **Version 3.0.0 (2021/11/08)**
 
@@ -155,9 +155,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.0.1-dev.2 =
+= 3.0.1-dev.3 =
 
-(2021/11/09) Fixed HTML output for HTTP error code.
+(2021/11/10) Fixed HTML output for HTTP error code.
 
 = 3.0.0 =
 
