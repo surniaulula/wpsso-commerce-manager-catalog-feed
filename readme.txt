@@ -13,7 +13,7 @@ Requires PHP: 7.2.34
 Requires At Least: 5.5
 Tested Up To: 6.4.1
 WC Tested Up To: 8.2.2
-Stable Tag: 3.0.0
+Stable Tag: 3.0.1
 
 Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce and custom product pages.
 
@@ -138,21 +138,6 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WordPress v5.5.
 	* WPSSO Core v17.0.0.
 
-**Version 2.8.0 (2023/10/28)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Update for deprecated method.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Changed deprecated `WpssoUtilCache->doing_task()` call for `WpssoUtilCache->is_refresh_running()`.
-* **Requires At Least**
-	* PHP v7.2.34.
-	* WordPress v5.5.
-	* WPSSO Core v16.5.0.
-
 == Upgrade Notice ==
 
 = 3.0.1 =
@@ -162,8 +147,4 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 = 3.0.0 =
 
 (2021/11/08) Refactored the settings page and metabox load process for WPSSO Core v17.0.0.
-
-= 2.8.0 =
-
-(2023/10/28) Update for deprecated method.
 
