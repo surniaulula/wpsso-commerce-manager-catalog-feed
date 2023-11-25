@@ -18,6 +18,60 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 	class WpssoCmcfXml {
 
+		static $product_callbacks = array(
+
+			/*
+			 * Required fields for products.
+			 *
+			 * Do NOT use the 'setAvailability' method as Facebook and Google use different sanitized availability values.
+			 */
+			'og:title'                 => 'setTitle',
+			'og:description'           => 'setDescription',
+			'og:url'                   => 'setCanonicalLink',
+			'product:retailer_item_id' => 'setId',
+			'product:title'            => 'setTitle',
+			'product:description'      => 'setDescription',
+			'product:availability'     => array( 'setAttribute', 'availability', false ),	// Do NOT use 'setAvailability'.
+			'product:condition'        => 'setCondition',
+			'product:price'            => 'setPrice',
+			'product:url'              => 'setLink',
+
+			/*
+			 * Additional required fields for checkout on Facebook and Instagram (US only).
+			 */
+			'product:category' => 'setGoogleCategory',
+			'product:size'     => 'setSize',
+
+			/*
+			 * The brand name, unique manufacturer part number (MPN) or Global Trade Item Number (GTIN) of the
+			 * item. You only need to enter one of these, not all of them. For GTIN, enter the item's UPC, EAN,
+			 * JAN or ISBN. Character limit: 100.
+			 */
+			'product:brand'       => 'addBrand',	// One or more.
+			'product:mfr_part_no' => 'addBrand',	// One or more.
+			'product:isbn'        => 'addBrand',	// One or more.
+			'product:upc'         => 'addBrand',	// One or more.
+			'product:ean'         => 'addBrand',	// One or more.
+			'product:gtin14'      => 'addBrand',	// One or more.
+			'product:gtin13'      => 'addBrand',	// One or more.
+			'product:gtin12'      => 'addBrand',	// One or more.
+			'product:gtin8'       => 'addBrand',	// One or more.
+			'product:gtin'        => 'addBrand',	// One or more.
+
+			/*
+			 * Optional fields for products.
+			 */
+			'product:sale_price'            => 'setSalePrice',
+			'product:sale_price_dates'      => 'setSalePriceEffectiveDate',
+			'product:item_group_id'         => array( 'setAttribute', 'item_group_id', false ),
+			'product:color'                 => 'setColor',
+			'product:target_gender'         => array( 'setAttribute', 'gender', false ),
+			'product:age_group'             => array( 'setAttribute', 'age_group', false ),
+			'product:material'              => 'setMaterial',
+			'product:pattern'               => array( 'setAttribute', 'pattern', false ),
+			'product:shipping_weight:value' => 'setShippingWeight',
+		);
+
 		/*
 		 * Clear the feed XML cache files.
 		 *
@@ -152,7 +206,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 							$wpsso->debug->log( 'adding variant #' . $num . ' for post id ' . $post_id );
 						}
 
-						self::add_feed_product( $rss2_feed, $mt_single );
+						self::add_feed_product( $rss2_feed, $mt_single, $request_type );
 					}
 
 				} else {
@@ -162,7 +216,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 						$wpsso->debug->log( 'adding product for post id ' . $post_id );
 					}
 
-					self::add_feed_product( $rss2_feed, $mt_og );
+					self::add_feed_product( $rss2_feed, $mt_og, $request_type );
 				}
 			}
 
@@ -181,7 +235,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 			return $xml;
 		}
 
-		static private function add_feed_product( &$rss2_feed, array $mt_single ) {
+		static private function add_feed_product( &$rss2_feed, array $mt_single, $request_type = 'feed' ) {
 
 			$wpsso =& Wpsso::get_instance();
 
@@ -213,105 +267,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 			self::sanitize_mt_array( $mt_single );
 
-			$mt_names = array(
-
-				/*
-				 * Required fields for products.
-				 *
-				 * Do not use the 'setAvailability' method as Facebook and Google use different sanitized
-				 * availability values.
-				 */
-				'og:title'                 => 'setTitle',
-				'og:description'           => 'setDescription',
-				'og:url'                   => 'setLink',
-				'product:retailer_item_id' => 'setId',
-				'product:title'            => 'setTitle',
-				'product:description'      => 'setDescription',
-				'product:availability'     => array( 'setAttribute', 'availability', false ),
-				'product:condition'        => 'setCondition',
-				'product:price'            => 'setPrice',
-				'product:url'              => 'setLink',
-
-				/*
-				 * Additional required fields for checkout on Facebook and Instagram (US only).
-				 */
-				'product:category' => 'setGoogleCategory',
-				'product:size'     => 'setSize',
-
-				/*
-				 * The brand name, unique manufacturer part number (MPN) or Global Trade Item Number (GTIN) of the
-				 * item. You only need to enter one of these, not all of them. For GTIN, enter the item's UPC, EAN,
-				 * JAN or ISBN. Character limit: 100.
-				 */
-				'product:brand'       => array( 'addAttribute', 'brand', false ),	// One or more.
-				'product:mfr_part_no' => array( 'addAttribute', 'brand', false ),	// One or more.
-				'product:isbn'        => array( 'addAttribute', 'brand', false ),	// One or more.
-				'product:upc'         => array( 'addAttribute', 'brand', false ),	// One or more.
-				'product:ean'         => array( 'addAttribute', 'brand', false ),	// One or more.
-				'product:gtin14'      => array( 'addAttribute', 'brand', false ),	// One or more.
-				'product:gtin13'      => array( 'addAttribute', 'brand', false ),	// One or more.
-				'product:gtin12'      => array( 'addAttribute', 'brand', false ),	// One or more.
-				'product:gtin8'       => array( 'addAttribute', 'brand', false ),	// One or more.
-				'product:gtin'        => array( 'addAttribute', 'brand', false ),	// One or more.
-
-				/*
-				 * Optional fields for products.
-				 */
-				'product:sale_price'            => 'setSalePrice',
-				'product:sale_price_dates'      => array( 'setAttribute', 'sale_price_effective_date', false ),
-				'product:item_group_id'         => array( 'setAttribute', 'item_group_id', false ),
-				'product:color'                 => 'setColor',
-				'product:target_gender'         => array( 'setAttribute', 'gender', false ),
-				'product:age_group'             => array( 'setAttribute', 'age_group', false ),
-				'product:material'              => 'setMaterial',
-				'product:pattern'               => array( 'setAttribute', 'pattern', false ),
-				'product:shipping_weight:value' => 'setShippingWeight',
-			);
-
-			foreach ( $mt_names as $mt_name => $mixed ) {
-
-				if ( isset( $mt_single[ $mt_name ] ) && '' !== $mt_single[ $mt_name ] ) {	// Not null or empty string.
-
-					if ( is_array( $mixed ) ) {
-
-						list( $method_name, $prop_name, $is_cdata ) = $mixed;
-
-					} else {
-
-						list( $method_name, $prop_name, $is_cdata ) = array( $mixed, '', false );
-					}
-
-					$values = is_array( $mt_single[ $mt_name ] ) ? $mt_single[ $mt_name ] : array( $mt_single[ $mt_name ] );
-
-					foreach ( $values as $value ) {
-
-						if ( false !== strpos( $mt_name, ':value' ) ) {
-
-							$mt_name_units = preg_replace( '/:value$/', ':units', $mt_name );
-
-							if ( ! empty( $mt_single[ $mt_name_units ] ) ) {
-
-								$value .= ' ' . $mt_single[ $mt_name_units ];
-							}
-						}
-
-						/*
-						 * Call method from Vitalybaev\GoogleMerchant\Product().
-						 */
-						if ( method_exists( $product, $method_name ) ) {	// Just in case.
-
-							if ( $prop_name ) {
-
-								$product->$method_name( $prop_name, $value, $is_cdata );
-
-							} else {
-
-								$product->$method_name( $value );
-							}
-						}
-					}
-				}
-			}
+			self::add_object_data( $product, $mt_single, self::$product_callbacks );
 		}
 
 		static private function add_product_images( &$product, $mt_single ) {
@@ -327,13 +283,62 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 			foreach ( $image_urls as $num => $image_url ) {
 
-				if ( 0 === $num ) {
+				if ( 0 == $num ) {
 
 					$product->setImage( $image_url );
 
-				} else {
+				} else $product->addAdditionalImage( $image_url );
+			}
+		}
 
-					$product->addAdditionalImage( $image_url );
+		static private function add_object_data( &$object, array $data, array $callbacks ) {
+
+			foreach ( $callbacks as $key => $callback ) {
+
+				if ( empty( $callback ) ) {	// Not used.
+
+					continue;
+
+				} elseif ( isset( $data[ $key ] ) && '' !== $data[ $key ] ) {	// Not null or empty string.
+
+					if ( is_array( $callback ) ) {
+
+						list( $method_name, $prop_name, $is_cdata ) = $callback;
+
+					} else {
+
+						list( $method_name, $prop_name, $is_cdata ) = array( $callback, '', false );
+					}
+
+					$values = is_array( $data[ $key ] ) ? $data[ $key ] : array( $data[ $key ] );
+
+					foreach ( $values as $value ) {
+
+						foreach ( array( ':value' => ':units', '_cost'  => '_currency' ) as $value_suffix => $append_suffix ) {
+
+							if ( false !== strpos( $key, $value_suffix ) ) {
+
+								$key_append = preg_replace( '/' . $value_suffix . '$/', $append_suffix, $key );
+
+								if ( ! empty( $data[ $key_append ] ) ) {
+
+									$value .= ' ' . $data[ $key_append ];
+								}
+							}
+						}
+
+						if ( method_exists( $object, $method_name ) ) {	// Just in case.
+
+							if ( $prop_name ) {
+
+								$object->$method_name( $prop_name, $value, $is_cdata );
+
+							} else {
+
+								$object->$method_name( $value );
+							}
+						}
+					}
 				}
 			}
 		}
@@ -383,12 +388,9 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 					self::map_mt_value( $arr_val, $map );
 				}
 
-			} else {
+			} elseif ( isset( $map[ $value ] ) ) {	// Allow for false.
 
-				if ( isset( $map[ $value ] ) ) {	// Allow for false.
-
-					$value = $map[ $value ];
-				}
+				$value = $map[ $value ];
 			}
 		}
 	}
