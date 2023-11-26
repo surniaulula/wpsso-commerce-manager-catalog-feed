@@ -179,7 +179,7 @@ msgctxt "option comment"
 msgid "%1$s feed items, %2$s image links, and %3$s additional image links."
 msgstr ""
 
-#: lib/xml.php:342
+#: lib/xml.php:347
 msgid "%1$s::%2$s() method does not exist."
 msgstr ""
 

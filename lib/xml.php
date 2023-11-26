@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 use Vitalybaev\GoogleMerchant\Feed;
-use Vitalybaev\GoogleMerchant\Product\Meta;
+use Vitalybaev\GoogleMerchant\Meta\Product;
 
 if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
@@ -21,6 +21,8 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 			/*
 			 * Required fields for products.
+			 *
+			 * See https://www.facebook.com/business/help/120325381656392?id=725943027795860
 			 */
 			'og:title'                 => 'setTitle',
 			'og:description'           => 'setDescription',
@@ -232,6 +234,9 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 			return $xml;
 		}
 
+		/*
+		 * See https://www.facebook.com/business/help/120325381656392?id=725943027795860
+		 */
 		static private function add_feed_product( &$rss2_feed, array $mt_single, $request_type = 'feed' ) {
 
 			$wpsso =& Wpsso::get_instance();
@@ -241,7 +246,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			$product = new Vitalybaev\GoogleMerchant\Product\Meta();
+			$product = new Vitalybaev\GoogleMerchant\Meta\Product();
 
 			self::add_product_data( $product, $mt_single );
 
@@ -251,7 +256,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 		}
 
 		/*
-		 * See https://www.facebook.com/business/help/120325381656392?id=725943027795860.
+		 * See https://www.facebook.com/business/help/120325381656392?id=725943027795860
 		 */
 		static private function add_product_data( &$product, $mt_single ) {
 
