@@ -84,7 +84,7 @@ if ( ! class_exists( 'WpssoCmcfActions' ) ) {
 		}
 
 		/*
-		 * Once the post cache is refreshed, clear the feed XML cache file.
+		 * Once the post cache is cleared and refreshed, clear the feed XML.
 		 *
 		 * See WpssoPost->refresh_cache().
 		 */
@@ -97,6 +97,7 @@ if ( ! class_exists( 'WpssoCmcfActions' ) ) {
 				$locale = SucomUtil::get_locale( $mod );
 
 				WpssoCmcfXml::clear_cache( $locale, $request_type = 'feed' );
+				WpssoCmcfXml::clear_cache( $locale, $request_type = 'inventory' );
 			}
 		}
 

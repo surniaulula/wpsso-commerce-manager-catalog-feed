@@ -68,10 +68,6 @@ if ( ! class_exists( 'WpssoCmcfFilters' ) ) {
 			return $sizes;
 		}
 
-		/*
-		 * See WpssoUtilCache->refresh().
-		 * See WpssoCmcfActions->action_load_settings_page_refresh_feed_xml_cache().
-		 */
 		public function filter_cache_refreshed_notice( $notice_msg, $user_id = null ) {
 
 			$xml_count      = 0;

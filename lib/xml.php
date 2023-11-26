@@ -11,8 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 use Vitalybaev\GoogleMerchant\Feed;
-use Vitalybaev\GoogleMerchant\Product;
-use Vitalybaev\GoogleMerchant\Product\Shipping;
+use Vitalybaev\GoogleMerchant\Product\Meta;
 
 if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
@@ -22,8 +21,6 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 			/*
 			 * Required fields for products.
-			 *
-			 * Do NOT use the 'setAvailability' method as Facebook and Google use different sanitized availability values.
 			 */
 			'og:title'                 => 'setTitle',
 			'og:description'           => 'setDescription',
@@ -31,13 +28,13 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 			'product:retailer_item_id' => 'setId',
 			'product:title'            => 'setTitle',
 			'product:description'      => 'setDescription',
-			'product:availability'     => array( 'setAttribute', 'availability', false ),	// Do NOT use 'setAvailability'.
+			'product:availability'     => 'setAvailability',
 			'product:condition'        => 'setCondition',
 			'product:price'            => 'setPrice',
 			'product:url'              => 'setLink',
 
 			/*
-			 * Additional required fields for checkout on Facebook and Instagram (US only).
+			 * Required fields for checkout on Facebook and Instagram (US only).
 			 */
 			'product:category' => 'setGoogleCategory',
 			'product:size'     => 'setSize',
@@ -63,12 +60,12 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 			 */
 			'product:sale_price'            => 'setSalePrice',
 			'product:sale_price_dates'      => 'setSalePriceEffectiveDate',
-			'product:item_group_id'         => array( 'setAttribute', 'item_group_id', false ),
+			'product:item_group_id'         => 'setItemGroupId',
 			'product:color'                 => 'setColor',
-			'product:target_gender'         => array( 'setAttribute', 'gender', false ),
-			'product:age_group'             => array( 'setAttribute', 'age_group', false ),
+			'product:target_gender'         => 'setGender',
+			'product:age_group'             => 'setAgeGroup',
 			'product:material'              => 'setMaterial',
-			'product:pattern'               => array( 'setAttribute', 'pattern', false ),
+			'product:pattern'               => 'setPattern',
 			'product:shipping_weight:value' => 'setShippingWeight',
 		);
 
@@ -244,7 +241,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			$product = new Vitalybaev\GoogleMerchant\Product();
+			$product = new Vitalybaev\GoogleMerchant\Product\Meta();
 
 			self::add_product_data( $product, $mt_single );
 
@@ -337,6 +334,15 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 								$object->$method_name( $value );
 							}
+
+						} else {
+
+							$notice_pre = sprintf( '%s error:', __METHOD__ );
+
+							$notice_msg = sprintf( __( '%1$s::%2$s() method does not exist.', 'wpsso-commerce-manager-catalog-feed' ),
+								get_class( $object ), $method_name );
+
+							SucomUtil::safe_error_log( $notice_pre . ' ' . $notice_msg );
 						}
 					}
 				}

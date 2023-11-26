@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssocmcf' => array(			// Plugin acronym.
-					'version'     => '3.1.0-dev.1',	// Plugin version.
+					'version'     => '4.0.0-dev.3',	// Plugin version.
 					'opt_version' => '1',		// Increment when changing default option values.
 					'short'       => 'WPSSO CMCF',	// Short plugin name.
 					'name'        => 'WPSSO Commerce Manager Catalog Feed XML',
@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '17.1.0',
+							'min_version'   => '17.2.1',
 						),
 					),
 
@@ -102,35 +102,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 				/*
 				 * See https://www.facebook.com/business/help/120325381656392?id=725943027795860.
 				 */
-				'cmcf_content_map' => array(	// Element of 'head' array.
-
-					/*
-					 * The current availability of the item. Supported values: in stock, out of stock. Out of
-					 * stock items don't appear in ads, which prevents advertising items that aren't available.
-					 * They do still appear in shops on Facebook and Instagram, but are marked as sold out.
-					 */
-					'product:availability' => array(
-						'https://schema.org/BackOrder'           => 'out of stock',
-						'https://schema.org/Discontinued'        => 'out of stock',
-						'https://schema.org/InStock'             => 'in stock',
-						'https://schema.org/InStoreOnly'         => 'in stock',
-						'https://schema.org/LimitedAvailability' => 'in stock',
-						'https://schema.org/OnlineOnly'          => 'in stock',
-						'https://schema.org/OutOfStock'          => 'out of stock',
-						'https://schema.org/PreOrder'            => 'in stock',
-						'https://schema.org/PreSale'             => 'in stock',
-						'https://schema.org/SoldOut'             => 'out of stock',
-					),
-
-					/*
-					 * The condition of the item. Supported values: new, refurbished, used.
-					 */
-					'product:condition' => array(
-						'https://schema.org/DamagedCondition'     => 'used',
-						'https://schema.org/NewCondition'         => 'new',
-						'https://schema.org/RefurbishedCondition' => 'refurbished',
-						'https://schema.org/UsedCondition'        => 'used',
-					),
+				'cmcf_content_map' => array(
 				),
 			),
 			'wp' => array(
