@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoCmcfSubmenuFacebookCatalog' ) && class_exists( 'Wpsso
 			$this->menu_ext  = $ext;
 
 			$this->menu_metaboxes = array(
-				'feedxml' => _x( 'Commerce Manager Catalog Feed XML', 'metabox title', 'wpsso-commerce-manager-catalog-feed' ),
+				'feed' => _x( 'Commerce Manager Catalog Feed XML', 'metabox title', 'wpsso-commerce-manager-catalog-feed' ),
 			);
 		}
 
@@ -82,9 +82,11 @@ if ( ! class_exists( 'WpssoCmcfSubmenuFacebookCatalog' ) && class_exists( 'Wpsso
 				$img_count  = substr_count( $xml, '<g:image_link>' );
 				$addl_count = substr_count( $xml, '<g:additional_image_link>' );
 				$xml_size   = number_format( ( strlen( $xml ) / 1024 ) );	// XML size in KB.
+				$css_id     = SucomUtil::sanitize_css_id( 'cmcf_feed_' . $locale . '_url' );
 
-				$table_rows[ 'cmcf_url_' . $locale ] = '' .
-					$this->form->get_th_html( $native_name, $css_class = 'medium' ) .
+				$table_rows[ $css_id ] = '' .
+					$this->form->get_th_html( $native_name, $css_class = 'medium', $css_id,
+						array( 'locale' => $locale, 'native_name' => $native_name ) ) .
 					'<td>' . $this->form->get_no_input_clipboard( $url ) .
 					'<p class="status-msg left">' .
 					sprintf( _x( '%1$s feed items, %2$s image links, and %3$s additional image links.',

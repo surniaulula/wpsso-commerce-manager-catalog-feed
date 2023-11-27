@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssocmcf' => array(			// Plugin acronym.
-					'version'     => '4.0.0-dev.3',	// Plugin version.
+					'version'     => '4.0.0-dev.4',	// Plugin version.
 					'opt_version' => '1',		// Increment when changing default option values.
 					'short'       => 'WPSSO CMCF',	// Short plugin name.
 					'name'        => 'WPSSO Commerce Manager Catalog Feed XML',
@@ -61,6 +61,45 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 					'lib' => array(
 						'submenu' => array(
 							'facebook-catalog' => 'Facebook Catalog',
+						),
+					),
+
+					/*
+					 * Callbacks for Vitalybaev\GoogleMerchant classes.
+					 */
+					'callbacks' => array(
+						'product' => array(
+							'og:title'                      => 'setTitle',
+							'og:description'                => 'setDescription',
+							'og:url'                        => 'setCanonicalLink',
+							'product:retailer_item_id'      => 'setId',
+							'product:title'                 => 'setTitle',
+							'product:description'           => 'setDescription',
+							'product:availability'          => 'setAvailability',
+							'product:condition'             => 'setCondition',
+							'product:price'                 => 'setPrice',
+							'product:url'                   => 'setLink',
+							'product:category'              => 'setGoogleCategory',
+							'product:size'                  => 'setSize',
+							'product:brand'                 => 'addBrand',	// One or more.
+							'product:mfr_part_no'           => 'addBrand',	// One or more.
+							'product:isbn'                  => 'addBrand',	// One or more.
+							'product:upc'                   => 'addBrand',	// One or more.
+							'product:ean'                   => 'addBrand',	// One or more.
+							'product:gtin14'                => 'addBrand',	// One or more.
+							'product:gtin13'                => 'addBrand',	// One or more.
+							'product:gtin12'                => 'addBrand',	// One or more.
+							'product:gtin8'                 => 'addBrand',	// One or more.
+							'product:gtin'                  => 'addBrand',	// One or more.
+							'product:sale_price'            => 'setSalePrice',
+							'product:sale_price_dates'      => 'setSalePriceEffectiveDate',
+							'product:item_group_id'         => 'setItemGroupId',
+							'product:color'                 => 'setColor',
+							'product:target_gender'         => 'setGender',
+							'product:age_group'             => 'setAgeGroup',
+							'product:material'              => 'setMaterial',
+							'product:pattern'               => 'setPattern',
+							'product:shipping_weight:value' => 'setShippingWeight',
 						),
 					),
 
@@ -121,6 +160,11 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 			$info =& self::$cf[ 'plugin' ][ 'wpssocmcf' ];
 
 			return $add_slug ? $info[ 'slug' ] . '-' . $info[ 'version' ] : $info[ 'version' ];
+		}
+
+		public static function get_callbacks( $item_type ) {
+
+			return self::$cf[ 'plugin' ][ 'wpssocmcf' ][ 'callbacks' ][ $item_type ];
 		}
 
 		public static function set_constants( $plugin_file ) {

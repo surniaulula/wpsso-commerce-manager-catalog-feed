@@ -17,60 +17,6 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 	class WpssoCmcfXml {
 
-		static $product_callbacks = array(
-
-			/*
-			 * Required fields for products.
-			 *
-			 * See https://www.facebook.com/business/help/120325381656392?id=725943027795860
-			 */
-			'og:title'                 => 'setTitle',
-			'og:description'           => 'setDescription',
-			'og:url'                   => 'setCanonicalLink',
-			'product:retailer_item_id' => 'setId',
-			'product:title'            => 'setTitle',
-			'product:description'      => 'setDescription',
-			'product:availability'     => 'setAvailability',
-			'product:condition'        => 'setCondition',
-			'product:price'            => 'setPrice',
-			'product:url'              => 'setLink',
-
-			/*
-			 * Required fields for checkout on Facebook and Instagram (US only).
-			 */
-			'product:category' => 'setGoogleCategory',
-			'product:size'     => 'setSize',
-
-			/*
-			 * The brand name, unique manufacturer part number (MPN) or Global Trade Item Number (GTIN) of the
-			 * item. You only need to enter one of these, not all of them. For GTIN, enter the item's UPC, EAN,
-			 * JAN or ISBN. Character limit: 100.
-			 */
-			'product:brand'       => 'addBrand',	// One or more.
-			'product:mfr_part_no' => 'addBrand',	// One or more.
-			'product:isbn'        => 'addBrand',	// One or more.
-			'product:upc'         => 'addBrand',	// One or more.
-			'product:ean'         => 'addBrand',	// One or more.
-			'product:gtin14'      => 'addBrand',	// One or more.
-			'product:gtin13'      => 'addBrand',	// One or more.
-			'product:gtin12'      => 'addBrand',	// One or more.
-			'product:gtin8'       => 'addBrand',	// One or more.
-			'product:gtin'        => 'addBrand',	// One or more.
-
-			/*
-			 * Optional fields for products.
-			 */
-			'product:sale_price'            => 'setSalePrice',
-			'product:sale_price_dates'      => 'setSalePriceEffectiveDate',
-			'product:item_group_id'         => 'setItemGroupId',
-			'product:color'                 => 'setColor',
-			'product:target_gender'         => 'setGender',
-			'product:age_group'             => 'setAgeGroup',
-			'product:material'              => 'setMaterial',
-			'product:pattern'               => 'setPattern',
-			'product:shipping_weight:value' => 'setShippingWeight',
-		);
-
 		/*
 		 * Clear the feed XML cache files.
 		 *
@@ -205,7 +151,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 							$wpsso->debug->log( 'adding variant #' . $num . ' for post id ' . $post_id );
 						}
 
-						self::add_feed_product( $rss2_feed, $mt_single, $request_type );
+						self::add_feed_item( $rss2_feed, $mt_single, $request_type );
 					}
 
 				} else {
@@ -215,7 +161,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 						$wpsso->debug->log( 'adding product for post id ' . $post_id );
 					}
 
-					self::add_feed_product( $rss2_feed, $mt_og, $request_type );
+					self::add_feed_item( $rss2_feed, $mt_og, $request_type );
 				}
 			}
 
@@ -237,7 +183,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 		/*
 		 * See https://www.facebook.com/business/help/120325381656392?id=725943027795860
 		 */
-		static private function add_feed_product( &$rss2_feed, array $mt_single, $request_type = 'feed' ) {
+		static private function add_feed_item( &$rss2_feed, array $mt_single, $request_type = 'feed' ) {
 
 			$wpsso =& Wpsso::get_instance();
 
@@ -246,33 +192,29 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			$product = new Vitalybaev\GoogleMerchant\Meta\Product();
-
-			self::add_product_data( $product, $mt_single );
-
-			self::add_product_images( $product, $mt_single );
-
-			$rss2_feed->addProduct( $product );
-		}
-
-		/*
-		 * See https://www.facebook.com/business/help/120325381656392?id=725943027795860
-		 */
-		static private function add_product_data( &$product, $mt_single ) {
-
-			$wpsso =& Wpsso::get_instance();
-
-			if ( $wpsso->debug->enabled ) {
-
-				$wpsso->debug->mark();
-			}
+			$item = null;
 
 			self::sanitize_mt_array( $mt_single );
 
-			self::add_object_data( $product, $mt_single, self::$product_callbacks );
+			switch ( $request_type ) {
+
+				case 'feed':
+
+					$item = new Vitalybaev\GoogleMerchant\Meta\Product();
+
+					$callbacks = WpssoCmcfConfig::get_callbacks( 'product' );
+
+					self::add_item_data( $item, $mt_single, $callbacks );
+
+					self::add_item_images( $item, $mt_single );
+
+					break;
+			}
+
+			if ( ! empty( $item ) ) $rss2_feed->addItem( $item );
 		}
 
-		static private function add_product_images( &$product, $mt_single ) {
+		static private function add_item_images( &$product, $mt_single ) {
 
 			$wpsso =& Wpsso::get_instance();
 
@@ -293,7 +235,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 			}
 		}
 
-		static private function add_object_data( &$object, array $data, array $callbacks ) {
+		static private function add_item_data( &$item, array $data, array $callbacks ) {
 
 			foreach ( $callbacks as $key => $callback ) {
 
@@ -307,10 +249,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 						list( $method_name, $prop_name, $is_cdata ) = $callback;
 
-					} else {
-
-						list( $method_name, $prop_name, $is_cdata ) = array( $callback, '', false );
-					}
+					} else list( $method_name, $prop_name, $is_cdata ) = array( $callback, '', false );
 
 					$values = is_array( $data[ $key ] ) ? $data[ $key ] : array( $data[ $key ] );
 
@@ -329,23 +268,20 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 							}
 						}
 
-						if ( method_exists( $object, $method_name ) ) {	// Just in case.
+						if ( method_exists( $item, $method_name ) ) {	// Just in case.
 
 							if ( $prop_name ) {
 
-								$object->$method_name( $prop_name, $value, $is_cdata );
+								$item->$method_name( $prop_name, $value, $is_cdata );
 
-							} else {
-
-								$object->$method_name( $value );
-							}
+							} else $item->$method_name( $value );
 
 						} else {
 
 							$notice_pre = sprintf( '%s error:', __METHOD__ );
 
 							$notice_msg = sprintf( __( '%1$s::%2$s() method does not exist.', 'wpsso-commerce-manager-catalog-feed' ),
-								get_class( $object ), $method_name );
+								get_class( $item ), $method_name );
 
 							SucomUtil::safe_error_log( $notice_pre . ' ' . $notice_msg );
 						}

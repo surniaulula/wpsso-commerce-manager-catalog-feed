@@ -27,7 +27,7 @@ if ( ! class_exists( 'WpssoCmcfFiltersMessages' ) ) {
 
 			$this->p->util->add_plugin_filters( $this, array(
 				'messages_info'         => 3,
-				'messages_tooltip'      => 2,
+				'messages_tooltip'      => 3,
 				'messages_tooltip_meta' => 2,
 			) );
 		}
@@ -80,7 +80,7 @@ if ( ! class_exists( 'WpssoCmcfFiltersMessages' ) ) {
 			return $text;
 		}
 
-		public function filter_messages_tooltip( $text, $msg_key ) {
+		public function filter_messages_tooltip( $text, $msg_key, $info ) {
 
 			if ( 0 !== strpos( $msg_key, 'tooltip-cmcf_' ) ) {
 
@@ -95,6 +95,14 @@ if ( ! class_exists( 'WpssoCmcfFiltersMessages' ) ) {
 
 					$text = sprintf( __( 'The dimensions used for the Facebook catalog feed XML image (default dimensions are %s).',
 						'wpsso-commerce-manager-catalog-feed' ), $def_img_dims ) . ' ';
+
+					break;
+
+				case ( 0 === strpos( $msg_key, 'tooltip-cmcf_feed_' ) ? true : false ):
+
+					$metabox_title =_x( 'Commerce Manager Catalog Feed XML', 'metabox title', 'wpsso-commerce-manager-catalog-feed' );
+
+					$text = sprintf( __( 'The %1$s includes all public WordPress post objects (ie. posts, pages, and custom post types) with an Open Graph type of "product" and a language of %2$s (ie. locale "%3$s").', 'wpsso-commerce-manager-catalog-feed' ), $metabox_title, $info[ 'native_name' ], $info[ 'locale' ] );
 
 					break;
 
