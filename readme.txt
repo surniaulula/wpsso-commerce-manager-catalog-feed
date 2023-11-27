@@ -108,7 +108,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.0.0-dev.3 (2023/11/26)**
+**Version 4.0.0-dev.4 (2023/11/27)**
 
 * **New Features**
 	* None.
@@ -117,9 +117,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
+	* Added a new `WpssoCmcfConfig::get_callbacks()` method.
 	* Added https://github.com/jsmoriss/php-google-merchant-feed repository to composer.json.
 	* Changed "vitalybaev/google-merchant-feed" require to "dev-wpsso-google-merchant-feed".
-	* Updated `WpssoCmcfXml::$product_callbacks` for the new methods in "vitalybaev/google-merchant-feed".
+	* Updated product callbacks for new methods in "vitalybaev/google-merchant-feed".
 * **Requires At Least**
 	* PHP v7.2.34.
 	* WordPress v5.5.
@@ -142,9 +143,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.0.0-dev.3 =
+= 4.0.0-dev.4 =
 
-(2023/11/26) Updated `WpssoCmcfXml::$product_callbacks` for the new methods in "vitalybaev/google-merchant-feed".
+(2023/11/27) Updated product callbacks for new methods in "vitalybaev/google-merchant-feed".
 
 = 3.0.1 =
 
