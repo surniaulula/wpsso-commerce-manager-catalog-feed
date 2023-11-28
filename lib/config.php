@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssocmcf' => array(			// Plugin acronym.
-					'version'     => '4.0.0-dev.6',	// Plugin version.
+					'version'     => '4.0.0-dev.7',	// Plugin version.
 					'opt_version' => '1',		// Increment when changing default option values.
 					'short'       => 'WPSSO CMCF',	// Short plugin name.
 					'name'        => 'WPSSO Commerce Manager Catalog Feed XML',
@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '17.3.0-dev.6',
+							'min_version'   => '17.3.0-dev.7',
 						),
 					),
 
@@ -142,6 +142,17 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 				 * See https://www.facebook.com/business/help/120325381656392?id=725943027795860.
 				 */
 				'cmcf_content_map' => array(
+				),
+			),
+			'wp' => array(
+				'cache' => array(
+					'file' => array(
+						'wpssocmcf_feed_' => array(
+							'label'  => 'Commerce Manager Catalog Feed XML',
+							'value'  => WEEK_IN_SECONDS,
+							'filter' => 'wpsso_cache_expire_cmcf_feed_xml',	// See WpssoUtil->get_cache_exp_secs().
+						),
+					),
 				),
 			),
 		);
