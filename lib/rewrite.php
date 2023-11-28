@@ -162,7 +162,7 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 			exit;
 		}
 
-		static public function get_url( $locale, $type = 'feed', $blog_id = null ) {
+		static public function get_url( $locale, $request_type = 'feed', $blog_id = null ) {
 
 			global $wp_rewrite;
 
@@ -170,15 +170,12 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 
 				$url = add_query_arg( array(
 					'feed_name'   => WPSSOCMCF_PAGENAME,
-					'feed_type'   => $type,
+					'feed_type'   => $request_type,
 					'feed_format' => 'rss2',
 					'feed_locale' => $locale,
 				), get_home_url( $blog_id ) );
 
-			} else {
-
-				$url = get_home_url( $blog_id, WPSSOCMCF_PAGENAME . '/' . $type . '/rss2/' . $locale . '.xml' );
-			}
+			} else $url = get_home_url( $blog_id, WPSSOCMCF_PAGENAME . '/' . $request_type . '/rss2/' . $locale . '.xml' );
 
 			return $url;
 		}

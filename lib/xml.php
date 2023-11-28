@@ -214,7 +214,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 			if ( ! empty( $item ) ) $rss2_feed->addItem( $item );
 		}
 
-		static private function add_item_images( &$product, $mt_single ) {
+		static private function add_item_images( &$item, $mt_single ) {
 
 			$wpsso =& Wpsso::get_instance();
 
@@ -229,9 +229,9 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 				if ( 0 == $num ) {
 
-					$product->setImage( $image_url );
+					$item->setImage( $image_url );
 
-				} else $product->addAdditionalImage( $image_url );
+				} else $item->addAdditionalImage( $image_url );
 			}
 		}
 

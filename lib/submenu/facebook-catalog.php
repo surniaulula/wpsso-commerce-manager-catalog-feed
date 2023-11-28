@@ -75,8 +75,8 @@ if ( ! class_exists( 'WpssoCmcfSubmenuFacebookCatalog' ) && class_exists( 'Wpsso
 
 			foreach ( $locale_names as $locale => $native_name ) {
 
-				$url = WpssoCmcfRewrite::get_url( $locale );
-				$xml = WpssoCmcfXml::get( $locale );
+				$url = WpssoCmcfRewrite::get_url( $locale, $request_type = 'feed' );
+				$xml = WpssoCmcfXml::get( $locale, $request_type = 'feed' );
 
 				$item_count = substr_count( $xml, '<item>' );
 				$img_count  = substr_count( $xml, '<g:image_link>' );
