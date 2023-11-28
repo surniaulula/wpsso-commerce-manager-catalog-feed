@@ -108,7 +108,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.0.0-dev.6 (2023/11/28)**
+**Version 4.0.0-dev.7 (2023/11/28)**
 
 * **New Features**
 	* None.
@@ -124,7 +124,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.34.
 	* WordPress v5.5.
-	* WPSSO Core v17.2.1.
+	* WPSSO Core v17.3.0-dev.7.
 
 **Version 3.0.1 (2023/11/11)**
 
@@ -143,7 +143,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.0.0-dev.6 =
+= 4.0.0-dev.7 =
 
 (2023/11/28) Updated product callbacks for new methods in "vitalybaev/google-merchant-feed".
 
