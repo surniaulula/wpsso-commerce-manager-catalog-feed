@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Commerce Manager Catalog Feed XML package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 4.0.0-dev.5\n"
+"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 4.0.0-dev.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-commerce-"
 "manager-catalog-feed\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
@@ -192,9 +192,24 @@ msgstr ""
 msgid "%s is currently unavailable pending completion of a cache refresh task."
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:92
+#: lib/submenu/facebook-catalog.php:86
 msgctxt "option comment"
-msgid "%1$s feed items, %2$s image links, and %3$s additional image links."
+msgid "%s feed items"
+msgstr ""
+
+#: lib/submenu/facebook-catalog.php:87
+msgctxt "option comment"
+msgid "%s image links"
+msgstr ""
+
+#: lib/submenu/facebook-catalog.php:88
+msgctxt "option comment"
+msgid "%s additional image links"
+msgstr ""
+
+#: lib/submenu/facebook-catalog.php:89
+msgctxt "option comment"
+msgid "%s KB file size"
 msgstr ""
 
 #: lib/xml.php:283
