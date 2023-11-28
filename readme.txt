@@ -108,7 +108,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.0.0-dev.5 (2023/11/28)**
+**Version 4.0.0-dev.6 (2023/11/28)**
 
 * **New Features**
 	* None.
@@ -143,7 +143,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.0.0-dev.5 =
+= 4.0.0-dev.6 =
 
 (2023/11/28) Updated product callbacks for new methods in "vitalybaev/google-merchant-feed".
 
