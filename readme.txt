@@ -108,12 +108,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.0.0-dev.7 (2023/11/28)**
+**Version 4.0.0-dev.8 (2023/11/29)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Added a new "XML Cache Expiration" option in the Feed XML metabox.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -124,7 +124,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.34.
 	* WordPress v5.5.
-	* WPSSO Core v17.3.0-dev.7.
+	* WPSSO Core v17.3.0-dev.8.
 
 **Version 3.0.1 (2023/11/11)**
 
@@ -143,9 +143,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.0.0-dev.7 =
+= 4.0.0-dev.8 =
 
-(2023/11/28) Updated product callbacks for new methods in "vitalybaev/google-merchant-feed".
+(2023/11/29) Updated product callbacks for new methods in "vitalybaev/google-merchant-feed".
 
 = 3.0.1 =
 
