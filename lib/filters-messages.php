@@ -98,7 +98,15 @@ if ( ! class_exists( 'WpssoCmcfFiltersMessages' ) ) {
 
 					break;
 
-				case 'tooltip-gmf_feed_exp_secs':
+				case 'tooltip-cmcf_feed_exp_secs':
+
+					$def_value = $this->p->opt->get_defaults( 'cmcf_feed_exp_secs' );
+
+					$text = sprintf( __( 'The XML file cache expiration time in seconds (default is %s).',
+						'wpsso-commerce-manager-catalog-feed' ), $def_value ) . ' ';
+
+					$text .= __( 'When a product is updated, or the cache expires, the XML file cache is automatically refreshed.',
+						'wpsso-commerce-manager-catalog-feed' ) . ' ';
 
 					break;
 
