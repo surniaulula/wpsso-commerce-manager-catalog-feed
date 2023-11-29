@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Commerce Manager Catalog Feed XML package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 4.0.0-dev.7\n"
+"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 4.0.0-dev.8\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-commerce-"
 "manager-catalog-feed\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
@@ -135,38 +135,38 @@ msgid ""
 "dimensions are %s)."
 msgstr ""
 
-#: lib/filters-messages.php:103 lib/filters.php:99
+#: lib/filters-messages.php:107 lib/filters.php:99
 #: lib/submenu/facebook-catalog.php:32
 msgctxt "metabox title"
 msgid "Commerce Manager Catalog Feed XML"
 msgstr ""
 
-#: lib/filters-messages.php:105
+#: lib/filters-messages.php:109
 msgid ""
 "The %1$s includes all public WordPress post objects (ie. posts, pages, and "
 "custom post types) with an Open Graph type of \"product\" and a language of "
 "%2$s (ie. locale \"%3$s\")."
 msgstr ""
 
-#: lib/filters-messages.php:128
+#: lib/filters-messages.php:132
 msgid "A customized image ID for the Facebook catalog feed XML."
 msgstr ""
 
-#: lib/filters-messages.php:131 lib/filters-messages.php:144
+#: lib/filters-messages.php:135 lib/filters-messages.php:148
 msgid "The default value is inherited from the priority image."
 msgstr ""
 
-#: lib/filters-messages.php:134
+#: lib/filters-messages.php:138
 msgid "This option is disabled if a custom image URL is entered."
 msgstr ""
 
-#: lib/filters-messages.php:141
+#: lib/filters-messages.php:145
 msgid ""
 "A customized image URL (instead of an image ID) for the Facebook catalog "
 "feed XML."
 msgstr ""
 
-#: lib/filters-messages.php:147
+#: lib/filters-messages.php:151
 msgid "This option is disabled if a custom image ID is selected."
 msgstr ""
 
@@ -179,35 +179,45 @@ msgctxt "submit button"
 msgid "Refresh XML Cache"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:62
+#: lib/submenu/facebook-catalog.php:63
 msgctxt "task name"
 msgid "refresh the cache"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:65
+#: lib/submenu/facebook-catalog.php:66
 msgid "A background task to %s is currently running."
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:67
+#: lib/submenu/facebook-catalog.php:68
 msgid "%s is currently unavailable pending completion of a cache refresh task."
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:86
+#: lib/submenu/facebook-catalog.php:80
+msgctxt "option label"
+msgid "XML Cache Expiration"
+msgstr ""
+
+#: lib/submenu/facebook-catalog.php:83
+msgctxt "option comment"
+msgid "seconds"
+msgstr ""
+
+#: lib/submenu/facebook-catalog.php:97
 msgctxt "option comment"
 msgid "%s feed items"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:87
+#: lib/submenu/facebook-catalog.php:98
 msgctxt "option comment"
 msgid "%s image links"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:88
+#: lib/submenu/facebook-catalog.php:99
 msgctxt "option comment"
 msgid "%s additional image links"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:89
+#: lib/submenu/facebook-catalog.php:100
 msgctxt "option comment"
 msgid "%s KB file size"
 msgstr ""

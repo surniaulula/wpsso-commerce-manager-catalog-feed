@@ -98,7 +98,11 @@ if ( ! class_exists( 'WpssoCmcfFiltersMessages' ) ) {
 
 					break;
 
-				case ( 0 === strpos( $msg_key, 'tooltip-cmcf_feed_' ) ? true : false ):
+				case 'tooltip-gmf_feed_exp_secs':
+
+					break;
+
+				case ( 0 === strpos( $msg_key, 'tooltip-cmcf_feed_xml_' ) ? true : false ):
 
 					$metabox_title =_x( 'Commerce Manager Catalog Feed XML', 'metabox title', 'wpsso-commerce-manager-catalog-feed' );
 

@@ -17,8 +17,8 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssocmcf' => array(			// Plugin acronym.
-					'version'     => '4.0.0-dev.7',	// Plugin version.
-					'opt_version' => '1',		// Increment when changing default option values.
+					'version'     => '4.0.0-dev.8',	// Plugin version.
+					'opt_version' => '2',		// Increment when changing default option values.
 					'short'       => 'WPSSO CMCF',	// Short plugin name.
 					'name'        => 'WPSSO Commerce Manager Catalog Feed XML',
 					'desc'        => 'Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce and custom product pages.',
@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '17.3.0-dev.7',
+							'min_version'   => '17.3.0-dev.8',
 						),
 					),
 
@@ -115,11 +115,12 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 			),
 			'opt' => array(
 				'defaults' => array(
-					'cmcf_img_width'  => 1200,
-					'cmcf_img_height' => 628,
-					'cmcf_img_crop'   => 1,
-					'cmcf_img_crop_x' => 'center',
-					'cmcf_img_crop_y' => 'center',
+					'cmcf_img_width'     => 1200,
+					'cmcf_img_height'    => 628,
+					'cmcf_img_crop'      => 1,
+					'cmcf_img_crop_x'    => 'center',
+					'cmcf_img_crop_y'    => 'center',
+					'cmcf_feed_exp_secs' => WEEK_IN_SECONDS,
 				),
 			),
 			'head' => array(
@@ -148,9 +149,9 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 				'cache' => array(
 					'file' => array(
 						'wpssocmcf_feed_' => array(
-							'label'  => 'Commerce Manager Catalog Feed XML',
-							'value'  => WEEK_IN_SECONDS,
-							'filter' => 'wpsso_cache_expire_cmcf_feed_xml',	// See WpssoUtil->get_cache_exp_secs().
+							'label'   => 'Commerce Manager Catalog Feed XML',
+							'opt_key' => 'cmcf_feed_exp_secs',
+							'filter'  => 'wpsso_cache_expire_cmcf_feed_xml',	// See WpssoUtil->get_cache_exp_secs().
 						),
 					),
 				),
