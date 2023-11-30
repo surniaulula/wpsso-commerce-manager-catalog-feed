@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 4.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-commerce-manager-catalog-feed\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-11-29 11:28-0800\n"
+"PO-Revision-Date: 2023-11-29 18:06-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -130,7 +130,7 @@ msgstr "Lorsqu'un produit est mis à jour ou que le cache expire, le cache du fi
 
 #: lib/filters-messages.php:117
 msgid "The %1$s includes all public WordPress post objects (ie. posts, pages, and custom post types) with an Open Graph type of \"product\" and a language of %2$s (ie. locale \"%3$s\")."
-msgstr ""
+msgstr "Le %1$s inclut tous les objets d'article WordPress publics (c'est-à-dire les articles, les pages et les types d'articles personnalisés) avec un type Open Graph \"produit\" et une langue de %2$s (c'est-à-dire les paramètres régionaux \"%3$s\")."
 
 #: lib/filters-messages.php:140
 msgid "A customized image ID for the Facebook catalog feed XML."
@@ -202,7 +202,7 @@ msgstr "%s liens d'images supplémentaires"
 #: lib/submenu/facebook-catalog.php:100
 msgctxt "option comment"
 msgid "%s KB file size"
-msgstr "%4$s Ko taille du fichier"
+msgstr "%s Ko taille du fichier"
 
 #: lib/xml.php:282
 msgid "%1$s::%2$s() method does not exist."
