@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Commerce Manager Catalog Feed XML package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 4.0.0-dev.8\n"
+"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 4.0.0-b.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-commerce-"
 "manager-catalog-feed\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: gettext/gettext-lib-config.php:5
 msgctxt "lib file description"
-msgid "Facebook Catalog"
+msgid "Meta Catalog"
 msgstr ""
 
 #: gettext/gettext-lib-config.php:6
@@ -45,31 +45,32 @@ msgctxt "plugin name"
 msgid "WPSSO Core"
 msgstr ""
 
+#: gettext/gettext-lib-config.php:9
+msgctxt "option label"
+msgid "Meta Catalog Feed XML"
+msgstr ""
+
 #: lib/actions.php:64
 msgid "checking facebook catalog feed"
 msgstr ""
 
-#: lib/actions.php:100
+#: lib/actions.php:100 lib/filters-messages.php:115 lib/filters.php:99
+#: lib/submenu/facebook-catalog.php:32
 msgctxt "metabox title"
-msgid "Google Merchant Feed XML"
+msgid "Commerce Manager Catalog Feed XML"
 msgstr ""
 
-#: lib/actions.php:101
-msgctxt "metabox title"
-msgid "Google Merchant Inventory XML"
-msgstr ""
-
-#: lib/actions.php:123
+#: lib/actions.php:122
 msgid "checking facebook catalog feed images"
 msgstr ""
 
-#: lib/actions.php:136
+#: lib/actions.php:135
 msgid ""
 "A Facebook catalog feed XML %1$s attribute could not be generated for %2$s "
 "ID %3$s."
 msgstr ""
 
-#: lib/actions.php:138
+#: lib/actions.php:137
 msgid ""
 "Facebook requires at least one %1$s attribute for each product variation in "
 "the Facebook catalog feed XML."
@@ -143,12 +144,6 @@ msgstr ""
 msgid ""
 "When a product is updated, or the cache expires, the XML file cache is "
 "automatically refreshed."
-msgstr ""
-
-#: lib/filters-messages.php:115 lib/filters.php:99
-#: lib/submenu/facebook-catalog.php:32
-msgctxt "metabox title"
-msgid "Commerce Manager Catalog Feed XML"
 msgstr ""
 
 #: lib/filters-messages.php:117
