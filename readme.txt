@@ -15,13 +15,13 @@ Tested Up To: 6.4.1
 WC Tested Up To: 8.3.1
 Stable Tag: 3.0.1
 
-Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce and custom product pages.
+Meta (Facebook and Instagram) Commerce Manager Catalog Feed XMLs for WooCommerce and custom product pages.
 
 == Description ==
 
 <!-- about -->
 
-**Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce and custom product pages.**
+**Meta (Facebook and Instagram) Commerce Manager Catalog Feed XMLs for WooCommerce and custom product pages.**
 
 **E-Commerce Plugin Optional:**
 
@@ -35,11 +35,11 @@ WooCommerce simple products, product variations, product attributes, product met
 
 **Automatic Multilingual Support:**
 
-The Facebook and Instagram product catalog feed XMLs are automatically created in your site's language(s) from Polylang, WPML, or the installed WordPress languages.
+The Meta (Facebook and Instagram) product catalog feed XMLs are automatically created in your site's language(s) from Polylang, WPML, or the installed WordPress languages.
 
-After activating the WPSSO Commerce Manager Catalog Feed XML add-on, see the SSO &gt; Facebook Catalog settings page for your feed URLs.
+After activating the WPSSO Commerce Manager Catalog Feed XML add-on, see the SSO &gt; Meta Catalog settings page for your feed URLs.
 
-**Facebook and Instagram Commerce Manager Catalog Feed XML Attributes:**
+**Meta (Facebook and Instagram) Commerce Manager Catalog Feed XML Attributes:**
 
 The following XML product attributes are automatically created from your WooCommerce and custom products:
 
@@ -108,7 +108,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.0.0-dev.8 (2023/11/29)**
+**Version 4.0.0-b.1 (2023/11/29)**
 
 * **New Features**
 	* None.
@@ -124,7 +124,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.34.
 	* WordPress v5.5.
-	* WPSSO Core v17.3.0-dev.8.
+	* WPSSO Core v17.3.0-b.1.
 
 **Version 3.0.1 (2023/11/11)**
 
@@ -143,7 +143,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.0.0-dev.8 =
+= 4.0.0-b.1 =
 
 (2023/11/29) Updated product callbacks for new methods in "vitalybaev/google-merchant-feed".
 
