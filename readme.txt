@@ -41,7 +41,7 @@ After activating the WPSSO Commerce Manager Catalog Feed XML add-on, see the SSO
 
 **Meta (Facebook and Instagram) Commerce Manager Catalog Feed XML Attributes:**
 
-The following XML product attributes are automatically created from your WooCommerce and custom products:
+XML attributes are automatically created from your WooCommerce and custom products:
 
 * Additional image link <code>&#91;additional_image_link&#93;</code>
 * Age group <code>&#91;age_group&#93;</code>

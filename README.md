@@ -37,7 +37,7 @@
 
 <p><strong>Meta (Facebook and Instagram) Commerce Manager Catalog Feed XML Attributes:</strong></p>
 
-<p>The following XML product attributes are automatically created from your WooCommerce and custom products:</p>
+<p>XML attributes are automatically created from your WooCommerce and custom products:</p>
 
 <ul>
 <li>Additional image link <code>&#91;additional_image_link&#93;</code></li>
