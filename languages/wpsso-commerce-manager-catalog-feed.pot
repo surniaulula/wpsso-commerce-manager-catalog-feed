@@ -45,9 +45,10 @@ msgctxt "plugin name"
 msgid "WPSSO Core"
 msgstr ""
 
-#: gettext/gettext-lib-config.php:9
+#: gettext/gettext-lib-config.php:9 lib/filters-advanced.php:39
+#: lib/filters.php:65
 msgctxt "option label"
-msgid "Meta Catalog Feed XML"
+msgid "Commerce Manager Catalog Feed XML"
 msgstr ""
 
 #: lib/actions.php:64
@@ -74,11 +75,6 @@ msgstr ""
 msgid ""
 "Facebook requires at least one %1$s attribute for each product variation in "
 "the Facebook catalog feed XML."
-msgstr ""
-
-#: lib/filters-advanced.php:39 lib/filters.php:65
-msgctxt "option label"
-msgid "Commerce Manager Catalog Feed XML"
 msgstr ""
 
 #: lib/filters-edit.php:47

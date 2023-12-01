@@ -149,7 +149,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 				'cache' => array(
 					'file' => array(
 						'wpssocmcf_feed_' => array(
-							'label'   => 'Meta Catalog Feed XML',
+							'label'   => 'Commerce Manager Catalog Feed XML',
 							'opt_key' => 'cmcf_feed_exp_secs',
 							'filter'  => 'wpsso_cache_expire_cmcf_feed_xml',	// See WpssoUtil->get_cache_exp_secs().
 						),
