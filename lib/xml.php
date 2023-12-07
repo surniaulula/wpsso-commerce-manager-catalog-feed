@@ -151,6 +151,8 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 						}
 
 						self::add_feed_item( $rss2_feed, $mt_single, $request_type );
+
+						unset( $mt_og[ 'product:variants' ][ $num ] );
 					}
 
 				} else {
@@ -162,7 +164,11 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 					self::add_feed_item( $rss2_feed, $mt_og, $request_type );
 				}
+
+				unset( $mt_og );
 			}
+
+			unset( $public_ids );
 
 			$xml = $rss2_feed->build();
 
@@ -182,7 +188,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 		/*
 		 * See https://www.facebook.com/business/help/120325381656392?id=725943027795860
 		 */
-		static private function add_feed_item( &$rss2_feed, array $mt_single, $request_type = 'feed' ) {
+		static private function add_feed_item( &$rss2_feed, &$mt_single, $request_type = 'feed' ) {
 
 			$wpsso =& Wpsso::get_instance();
 
@@ -213,7 +219,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 			if ( ! empty( $item ) ) $rss2_feed->addItem( $item );
 		}
 
-		static private function add_item_images( &$item, $mt_single ) {
+		static private function add_item_images( &$item, &$mt_single ) {
 
 			$wpsso =& Wpsso::get_instance();
 
@@ -232,6 +238,8 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 				} else $item->addAdditionalImage( $image_url );
 			}
+
+			unset( $image_urls );
 		}
 
 		static private function add_item_data( &$item, array $data, array $callbacks ) {
