@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 4.0.0\n"
+"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 4.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-commerce-manager-catalog-feed\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-11-29 18:06-0800\n"
+"PO-Revision-Date: 2023-12-07 10:04-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -41,10 +41,11 @@ msgctxt "plugin name"
 msgid "WPSSO Core"
 msgstr "WPSSO Core"
 
-#: gettext/gettext-lib-config.php:9
+#: gettext/gettext-lib-config.php:9 lib/filters-advanced.php:39
+#: lib/filters.php:65
 msgctxt "option label"
-msgid "Meta Catalog Feed XML"
-msgstr "Flux XML de catalogue Meta"
+msgid "Commerce Manager Catalog Feed XML"
+msgstr "Flux XML de catalogue Gestionnaire des ventes"
 
 #: lib/actions.php:64
 msgid "checking facebook catalog feed"
@@ -67,11 +68,6 @@ msgstr "Impossible de générer l'attribut %1$s de flux XML de catalogue Faceboo
 #: lib/actions.php:137
 msgid "Facebook requires at least one %1$s attribute for each product variation in the Facebook catalog feed XML."
 msgstr "Facebook exige au moins un attribut %1$s pour chaque variante de produit dans le flux XML de catalogue Facebook."
-
-#: lib/filters-advanced.php:39 lib/filters.php:65
-msgctxt "option label"
-msgid "Commerce Manager Catalog Feed XML"
-msgstr "Flux XML de catalogue Gestionnaire des ventes"
 
 #: lib/filters-edit.php:47
 msgid "getting facebook catalog feed image"
@@ -204,7 +200,7 @@ msgctxt "option comment"
 msgid "%s KB file size"
 msgstr "%s Ko taille du fichier"
 
-#: lib/xml.php:282
+#: lib/xml.php:290
 msgid "%1$s::%2$s() method does not exist."
 msgstr "La méthode %1$s::%2$s() n'existe pas."
 
@@ -227,17 +223,3 @@ msgstr "JS Morisset"
 #. Author URI of the plugin/theme
 msgid "https://wpsso.com/"
 msgstr "https://wpsso.com/"
-
-#, fuzzy
-#~ msgctxt "metabox title"
-#~ msgid "Google Merchant Feed XML"
-#~ msgstr "Flux XML de marchand Google"
-
-#, fuzzy
-#~ msgctxt "metabox title"
-#~ msgid "Google Merchant Inventory XML"
-#~ msgstr "Inventaire XML de marchand Google"
-
-#~ msgctxt "option comment"
-#~ msgid "%1$s feed items, %2$s image links, and %3$s additional image links."
-#~ msgstr "%1$s éléments de flux, %2$s liens d'image et %3$s liens d'image supplémentaires."
