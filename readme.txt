@@ -108,7 +108,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.0.1-dev.3 (2023/12/07)**
+**Version 4.0.1-dev.4 (2023/12/07)**
 
 * **New Features**
 	* None.
@@ -159,7 +159,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.0.1-dev.3 =
+= 4.0.1-dev.4 =
 
 (2023/12/07) Updated the "vitalybaev/google-merchant-feed" library.
 
