@@ -108,6 +108,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 4.0.1-dev.3 (2023/12/07)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Updated the "vitalybaev/google-merchant-feed" library.
+* **Requires At Least**
+	* PHP v7.2.34.
+	* WordPress v5.5.
+	* WPSSO Core v17.3.1.
+
 **Version 4.0.0 (2023/12/01)**
 
 * **New Features**
@@ -143,6 +158,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v17.1.0.
 
 == Upgrade Notice ==
+
+= 4.0.1-dev.3 =
+
+(2023/12/07) Updated the "vitalybaev/google-merchant-feed" library.
 
 = 4.0.0 =
 
