@@ -98,7 +98,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 			if ( $wpsso->debug->enabled ) {
 
-				$wpsso->debug->log( 'creating new feed' );
+				$wpsso->debug->mark( 'create feed' );	// Begin timer.
 			}
 
 			$site_title = SucomUtil::get_site_name( $wpsso->options, $request_locale );
@@ -170,7 +170,19 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 			unset( $public_ids );
 
+			if ( $wpsso->debug->enabled ) {
+
+				$wpsso->debug->mark( 'create feed' );	// End timer.
+
+				$wpsso->debug->mark( 'build xml' );	// Begin timer.
+			}
+
 			$xml = $rss2_feed->build();
+
+			if ( $wpsso->debug->enabled ) {
+
+				$wpsso->debug->mark( 'build xml' );	// End timer.
+			}
 
 			if ( $cache_exp_secs ) {
 
