@@ -104,9 +104,9 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 			$site_title = SucomUtil::get_site_name( $wpsso->options, $request_locale );
 			$site_url   = SucomUtil::get_home_url( $wpsso->options, $request_locale );
 			$site_desc  = SucomUtil::get_site_description( $wpsso->options, $request_locale );
-			$rss2_feed  = new Vitalybaev\GoogleMerchant\Feed( $site_title, $site_url, $site_desc, '2.0' );
 			$query_args = array( 'meta_query' => WpssoAbstractWpMeta::get_column_meta_query_og_type( $og_type = 'product', $request_locale ) );
 			$public_ids = WpssoPost::get_public_ids( $query_args );
+			$rss2_feed  = new Vitalybaev\GoogleMerchant\Feed( $site_title, $site_url, $site_desc, '2.0' );
 
 			if ( $wpsso->debug->enabled ) {
 
