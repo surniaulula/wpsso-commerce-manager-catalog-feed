@@ -106,7 +106,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.1.0-rc.1 (2023/12/12)**
+**Version 4.1.0 (2023/12/12)**
 
 * **New Features**
 	* None.
@@ -119,7 +119,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.34.
 	* WordPress v5.5.
-	* WPSSO Core v17.4.0-rc.1.
+	* WPSSO Core v17.4.0.
 
 **Version 4.0.1 (2023/12/08)**
 
@@ -172,7 +172,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.1.0-rc.1 =
+= 4.1.0 =
 
 (2023/12/12) Added a `Vitalybaev\GoogleMerchant\ProductProperty::getInstance()` method to reduce memory usage.
 
