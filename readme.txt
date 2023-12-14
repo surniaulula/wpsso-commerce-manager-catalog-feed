@@ -106,7 +106,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.2.0-rc.1 (2023/12/14)**
+**Version 4.2.0 (2023/12/15)**
 
 * **New Features**
 	* None.
@@ -187,9 +187,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.2.0-rc.1 =
+= 4.2.0 =
 
-(2023/12/14) Added a `Vitalybaev\GoogleMerchant\ProductProperty::resetCache()` method to reduce memory usage.
+(2023/12/15) Added a `Vitalybaev\GoogleMerchant\ProductProperty::resetCache()` method to reduce memory usage.
 
 = 4.1.0 =
 
