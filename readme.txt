@@ -106,6 +106,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 4.3.0-dev.1 (2023/12/17)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Added a `Vitalybaev\GoogleMerchant\ProductProperty::getCache()` method to reduce memory usage.
+* **Requires At Least**
+	* PHP v7.2.34.
+	* WordPress v5.5.
+	* WPSSO Core v17.4.0.
+
 **Version 4.2.0 (2023/12/15)**
 
 * **New Features**
@@ -186,6 +201,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v17.1.0.
 
 == Upgrade Notice ==
+
+= 4.3.0-dev.1 =
+
+(2023/12/16) Added a `Vitalybaev\GoogleMerchant\ProductProperty::getCache()` method to reduce memory usage.
 
 = 4.2.0 =
 
