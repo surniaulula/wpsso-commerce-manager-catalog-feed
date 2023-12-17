@@ -26,6 +26,11 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 			$wpsso =& Wpsso::get_instance();
 
+			if ( $wpsso->debug->enabled ) {
+
+				$wpsso->debug->mark();
+			}
+
 			if ( ! $request_locale ) {
 
 				$request_locale = SucomUtil::get_locale();
@@ -35,6 +40,11 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 			$cache_file_ext = '.xml';
 
 			$wpsso->cache->clear_cache_data( $cache_salt, $cache_file_ext );	// Clear the feed XML cache file.
+
+			if ( $wpsso->debug->enabled ) {
+
+				$wpsso->debug->mark_diff( 'xml file cache cleared' );
+			}
 		}
 
 		static public function get( $request_locale = null, $request_type = 'feed' ) {
@@ -111,8 +121,8 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 			if ( $wpsso->debug->enabled ) {
 
 				$wpsso->debug->log( 'adding ' . count( $public_ids ) . ' public ids' );
-
 				$wpsso->debug->log_arr( 'public_ids', $public_ids );
+				$wpsso->debug->mark_diff( 'adding ' . count( $public_ids ) . ' public ids' );
 			}
 
 			foreach ( $public_ids as $post_id ) {
@@ -166,6 +176,11 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 				}
 
 				unset( $mod, $mt_og );
+			
+				if ( $wpsso->debug->enabled ) {
+
+					$wpsso->debug->mark_diff( 'added post id ' . $post_id );
+				}
 			}
 
 			unset( $public_ids );
@@ -173,7 +188,6 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 			if ( $wpsso->debug->enabled ) {
 
 				$wpsso->debug->mark( 'create feed' );	// End timer.
-
 				$wpsso->debug->mark( 'build xml' );	// Begin timer.
 			}
 
@@ -182,16 +196,34 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 			if ( $wpsso->debug->enabled ) {
 
 				$wpsso->debug->mark( 'build xml' );	// End timer.
+				$wpsso->debug->mark_diff( 'xml built' );
+			}
+
+			Vitalybaev\GoogleMerchant\ProductProperty::resetCache();
+
+			if ( $wpsso->debug->enabled ) {
+
+				$wpsso->debug->mark_diff( 'ProductProperty cache reset' );
 			}
 
 			if ( $cache_exp_secs ) {
 
 				$wpsso->cache->save_cache_data( $cache_salt, $xml, $cache_type, $cache_exp_secs, $cache_file_ext );
+			
+				if ( $wpsso->debug->enabled ) {
+
+					$wpsso->debug->mark_diff( 'xml saved' );
+				}
 			}
 
 			if ( $is_switched ) {
 
 				restore_previous_locale();
+			}
+
+			if ( $wpsso->debug->enabled ) {
+
+				$wpsso->debug->mark_diff( 'method end' );
 			}
 
 			return $xml;
