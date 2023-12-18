@@ -53,7 +53,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 			if ( $wpsso->debug->enabled ) {
 
-				$wpsso->debug->mark();
+				$wpsso->debug->mark_diff( 'method begin' );
 			}
 
 			$original_locale = SucomUtil::get_locale();
@@ -161,8 +161,6 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 						}
 
 						self::add_feed_item( $rss2_feed, $mt_single, $request_type );
-
-						unset( $mt_og[ 'product:variants' ][ $num ] );
 					}
 
 				} else {
@@ -282,8 +280,6 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 				} else $item->addAdditionalImage( $image_url );
 			}
-
-			unset( $image_urls );
 		}
 
 		static private function add_item_data( &$item, array $data, array $callbacks ) {
@@ -386,7 +382,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 					self::map_mt_value( $arr_val, $map );
 				}
 
-			} elseif ( isset( $map[ $value ] ) ) {	// Allow for false.
+			} elseif ( isset( $map[ $value ] ) ) {	// Allow false.
 
 				$value = $map[ $value ];
 			}
