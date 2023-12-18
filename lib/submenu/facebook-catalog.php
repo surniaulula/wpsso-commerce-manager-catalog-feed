@@ -60,7 +60,7 @@ if ( ! class_exists( 'WpssoCmcfSubmenuFacebookCatalog' ) && class_exists( 'Wpsso
 
 			if ( $this->p->util->cache->is_refresh_running() ) {
 
-				$task_name_transl = _x( 'refresh the cache', 'task name', 'wpsso' );
+				$task_name_transl = _x( 'refresh the cache', 'task name', 'wpsso-commerce-manager-catalog-feed' );
 
 				$table_rows[ 'wpssocmcf_disabled' ] = '<tr><td align="center">' .
 					'<p class="status-msg">' . sprintf( __( 'A background task to %s is currently running.',
@@ -77,10 +77,10 @@ if ( ! class_exists( 'WpssoCmcfSubmenuFacebookCatalog' ) && class_exists( 'Wpsso
 				case 'facebook-catalog-feed':
 
 					$table_rows[ 'cmcf_feed_exp_secs' ] = '' .
-						$this->form->get_th_html( _x( 'XML Cache Expiration', 'option label', 'wpsso' ),
+						$this->form->get_th_html( _x( 'XML Cache Expiration', 'option label', 'wpsso-commerce-manager-catalog-feed' ),
 							$css_class = 'medium', $css_id = 'cmcf_feed_exp_secs' ) .
 						'<td>' . $this->form->get_input( 'cmcf_feed_exp_secs', 'short' ) . ' ' .
-							_x( 'seconds', 'option comment', 'wpsso' ) . '</td>';
+							_x( 'seconds', 'option comment', 'wpsso-commerce-manager-catalog-feed' ) . '</td>';
 
 					$locale_names = SucomUtil::get_available_feed_locale_names();
 
