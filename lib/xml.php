@@ -230,7 +230,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 		/*
 		 * See https://www.facebook.com/business/help/120325381656392?id=725943027795860
 		 */
-		static private function add_feed_item( &$rss2_feed, &$mt_single, $request_type = 'feed' ) {
+		static private function add_feed_item( &$rss2_feed, $mt_single, $request_type = 'feed' ) {
 
 			$wpsso =& Wpsso::get_instance();
 
@@ -261,7 +261,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 			if ( ! empty( $item ) ) $rss2_feed->addItem( $item );
 		}
 
-		static private function add_item_images( &$item, &$mt_single ) {
+		static private function add_item_images( &$item, $mt_single ) {
 
 			$wpsso =& Wpsso::get_instance();
 
@@ -337,7 +337,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 			}
 		}
 
-		static private function sanitize_mt_array( &$mt_single ) {
+		static private function sanitize_mt_array( &$mt_single ) {	// Pass by reference is OK.
 
 			$wpsso =& Wpsso::get_instance();
 
