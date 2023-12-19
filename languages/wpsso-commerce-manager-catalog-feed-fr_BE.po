@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 4.3.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-commerce-manager-catalog-feed\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-12-18 13:54-0800\n"
+"PO-Revision-Date: 2023-12-19 09:39-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -157,45 +157,58 @@ msgctxt "submit button"
 msgid "Refresh XML Cache"
 msgstr "Rafraîchir cache XML"
 
-#: lib/submenu/facebook-catalog.php:63
+#: lib/submenu/facebook-catalog.php:64
 msgctxt "task name"
 msgid "refresh the cache"
 msgstr "rafraîchir le cache"
 
-#: lib/submenu/facebook-catalog.php:66
+#: lib/submenu/facebook-catalog.php:67
 msgid "A background task to %s is currently running."
 msgstr "Une tâche en arrière-plan pour %s est en cours d'exécution."
 
-#: lib/submenu/facebook-catalog.php:68
+#: lib/submenu/facebook-catalog.php:69
 msgid "%s is currently unavailable pending completion of a cache refresh task."
 msgstr "%s est actuellement indisponible en attendant la fin d'une tâche d'actualisation du cache."
 
-#: lib/submenu/facebook-catalog.php:80
+#: lib/submenu/facebook-catalog.php:78
+msgctxt "option label"
+msgid "No Index"
+msgstr "Pas d'indexation"
+
+#: lib/submenu/facebook-catalog.php:84
+msgid "The WordPress <a href=\"%s\">Search Engine Visibility</a> option is set to discourage search engines from indexing this site."
+msgstr "L'option WordPress <a href=\"%s\">Visibilité par les moteurs de recherche</a> est configurée pour décourager les moteurs de recherche d'indexer ce site."
+
+#: lib/submenu/facebook-catalog.php:85
+msgid "%1$s is currently unavailable since all products are marked as %2$s by default."
+msgstr "%1$s est actuellement indisponible car tous les produits sont marqués comme %2$s par défaut."
+
+#: lib/submenu/facebook-catalog.php:98
 msgctxt "option label"
 msgid "XML Cache Expiration"
 msgstr "Expiration du cache XML"
 
-#: lib/submenu/facebook-catalog.php:83
+#: lib/submenu/facebook-catalog.php:101
 msgctxt "option comment"
 msgid "seconds"
 msgstr "secondes"
 
-#: lib/submenu/facebook-catalog.php:97
+#: lib/submenu/facebook-catalog.php:115
 msgctxt "option comment"
 msgid "%s feed items"
 msgstr "%s éléments de flux"
 
-#: lib/submenu/facebook-catalog.php:98
+#: lib/submenu/facebook-catalog.php:116
 msgctxt "option comment"
 msgid "%s image links"
 msgstr "%s liens d'image"
 
-#: lib/submenu/facebook-catalog.php:99
+#: lib/submenu/facebook-catalog.php:117
 msgctxt "option comment"
 msgid "%s additional image links"
 msgstr "%s liens d'images supplémentaires"
 
-#: lib/submenu/facebook-catalog.php:100
+#: lib/submenu/facebook-catalog.php:118
 msgctxt "option comment"
 msgid "%s KB file size"
 msgstr "%s Ko taille du fichier"
