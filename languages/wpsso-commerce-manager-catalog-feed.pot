@@ -180,45 +180,62 @@ msgctxt "submit button"
 msgid "Refresh XML Cache"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:63
+#: lib/submenu/facebook-catalog.php:64
 msgctxt "task name"
 msgid "refresh the cache"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:66
+#: lib/submenu/facebook-catalog.php:67
 msgid "A background task to %s is currently running."
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:68
+#: lib/submenu/facebook-catalog.php:69
 msgid "%s is currently unavailable pending completion of a cache refresh task."
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:80
+#: lib/submenu/facebook-catalog.php:78
+msgctxt "option label"
+msgid "No Index"
+msgstr ""
+
+#: lib/submenu/facebook-catalog.php:84
+msgid ""
+"The WordPress <a href=\"%s\">Search Engine Visibility</a> option is set to "
+"discourage search engines from indexing this site."
+msgstr ""
+
+#: lib/submenu/facebook-catalog.php:85
+msgid ""
+"%1$s is currenty unavailable since all products are marked as %2$s by "
+"default."
+msgstr ""
+
+#: lib/submenu/facebook-catalog.php:98
 msgctxt "option label"
 msgid "XML Cache Expiration"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:83
+#: lib/submenu/facebook-catalog.php:101
 msgctxt "option comment"
 msgid "seconds"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:97
+#: lib/submenu/facebook-catalog.php:115
 msgctxt "option comment"
 msgid "%s feed items"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:98
+#: lib/submenu/facebook-catalog.php:116
 msgctxt "option comment"
 msgid "%s image links"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:99
+#: lib/submenu/facebook-catalog.php:117
 msgctxt "option comment"
 msgid "%s additional image links"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:100
+#: lib/submenu/facebook-catalog.php:118
 msgctxt "option comment"
 msgid "%s KB file size"
 msgstr ""
