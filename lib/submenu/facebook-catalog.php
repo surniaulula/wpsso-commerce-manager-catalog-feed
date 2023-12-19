@@ -82,7 +82,7 @@ if ( ! class_exists( 'WpssoCmcfSubmenuFacebookCatalog' ) && class_exists( 'Wpsso
 
 					$table_rows[ 'wpssocmcf_disabled' ] = '<tr><td align="center">' .
 						'<p class="status-msg">' . sprintf( __( 'The WordPress <a href="%s">Search Engine Visibility</a> option is set to discourage search engines from indexing this site.', 'wpsso-commerce-manager-catalog-feed' ), $settings_url ) . '</p>' .
-						'<p class="status-msg">' . sprintf( __( '%1$s is currenty unavailable since all products are marked as %2$s by default.',
+						'<p class="status-msg">' . sprintf( __( '%1$s is currently unavailable since all products are marked as %2$s by default.',
 							'wpsso-commerce-manager-catalog-feed' ), $args[ 'metabox_title' ], $noindex_label_transl ) . '</p>' .
 						'</td></tr>';
 
