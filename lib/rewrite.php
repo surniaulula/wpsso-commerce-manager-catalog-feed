@@ -111,6 +111,8 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 				}
 			}
 
+			$wpsso =& Wpsso::get_instance();
+
 			/*
 			 * Make sure the requested locale is valid.
 			 */
@@ -121,25 +123,11 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 			if ( ! isset( $locale_names[ $request_locale ] ) ) {
 
 				WpssoErrorException::http_error( 400 );
-			}
 
-			$wpsso =& Wpsso::get_instance();
-
-			if ( $wpsso->util->cache->is_refresh_running() ) {
+			} elseif ( $wpsso->util->cache->is_refresh_running() ) {
 
 				WpssoErrorException::http_error( 503 );
 			}
-
-			$document_xml = WpssoCmcfXml::get( $request_locale, $request_type );
-			$disposition  = 'attachment';
-			$filename     = SucomUtil::sanitize_file_name( $request_name . '-' . $request_locale . '.xml' );
-
-			if ( $wpsso->debug->enabled ) {
-
-				$document_xml .= $wpsso->debug->get_html( null, 'debug log' );
-			}
-
-			$content_len = strlen( $document_xml );
 
 			global $wp_query;
 
@@ -148,13 +136,28 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 			ob_implicit_flush( $enable = true );
 			ob_end_flush();
 
+			$filename = SucomUtil::sanitize_file_name( $request_name . '-' . $request_locale . '.xml' );
+
 			header( 'HTTP/1.1 200 OK' );
 			header( 'Content-Type: application/rss+xml' );
-			header( 'Content-Disposition: ' . $disposition . '; filename="' . $filename . '"' );
-			header( 'Content-Length: ' . $content_len );
+			header( 'Content-Disposition: attachment; filename="' . $filename . '"' );
+
+			$document_xml = WpssoCmcfXml::get( $request_locale, $request_type );
+
+			if ( ! $wpsso->debug->is_enabled( 'html' ) ) {	// Only add content length if not adding debug messages.
+
+				header( 'Content-Length: ' . strlen( $document_xml ) );
+			}
 
 			// phpcs:ignore $document_xml is a complete rss2 XML document that should not be encoded - tag values have already been sanitized and encoded.
 			echo $document_xml;
+
+			unset( $document_xml );
+
+			if ( $wpsso->debug->is_enabled( 'html' ) ) {
+
+				echo $wpsso->debug->get_html( null, 'debug log' );
+			}
 
 			flush();
 			sleep( $seconds = 1 );
