@@ -91,7 +91,7 @@ if ( ! class_exists( 'WpssoCmcfFilters' ) ) {
 
 				WpssoCmcfXml::clear_cache( $locale );	// Clear the feed XML cache file.
 
-				$xml = WpssoCmcfXml::get( $locale );
+				WpssoCmcfXml::get( $locale );
 
 				$xml_count++;
 			}

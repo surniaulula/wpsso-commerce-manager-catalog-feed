@@ -111,7 +111,10 @@ if ( ! class_exists( 'WpssoCmcfSubmenuFacebookCatalog' ) && class_exists( 'Wpsso
 						$img_count  = substr_count( $xml, '<g:image_link>' );
 						$addl_count = substr_count( $xml, '<g:additional_image_link>' );
 						$xml_size   = number_format( ( strlen( $xml ) / 1024 ) );	// XML size in KB.
-						$xml_info   = array(
+
+						unset( $xml );
+
+						$xml_info = array(
 							sprintf( _x( '%s feed items', 'option comment', 'wpsso-commerce-manager-catalog-feed' ), $item_count ),
 							sprintf( _x( '%s image links', 'option comment', 'wpsso-commerce-manager-catalog-feed' ), $img_count ),
 							sprintf( _x( '%s additional image links', 'option comment', 'wpsso-commerce-manager-catalog-feed' ), $addl_count ),

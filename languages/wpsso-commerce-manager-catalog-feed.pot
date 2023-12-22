@@ -220,22 +220,22 @@ msgctxt "option comment"
 msgid "seconds"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:115
+#: lib/submenu/facebook-catalog.php:118
 msgctxt "option comment"
 msgid "%s feed items"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:116
+#: lib/submenu/facebook-catalog.php:119
 msgctxt "option comment"
 msgid "%s image links"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:117
+#: lib/submenu/facebook-catalog.php:120
 msgctxt "option comment"
 msgid "%s additional image links"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:118
+#: lib/submenu/facebook-catalog.php:121
 msgctxt "option comment"
 msgid "%s KB file size"
 msgstr ""
