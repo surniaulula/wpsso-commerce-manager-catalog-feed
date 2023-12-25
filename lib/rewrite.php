@@ -46,7 +46,7 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 			global $wp_rewrite;
 
 			$rewrite_rules   = $wp_rewrite->wp_rewrite_rules();
-			$rewrite_key     = '^(' . WPSSOCMCF_PAGENAME . ')/(feed)/(rss2)/([^\./]+)\.xml$';
+			$rewrite_key     = '^(' . WPSSOCMCF_PAGENAME . ')/(feed)/(atom|rss|rss2)/([^\./]+)\.xml$';
 			$rewrite_value   = 'index.php?feed_name=$matches[1]&feed_type=$matches[2]&feed_format=$matches[3]&feed_locale=$matches[4]';
 			$rewrite_missing = empty( $rewrite_rules[ $rewrite_key ] ) || $rewrite_rules[ $rewrite_key ] !== $rewrite_value ? true : false;
 
@@ -83,35 +83,45 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 				return;
 			}
 
-			/*
-			 * Make sure the requested type is valid.
-			 */
-			$request_type = get_query_var( 'feed_type' );
+			$wpsso =& Wpsso::get_instance();
+
+			$request_type   = get_query_var( 'feed_type' );
+			$request_format = get_query_var( 'feed_format' );
 
 			if ( 'rss2' === $request_type ) {	// Backwards compatibility.
 
 				$request_type   = 'feed';
-				$request_format = 'rss2';
-
-			} else {
-
-				if ( 'feed' !== $request_type ) {
-
-					WpssoErrorException::http_error( 400 );
-				}
-
-				/*
-				 * Make sure the requested format is valid.
-				 */
-				$request_format = get_query_var( 'feed_format' );
-
-				if ( 'rss2' !== $request_format ) {
-
-					WpssoErrorException::http_error( 400 );
-				}
+				$request_format = 'rss';
 			}
 
-			$wpsso =& Wpsso::get_instance();
+			switch ( $request_type ) {
+
+				case 'feed':
+
+					break;
+
+				default:
+
+					WpssoErrorException::http_error( 400 );
+			}
+
+			switch ( $request_format ) {
+
+				case 'atom':
+					
+					break;
+
+				case 'rss':
+				case 'rss2':
+
+					$request_format = 'rss';
+
+					break;
+
+				default;
+
+					WpssoErrorException::http_error( 400 );
+			}
 
 			/*
 			 * Make sure the requested locale is valid.
@@ -139,17 +149,17 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 			$filename = SucomUtil::sanitize_file_name( $request_name . '-' . $request_locale . '.xml' );
 
 			header( 'HTTP/1.1 200 OK' );
-			header( 'Content-Type: application/rss+xml' );
+			header( 'Content-Type: application/' . $request_format . '+xml' );	// $request_format = 'atom' or 'rss'.
 			header( 'Content-Disposition: attachment; filename="' . $filename . '"' );
 
-			$document_xml = WpssoCmcfXml::get( $request_locale, $request_type );
+			$document_xml = WpssoCmcfXml::get( $request_locale, $request_type, $request_format );
 
 			if ( ! $wpsso->debug->is_enabled( 'html' ) ) {	// Only add content length if not adding debug messages.
 
 				header( 'Content-Length: ' . strlen( $document_xml ) );
 			}
 
-			// phpcs:ignore $document_xml is a complete rss2 XML document that should not be encoded - tag values have already been sanitized and encoded.
+			// phpcs:ignore $document_xml is a complete XML document that should not be encoded - values have already been sanitized and encoded.
 			echo $document_xml;
 
 			unset( $document_xml );
@@ -160,7 +170,6 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 			}
 
 			flush();
-			sleep( $seconds = 1 );
 
 			exit;
 		}
@@ -174,11 +183,11 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 				$url = add_query_arg( array(
 					'feed_name'   => WPSSOCMCF_PAGENAME,
 					'feed_type'   => $request_type,
-					'feed_format' => 'rss2',
+					'feed_format' => 'rss',
 					'feed_locale' => $locale,
 				), get_home_url( $blog_id ) );
 
-			} else $url = get_home_url( $blog_id, WPSSOCMCF_PAGENAME . '/' . $request_type . '/rss2/' . $locale . '.xml' );
+			} else $url = get_home_url( $blog_id, WPSSOCMCF_PAGENAME . '/' . $request_type . '/rss/' . $locale . '.xml' );
 
 			return $url;
 		}
