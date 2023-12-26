@@ -10,10 +10,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
-use Vitalybaev\GoogleMerchant\AtomFeed;
-use Vitalybaev\GoogleMerchant\RssFeed;
-use Vitalybaev\GoogleMerchant\Meta\Product;
-
 if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 	class WpssoCmcfXml {
@@ -39,10 +35,9 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 			foreach ( array( 'atom', 'rss' ) as $request_format ) {
 
-				$cache_salt     = __CLASS__ . '::get(locale:' . $request_locale . '_type:' . $request_type . '_format:' . $request_format . ')';
-				$cache_file_ext = '.xml';
+				$cache_salt = __CLASS__ . '::get(locale:' . $request_locale . '_type:' . $request_type . '_format:' . $request_format . ')';
 
-				$wpsso->cache->clear_cache_data( $cache_salt, $cache_file_ext );	// Clear the feed XML cache file.
+				$wpsso->cache->clear_cache_data( $cache_salt, $cache_file_ext = '.xml' );	// Clear the feed XML cache file.
 			}
 
 			if ( $wpsso->debug->enabled ) {
@@ -81,10 +76,8 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 				}
 			}
 
-			$cache_salt     = __CLASS__ . '::get(locale:' . $request_locale . '_type:' . $request_type . ')';
-			$cache_type     = 'file';
-			$cache_file_ext = '.xml';
-			$cache_exp_secs = $wpsso->util->get_cache_exp_secs( $cache_key = 'wpssogmf_' . $request_type . '_', $cache_type );
+			$cache_salt     = __CLASS__ . '::get(locale:' . $request_locale . '_type:' . $request_type . '_format:' . $request_format . ')';
+			$cache_exp_secs = $wpsso->util->get_cache_exp_secs( $cache_key = 'wpssogmf_' . $request_type . '_', $cache_type = 'file' );
 
 			if ( $wpsso->debug->enabled ) {
 
@@ -97,7 +90,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 			if ( $cache_exp_secs ) {
 
-				$xml = $wpsso->cache->get_cache_data( $cache_salt, $cache_type, $cache_exp_secs, $cache_file_ext );
+				$xml = $wpsso->cache->get_cache_data( $cache_salt, $cache_type = 'file', $cache_exp_secs, $cache_file_ext = '.xml' );
 
 				if ( false !== $xml ) {
 
@@ -115,11 +108,11 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 				$wpsso->debug->mark( 'create feed' );	// Begin timer.
 			}
 
-			$site_title   = SucomUtil::get_site_name( $wpsso->options, $request_locale );
-			$site_url     = SucomUtil::get_home_url( $wpsso->options, $request_locale );
-			$site_desc    = SucomUtil::get_site_description( $wpsso->options, $request_locale );
-			$query_args   = array( 'meta_query' => WpssoAbstractWpMeta::get_column_meta_query_og_type( $og_type = 'product', $request_locale ) );
-			$public_ids   = WpssoPost::get_public_ids( $query_args );
+			$site_title = SucomUtil::get_site_name( $wpsso->options, $request_locale );
+			$site_url   = SucomUtil::get_home_url( $wpsso->options, $request_locale );
+			$site_desc  = SucomUtil::get_site_description( $wpsso->options, $request_locale );
+			$query_args = array( 'meta_query' => WpssoAbstractWpMeta::get_column_meta_query_og_type( $og_type = 'product', $request_locale ) );
+			$public_ids = WpssoPost::get_public_ids( $query_args );
 
 			$feed = 'atom' === $request_format ?
 				new Vitalybaev\GoogleMerchant\AtomFeed( $site_title, $site_url, $site_desc ) :
@@ -213,7 +206,7 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 			if ( $cache_exp_secs ) {
 
-				$wpsso->cache->save_cache_data( $cache_salt, $xml, $cache_type, $cache_exp_secs, $cache_file_ext );
+				$wpsso->cache->save_cache_data( $cache_salt, $xml, $cache_type = 'file', $cache_exp_secs, $cache_file_ext = '.xml' );
 
 				if ( $wpsso->debug->enabled ) {
 
@@ -255,7 +248,8 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 				case 'feed':
 
 					$callbacks = WpssoCmcfConfig::get_callbacks( 'product' );
-					$item      = new Vitalybaev\GoogleMerchant\Meta\Product();
+
+					$item = new Vitalybaev\GoogleMerchant\Meta\Product();
 
 					self::add_item_data( $item, $mt_single, $callbacks );
 
