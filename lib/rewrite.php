@@ -46,7 +46,7 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 			global $wp_rewrite;
 
 			$rewrite_rules   = $wp_rewrite->wp_rewrite_rules();
-			$rewrite_key     = '^(' . WPSSOCMCF_PAGENAME . ')/(feed)/(atom|rss|rss2)/([^\./]+)\.xml$';
+			$rewrite_key     = '^(' . WPSSOCMCF_PAGENAME . ')/(feed)/(atom|atom1|rss|rss2)/([^\./]+)\.xml$';
 			$rewrite_value   = 'index.php?feed_name=$matches[1]&feed_type=$matches[2]&feed_format=$matches[3]&feed_locale=$matches[4]';
 			$rewrite_missing = empty( $rewrite_rules[ $rewrite_key ] ) || $rewrite_rules[ $rewrite_key ] !== $rewrite_value ? true : false;
 
@@ -108,7 +108,10 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 			switch ( $request_format ) {
 
 				case 'atom':
+				case 'atom1':
 					
+					$request_format = 'atom';
+
 					break;
 
 				case 'rss':
@@ -174,7 +177,7 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 			exit;
 		}
 
-		static public function get_url( $locale, $request_type = 'feed', $blog_id = null ) {
+		static public function get_url( $locale, $request_type = 'feed', $request_format = 'atom', $blog_id = null ) {
 
 			global $wp_rewrite;
 
@@ -183,11 +186,11 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 				$url = add_query_arg( array(
 					'feed_name'   => WPSSOCMCF_PAGENAME,
 					'feed_type'   => $request_type,
-					'feed_format' => 'rss',
+					'feed_format' => $request_format,
 					'feed_locale' => $locale,
 				), get_home_url( $blog_id ) );
 
-			} else $url = get_home_url( $blog_id, WPSSOCMCF_PAGENAME . '/' . $request_type . '/rss/' . $locale . '.xml' );
+			} else $url = get_home_url( $blog_id, WPSSOCMCF_PAGENAME . '/' . $request_type . '/' . $request_format . '/' . $locale . '.xml' );
 
 			return $url;
 		}
