@@ -93,7 +93,7 @@ if ( ! class_exists( 'WpssoCmcfSubmenuFacebookCatalog' ) && class_exists( 'Wpsso
 					$table_rows[ 'cmcf_feed_exp_secs' ] = $this->form->get_tr_hide( $in_view = 'basic', 'cmcf_feed_exp_secs' ) .
 						$this->form->get_th_html( _x( 'XML Cache Expiration', 'option label', 'wpsso-commerce-manager-catalog-feed' ),
 							$css_class = '', $css_id = 'cmcf_feed_exp_secs' ) .
-						'<td>' . $this->form->get_input( 'cmcf_feed_exp_secs', 'short' ) . ' ' .
+						'<td>' . $this->form->get_input( 'cmcf_feed_exp_secs', 'medium' ) . ' ' .
 							_x( 'seconds', 'option comment', 'wpsso-commerce-manager-catalog-feed' ) . '</td>';
 
 					$table_rows[ 'cmcf_feed_format' ] = $this->form->get_tr_hide( $in_view = 'basic', 'cmcf_feed_format' ) .
