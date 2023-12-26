@@ -17,8 +17,8 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssocmcf' => array(			// Plugin acronym.
-					'version'     => '4.4.0-dev.5',	// Plugin version.
-					'opt_version' => '2',		// Increment when changing default option values.
+					'version'     => '4.4.0-dev.6',	// Plugin version.
+					'opt_version' => '5',		// Increment when changing default option values.
 					'short'       => 'WPSSO CMCF',	// Short plugin name.
 					'name'        => 'WPSSO Commerce Manager Catalog Feed XML',
 					'desc'        => 'Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce and custom product pages.',
@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '17.7.0-dev.5',
+							'min_version'   => '17.7.0-dev.6',
 						),
 					),
 
@@ -123,8 +123,15 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 					'cmcf_img_crop_x'    => 'center',
 					'cmcf_img_crop_y'    => 'center',
 					'cmcf_feed_exp_secs' => WEEK_IN_SECONDS,
+					'cmcf_feed_format'   => 'atom',
 				),
-			),
+			),	// End of 'opt' array.
+			'form' => array(
+				'feed_formats' => array(
+					'atom' => 'Atom 1.0',
+					'rss'  => 'RSS 2.0',
+				),
+			),	// End of 'form' array.
 			'head' => array(
 
 				/*
@@ -146,7 +153,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 				 */
 				'cmcf_content_map' => array(
 				),
-			),
+			),	// End of 'head' array.
 			'wp' => array(
 				'cache' => array(
 					'file' => array(

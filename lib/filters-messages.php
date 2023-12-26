@@ -110,6 +110,15 @@ if ( ! class_exists( 'WpssoCmcfFiltersMessages' ) ) {
 
 					break;
 
+				case 'tooltip-cmcf_feed_format':
+
+					$def_value = $this->p->opt->get_defaults( str_replace( 'tooltip-', '', $msg_key ) );
+					$def_label = $this->p->cf[ 'form' ][ 'feed_formats' ][ $def_value ];
+
+					$text = sprintf( __( 'Choose the preferred XML format (default is %s).', 'wpsso-commerce-manager-catalog-feed' ), $def_label ) . ' ';
+					
+					break;
+
 				case ( 0 === strpos( $msg_key, 'tooltip-cmcf_feed_xml_' ) ? true : false ):
 
 					$metabox_title =_x( 'Commerce Manager Catalog Feed XML', 'metabox title', 'wpsso-commerce-manager-catalog-feed' );

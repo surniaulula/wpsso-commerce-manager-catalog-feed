@@ -10,7 +10,7 @@ use Vitalybaev\GoogleMerchant\Product\Shipping;
 
 class Product
 {
-	use HasProperties;
+	use \Vitalybaev\GoogleMerchant\HasProperties;
 
 	/**
 	 * Sets 'id'.
@@ -64,7 +64,7 @@ class Product
 	 */
 	public function setUpdated($value)
 	{
-		if ( 'atom' === \Vitalybaev\GoogleMerchant\FEED_FORMAT ) {
+		if ( 'atom' === $this->format ) {
 
 			$this->setAttribute('updated', $value, false);
 		}

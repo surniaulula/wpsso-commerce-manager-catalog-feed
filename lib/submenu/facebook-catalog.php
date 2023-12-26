@@ -36,7 +36,7 @@ if ( ! class_exists( 'WpssoCmcfSubmenuFacebookCatalog' ) && class_exists( 'Wpsso
 		protected function add_form_buttons( &$form_button_rows ) {
 
 			/*
-			 * If a refresh is running, remove all buttons.
+			 * Remove all buttons if a cache refresh is running.
 			 */
 			if ( $this->p->util->cache->is_refresh_running() ) {
 
@@ -44,13 +44,9 @@ if ( ! class_exists( 'WpssoCmcfSubmenuFacebookCatalog' ) && class_exists( 'Wpsso
 			}
 
 			/*
-			 * Remove all action buttons and add a "Refresh XML Cache" button.
+			 * Add a "Refresh XML Cache" button.
 			 */
-			$form_button_rows = array(
-				array(
-					'refresh_feed_xml_cache' => _x( 'Refresh XML Cache', 'submit button', 'wpsso-commerce-manager-catalog-feed' ),
-				),
-			);
+			$form_button_rows[ 0 ][ 'refresh_feed_xml_cache' ] = _x( 'Refresh XML Cache', 'submit button', 'wpsso-google-merchant-feed' );
 		}
 
 		protected function get_table_rows( $page_id, $metabox_id, $tab_key = '', $args = array() ) {
@@ -94,23 +90,30 @@ if ( ! class_exists( 'WpssoCmcfSubmenuFacebookCatalog' ) && class_exists( 'Wpsso
 
 				case 'facebook-catalog-feed':
 
-					$table_rows[ 'cmcf_feed_exp_secs' ] = '' .
+					$table_rows[ 'cmcf_feed_exp_secs' ] = $this->form->get_tr_hide( $in_view = 'basic', 'cmcf_feed_exp_secs' ) .
 						$this->form->get_th_html( _x( 'XML Cache Expiration', 'option label', 'wpsso-commerce-manager-catalog-feed' ),
-							$css_class = 'medium', $css_id = 'cmcf_feed_exp_secs' ) .
+							$css_class = '', $css_id = 'cmcf_feed_exp_secs' ) .
 						'<td>' . $this->form->get_input( 'cmcf_feed_exp_secs', 'short' ) . ' ' .
 							_x( 'seconds', 'option comment', 'wpsso-commerce-manager-catalog-feed' ) . '</td>';
+
+					$table_rows[ 'cmcf_feed_format' ] = $this->form->get_tr_hide( $in_view = 'basic', 'cmcf_feed_format' ) .
+						$this->form->get_th_html( _x( 'XML Format', 'option label', 'wpsso-google-merchant-feed' ),
+							$css_class = '', $css_id = 'cmcf_feed_format' ) .
+						'<td>' . $this->form->get_select( 'cmcf_feed_format', $this->p->cf[ 'form' ][ 'feed_formats' ], 'medium' ) . '</td>';
 
 					$locale_names = SucomUtil::get_available_feed_locale_names();
 
 					foreach ( $locale_names as $locale => $native_name ) {
 
-						$url        = WpssoCmcfRewrite::get_url( $locale, $request_type = 'feed', $request_format = 'atom' );
-						$xml        = WpssoCmcfXml::get( $locale, $request_type = 'feed', $request_format = 'atom' );
-						$css_id     = SucomUtil::sanitize_css_id( 'cmcf_feed_xml_' . $locale );
-						$item_count = substr_count( $xml, '<entry>' );
-						$img_count  = substr_count( $xml, '<g:image_link>' );
-						$addl_count = substr_count( $xml, '<g:additional_image_link>' );
-						$xml_size   = number_format( ( strlen( $xml ) / 1024 ) );	// XML size in KB.
+						$feed_type   = 'feed';
+						$feed_format = $this->p->options[ 'cmcf_' . $feed_type . '_format' ];
+						$url         = WpssoCmcfRewrite::get_url( $locale, $feed_type, $feed_format );
+						$xml         = WpssoCmcfXml::get( $locale, $feed_type, $feed_format );
+						$css_id      = SucomUtil::sanitize_css_id( 'cmcf_feed_xml_' . $locale );
+						$item_count  = substr_count( $xml, 'atom' === $feed_format? '<entry>' : '<item>' );
+						$img_count   = substr_count( $xml, '<g:image_link>' );
+						$addl_count  = substr_count( $xml, '<g:additional_image_link>' );
+						$xml_size    = number_format( ( strlen( $xml ) / 1024 ) );	// XML size in KB.
 
 						unset( $xml );
 
@@ -122,7 +125,7 @@ if ( ! class_exists( 'WpssoCmcfSubmenuFacebookCatalog' ) && class_exists( 'Wpsso
 						);
 
 						$table_rows[ $css_id ] = '' .
-							$this->form->get_th_html( $native_name, $css_class = 'medium', $css_id,
+							$this->form->get_th_html( $native_name, $css_class = '', $css_id,
 								array( 'locale' => $locale, 'native_name' => $native_name ) ) .
 							'<td>' . $this->form->get_no_input_clipboard( $url ) .
 							'<p class="status-msg left">' . implode( '; ', $xml_info ) . '</p></td>';
