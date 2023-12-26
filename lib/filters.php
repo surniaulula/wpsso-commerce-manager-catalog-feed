@@ -87,13 +87,18 @@ if ( ! class_exists( 'WpssoCmcfFilters' ) ) {
 			 */
 			SucomUtil::move_to_end( $locale_names, $current_locale );
 
-			foreach ( $locale_names as $locale => $native_name ) {
+			foreach ( array(
+				'feed' => _x( 'Commerce Manager Catalog Feed XML', 'metabox title', 'wpsso-commerce-manager-catalog-feed' ),
+			) as $request_type => $metabox_title ) {
 
-				WpssoCmcfXml::clear_cache( $locale );	// Clear the feed XML cache file.
+				foreach ( $locale_names as $request_locale => $native_name ) {
 
-				WpssoCmcfXml::get( $locale );
+					WpssoCmcfXml::clear_cache( $request_locale, $request_type );
 
-				$xml_count++;
+					WpssoCmcfXml::get( $request_locale, $request_type );
+
+					$xml_count++;
+				}
 			}
 
 			$metabox_title = _x( 'Commerce Manager Catalog Feed XML', 'metabox title', 'wpsso-commerce-manager-catalog-feed' );

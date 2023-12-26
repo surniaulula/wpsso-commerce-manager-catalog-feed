@@ -37,10 +37,13 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 				$request_locale = SucomUtil::get_locale();
 			}
 
-			$cache_salt     = __CLASS__ . '::get(locale:' . $request_locale . '_type:' . $request_type . ')';
-			$cache_file_ext = '.xml';
+			foreach ( array( 'atom', 'rss' ) as $request_format ) {
 
-			$wpsso->cache->clear_cache_data( $cache_salt, $cache_file_ext );	// Clear the feed XML cache file.
+				$cache_salt     = __CLASS__ . '::get(locale:' . $request_locale . '_type:' . $request_type . '_format:' . $request_format . ')';
+				$cache_file_ext = '.xml';
+
+				$wpsso->cache->clear_cache_data( $cache_salt, $cache_file_ext );	// Clear the feed XML cache file.
+			}
 
 			if ( $wpsso->debug->enabled ) {
 
