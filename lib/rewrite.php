@@ -109,7 +109,7 @@ if ( ! class_exists( 'WpssoCmcfRewrite' ) ) {
 
 				case 'atom':
 				case 'atom1':
-					
+
 					$request_format = 'atom';
 
 					break;

@@ -116,7 +116,7 @@ if ( ! class_exists( 'WpssoCmcfFiltersMessages' ) ) {
 					$def_label = $this->p->cf[ 'form' ][ 'feed_formats' ][ $def_value ];
 
 					$text = sprintf( __( 'Choose the preferred XML format (default is %s).', 'wpsso-commerce-manager-catalog-feed' ), $def_label ) . ' ';
-					
+
 					break;
 
 				case ( 0 === strpos( $msg_key, 'tooltip-cmcf_feed_xml_' ) ? true : false ):
