@@ -106,7 +106,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.4.0-dev.6 (2023/12/26)**
+**Version 4.4.0-b.1 (2023/12/26)**
 
 * **New Features**
 	* None.
@@ -120,7 +120,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.34.
 	* WordPress v5.5.
-	* WPSSO Core v17.7.0-dev.6.
+	* WPSSO Core v17.7.0.
 
 **Version 4.3.0 (2023/12/19)**
 
@@ -218,7 +218,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.4.0-dev.6 =
+= 4.4.0-b.1 =
 
 (2023/12/26) Added a new "XML Format" option. Added an 'updated' property in the Atom 1.0 format XML.
 
