@@ -106,7 +106,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.4.0-b.1 (2023/12/27)**
+**Version 4.4.0-rc.1 (2023/12/28)**
 
 * **New Features**
 	* None.
@@ -218,9 +218,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.4.0-b.1 =
+= 4.4.0-rc.1 =
 
-(2023/12/27) Added a new "XML Format" option. Added an 'updated' property in the Atom 1.0 format XML.
+(2023/12/28) Added a new "XML Format" option. Added an 'updated' property in the Atom 1.0 format XML.
 
 = 4.3.0 =
 
