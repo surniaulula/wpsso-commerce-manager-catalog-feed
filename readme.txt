@@ -13,7 +13,7 @@ Requires PHP: 7.2.34
 Requires At Least: 5.5
 Tested Up To: 6.4.2
 WC Tested Up To: 8.4.0
-Stable Tag: 4.3.0
+Stable Tag: 4.4.0
 
 Meta (Facebook and Instagram) Commerce Manager Catalog Feed XMLs for WooCommerce and custom product pages.
 
@@ -122,127 +122,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WordPress v5.5.
 	* WPSSO Core v17.7.0.
 
-**Version 4.3.0 (2023/12/19)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Added a `Vitalybaev\GoogleMerchant\ProductProperty::getCache()` method to reduce memory usage.
-* **Requires At Least**
-	* PHP v7.2.34.
-	* WordPress v5.5.
-	* WPSSO Core v17.5.0.
-
-**Version 4.2.0 (2023/12/15)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Added a `Vitalybaev\GoogleMerchant\ProductProperty::resetCache()` method to reduce memory usage.
-* **Requires At Least**
-	* PHP v7.2.34.
-	* WordPress v5.5.
-	* WPSSO Core v17.4.0.
-
-**Version 4.1.0 (2023/12/12)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Added a `Vitalybaev\GoogleMerchant\ProductProperty::getInstance()` method to reduce memory usage.
-* **Requires At Least**
-	* PHP v7.2.34.
-	* WordPress v5.5.
-	* WPSSO Core v17.4.0.
-
-**Version 4.0.1 (2023/12/08)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Updated the "vitalybaev/google-merchant-feed" library.
-* **Requires At Least**
-	* PHP v7.2.34.
-	* WordPress v5.5.
-	* WPSSO Core v17.3.1.
-
-**Version 4.0.0 (2023/12/01)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added a new "XML Cache Expiration" option in the Feed XML metabox.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Added https://github.com/jsmoriss/php-google-merchant-feed repository to composer.json.
-	* Added a new `WpssoCmcfConfig::get_callbacks()` method.
-	* Renamed the 'wpsso_cache_expire_cmcf_xml' filter to 'wpsso_cache_expire_cmcf_feed_xml'.
-	* Changed "vitalybaev/google-merchant-feed" require from "^2.6" to "dev-wpsso-google-merchant-feed".
-	* Updated product callbacks for new methods in "vitalybaev/google-merchant-feed".
-* **Requires At Least**
-	* PHP v7.2.34.
-	* WordPress v5.5.
-	* WPSSO Core v17.3.0.
-
-**Version 3.0.1 (2023/11/11)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* Fixed HTML output for HTTP error code.
-* **Developer Notes**
-	* None.
-* **Requires At Least**
-	* PHP v7.2.34.
-	* WordPress v5.5.
-	* WPSSO Core v17.1.0.
-
 == Upgrade Notice ==
 
 = 4.4.0 =
 
 (2023/12/28) Added a new "XML Format" option. Added an 'updated' property in the Atom 1.0 format XML.
-
-= 4.3.0 =
-
-(2023/12/19) Added a `Vitalybaev\GoogleMerchant\ProductProperty::getCache()` method to reduce memory usage.
-
-= 4.2.0 =
-
-(2023/12/15) Added a `Vitalybaev\GoogleMerchant\ProductProperty::resetCache()` method to reduce memory usage.
-
-= 4.1.0 =
-
-(2023/12/12) Added a `Vitalybaev\GoogleMerchant\ProductProperty::getInstance()` method to reduce memory usage.
-
-= 4.0.1 =
-
-(2023/12/08) Updated the "vitalybaev/google-merchant-feed" library.
-
-= 4.0.0 =
-
-(2023/12/01) Updated product callbacks for new methods in "vitalybaev/google-merchant-feed".
-
-= 3.0.1 =
-
-(2021/11/11) Fixed HTML output for HTTP error code.
 
