@@ -31,7 +31,7 @@
 
 <p><strong>Automatic Multilingual Support:</strong></p>
 
-<p>The Meta (Facebook and Instagram) product catalog feed XMLs are automatically created in your site's language(s) from Polylang, WPML, or the installed WordPress languages.</p>
+<p>The Meta (Facebook and Instagram) product catalog feed XMLs are automatically created in your site's language(s) from Polylang, qTranslate-XT, WPML, or the installed WordPress languages.</p>
 
 <p>After activating the WPSSO Commerce Manager Catalog Feed XML add-on, see the SSO &gt; Meta Catalog settings page for your feed URLs.</p>
 
