@@ -70,17 +70,8 @@ if ( ! class_exists( 'WpssoCmcfFilters' ) ) {
 
 		public function filter_cache_refreshed_notice( $notice_msg, $user_id = null ) {
 
-			$xml_count      = 0;
-			$current_locale = SucomUtil::get_locale();
-
-			/*
-			 * Calls SucomUtil::get_available_locale_names() and applies the 'sucom_available_feed_locale_names'
-			 * filter.
-			 *
-			 * Returns an associative array with locale keys and native names (example: 'en_US' => 'English (United
-			 * States)').
-			 */
-			$locale_names = SucomUtil::get_available_feed_locale_names();	// Uses a local cache.
+			$current_locale = SucomUtilWP::get_locale();
+			$locale_names   = SucomUtilWP::get_available_feed_locale_names();
 
 			/*
 			 * Move the current locale last to generate any notices in the current locale.
@@ -91,6 +82,8 @@ if ( ! class_exists( 'WpssoCmcfFilters' ) ) {
 				'feed' => _x( 'Commerce Manager Catalog Feed XML', 'metabox title', 'wpsso-commerce-manager-catalog-feed' ),
 			) as $request_type => $metabox_title ) {
 
+				$xml_count = 0;
+
 				foreach ( $locale_names as $request_locale => $native_name ) {
 
 					WpssoCmcfXml::clear_cache( $request_locale, $request_type );
@@ -99,11 +92,9 @@ if ( ! class_exists( 'WpssoCmcfFilters' ) ) {
 
 					$xml_count++;
 				}
+
+				$notice_msg .= sprintf( __( '%1$s for %2$s locales has been refreshed.', 'wpsso-google-merchant-feed' ), $metabox_title, $xml_count ) . ' ';
 			}
-
-			$metabox_title = _x( 'Commerce Manager Catalog Feed XML', 'metabox title', 'wpsso-commerce-manager-catalog-feed' );
-
-			$notice_msg .= sprintf( __( '%1$s for %2$s locales has been refreshed.', 'wpsso-commerce-manager-catalog-feed' ), $metabox_title, $xml_count ) . ' ';
 
 			return $notice_msg;
 		}

@@ -94,7 +94,7 @@ if ( ! class_exists( 'WpssoCmcfActions' ) ) {
 
 			if ( 'product' === $og_type ) {
 
-				$locale = SucomUtil::get_locale( $mod );
+				$locale = SucomUtilWP::get_locale( $mod );
 
 				foreach ( array(
 					'feed' => _x( 'Commerce Manager Catalog Feed XML', 'metabox title', 'wpsso-commerce-manager-catalog-feed' ),

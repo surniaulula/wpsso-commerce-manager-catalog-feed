@@ -101,7 +101,7 @@ if ( ! class_exists( 'WpssoCmcfSubmenuFacebookCatalog' ) && class_exists( 'Wpsso
 							$css_class = '', $css_id = 'cmcf_feed_format' ) .
 						'<td>' . $this->form->get_select( 'cmcf_feed_format', $this->p->cf[ 'form' ][ 'feed_formats' ], 'medium' ) . '</td>';
 
-					$locale_names = SucomUtil::get_available_feed_locale_names();
+					$locale_names = SucomUtilWP::get_available_feed_locale_names();
 
 					foreach ( $locale_names as $locale => $native_name ) {
 
