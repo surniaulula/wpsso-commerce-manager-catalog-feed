@@ -260,7 +260,7 @@ msgctxt "option comment"
 msgid "%s KB file size"
 msgstr ""
 
-#: lib/xml.php:345
+#: lib/xml.php:342
 msgid "%1$s::%2$s() method does not exist."
 msgstr ""
 
