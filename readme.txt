@@ -106,7 +106,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.6.0-rc.1 (2024/02/15)**
+**Version 4.6.0 (2024/02/15)**
 
 * **New Features**
 	* None.
@@ -119,7 +119,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.34.
 	* WordPress v5.8.
-	* WPSSO Core v17.13.0-rc.1.
+	* WPSSO Core v17.13.0.
 
 **Version 4.5.0 (2024/01/12)**
 
@@ -154,7 +154,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.6.0-rc.1 =
+= 4.6.0 =
 
 (2024/02/15) Added an exclusion for virtual products.
 
