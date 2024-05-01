@@ -6,7 +6,7 @@ Domain Path: /languages
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://surniaulula.github.io/wpsso-commerce-manager-catalog-feed/assets/
-Tags: facebook feed, woocommerce product feed, facebook catalog, woocommerce, instagram, wpml, polylang, easy digital downloads
+Tags: facebook, instagram, woocommerce, wpml, polylang
 Contributors: jsmoriss
 Requires Plugins: wpsso
 Requires PHP: 7.2.34
