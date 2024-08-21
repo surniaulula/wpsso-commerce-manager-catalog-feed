@@ -71,7 +71,7 @@ if ( ! class_exists( 'WpssoCmcf' ) ) {
 		}
 
 		/*
-		 * Called by Wpsso->set_objects which runs at init priority 10.
+		 * Called by Wpsso->set_objects() which runs at init priority 10.
 		 *
 		 * Require library files with functions or static methods in require_libs().
 		 *
