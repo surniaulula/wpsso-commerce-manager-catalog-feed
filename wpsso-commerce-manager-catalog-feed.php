@@ -16,7 +16,7 @@
  * Requires At Least: 5.8
  * Tested Up To: 6.6.1
  * WC Tested Up To: 9.2.2
- * Version: 4.6.0
+ * Version: 4.7.0-dev.1
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -42,11 +42,7 @@ if ( ! class_exists( 'WpssoCmcf' ) ) {
 
 	class WpssoCmcf extends WpssoAbstractAddOn {
 
-		public $actions;	// WpssoCmcfActions class object.
-		public $filters;	// WpssoCmcfFilters class object.
-		public $rewrite;	// WpssoCmcfRewrite class object.
-
-		protected $p;		// Wpsso class object.
+		protected $p;	// Wpsso class object.
 
 		private static $instance = null;	// WpssoCmcf class object.
 
@@ -77,7 +73,7 @@ if ( ! class_exists( 'WpssoCmcf' ) ) {
 		 *
 		 * Require library files with dynamic methods and instantiate the class object in init_objects().
 		 */
-		public function init_objects() {
+		public function init_objects_preloader() {
 
 			$this->p =& Wpsso::get_instance();
 
@@ -91,18 +87,9 @@ if ( ! class_exists( 'WpssoCmcf' ) ) {
 				return;	// Stop here.
 			}
 
-			require_once WPSSOCMCF_PLUGINDIR . 'lib/actions.php';
-
-			$this->actions = new WpssoCmcfActions( $this->p, $this );
-
-			require_once WPSSOCMCF_PLUGINDIR . 'lib/filters.php';
-
-			$this->filters = new WpssoCmcfFilters( $this->p, $this );
-
-			/*
-			 * lib/rewrite.php already loaded in require_libs() for WpssoCmcfRegister->activate_plugin().
-			 */
-			$this->rewrite = new WpssoCmcfRewrite( $this->p, $this );
+			new WpssoCmcfActions( $this->p, $this );
+			new WpssoCmcfFilters( $this->p, $this );
+			new WpssoCmcfRewrite( $this->p, $this );
 		}
 	}
 

@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssocmcf' => array(			// Plugin acronym.
-					'version'     => '4.6.0',	// Plugin version.
+					'version'     => '4.7.0-dev.1',	// Plugin version.
 					'opt_version' => '5',		// Increment when changing default option values.
 					'short'       => 'WPSSO CMCF',	// Short plugin name.
 					'name'        => 'WPSSO Commerce Manager Catalog Feed XML',
@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '17.18.0',
+							'min_version'   => '18.4.1-dev.1',
 						),
 					),
 
@@ -251,6 +251,8 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 		public static function require_libs( $plugin_file ) {
 
 			require_once WPSSOCMCF_PLUGINDIR . 'vendor/autoload.php';
+			require_once WPSSOCMCF_PLUGINDIR . 'lib/actions.php';
+			require_once WPSSOCMCF_PLUGINDIR . 'lib/filters.php';
 			require_once WPSSOCMCF_PLUGINDIR . 'lib/register.php';
 			require_once WPSSOCMCF_PLUGINDIR . 'lib/rewrite.php';	// Static methods required by WpssoCmcfRegister->activate_plugin().
 			require_once WPSSOCMCF_PLUGINDIR . 'lib/xml.php';

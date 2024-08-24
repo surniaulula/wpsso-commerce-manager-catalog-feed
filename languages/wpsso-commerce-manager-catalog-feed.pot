@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Commerce Manager Catalog Feed XML package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 4.6.0\n"
+"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 4.7.0-dev.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-commerce-"
 "manager-catalog-feed\n"
 "POT-Creation-Date: 2024-MO-DA HO:MI+ZONE\n"
@@ -13,11 +13,11 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: gettext/gettext-lib-abstract-com.php:5 lib/abstract/com/add-on.php:243
+#: gettext/gettext-lib-abstract-com.php:5 lib/abstract/com/add-on.php:234
 msgid "The %1$s add-on requires the %2$s plugin."
 msgstr ""
 
-#: gettext/gettext-lib-abstract-com.php:6 lib/abstract/com/add-on.php:262
+#: gettext/gettext-lib-abstract-com.php:6 lib/abstract/com/add-on.php:253
 msgid ""
 "The %1$s add-on requires %2$s version %3$s or newer (version %4$s is "
 "currently installed)."
@@ -46,7 +46,7 @@ msgid "WPSSO Core"
 msgstr ""
 
 #: gettext/gettext-lib-config.php:9 lib/filters-advanced.php:39
-#: lib/filters.php:65
+#: lib/filters.php:62
 msgctxt "option label"
 msgid "Commerce Manager Catalog Feed XML"
 msgstr ""
@@ -61,27 +61,27 @@ msgctxt "option value"
 msgid "RSS 2.0"
 msgstr ""
 
-#: lib/actions.php:64
+#: lib/actions.php:61
 msgid "checking facebook catalog feed"
 msgstr ""
 
-#: lib/actions.php:100 lib/filters-messages.php:124 lib/filters.php:82
-#: lib/submenu/facebook-catalog.php:32
+#: lib/actions.php:97 lib/filters-messages.php:124
+#: lib/submenu/facebook-catalog.php:32 lib/xml.php:28
 msgctxt "metabox title"
 msgid "Commerce Manager Catalog Feed XML"
 msgstr ""
 
-#: lib/actions.php:122
+#: lib/actions.php:116
 msgid "checking facebook catalog feed images"
 msgstr ""
 
-#: lib/actions.php:135
+#: lib/actions.php:129
 msgid ""
 "A Facebook catalog feed XML %1$s attribute could not be generated for %2$s "
 "ID %3$s."
 msgstr ""
 
-#: lib/actions.php:137
+#: lib/actions.php:131
 msgid ""
 "Facebook requires at least one %1$s attribute for each product variation in "
 "the Facebook catalog feed XML."
@@ -186,10 +186,6 @@ msgstr ""
 msgid "This option is disabled if a custom image ID is selected."
 msgstr ""
 
-#: lib/filters.php:96
-msgid "%1$s for %2$s locales has been refreshed."
-msgstr ""
-
 #: lib/submenu/facebook-catalog.php:49
 msgctxt "submit button"
 msgid "Refresh XML Cache"
@@ -260,7 +256,11 @@ msgctxt "option comment"
 msgid "%s KB file size"
 msgstr ""
 
-#: lib/xml.php:342
+#: lib/xml.php:42
+msgid "%1$s for %2$s locales has been refreshed."
+msgstr ""
+
+#: lib/xml.php:373
 msgid "%1$s::%2$s() method does not exist."
 msgstr ""
 

@@ -24,10 +24,7 @@ if ( ! class_exists( 'WpssoCmcfActions' ) ) {
 
 			static $do_once = null;
 
-			if ( true === $do_once ) {
-
-				return;	// Stop here.
-			}
+			if ( $do_once ) return;	// Stop here.
 
 			$do_once = true;
 
@@ -107,17 +104,14 @@ if ( ! class_exists( 'WpssoCmcfActions' ) ) {
 
 		public function action_load_settings_page_refresh_feed_xml_cache( $pagehook, $menu_id, $menu_name, $menu_lib ) {
 
-			$notice_msg = $this->a->filters->filter_cache_refreshed_notice( $notice_msg = '' );
+			$notice_msg = WpssoCmcfXml::cache_refreshed_notice();
 
-			$this->p->notice->upd( $notice_msg );
+			if ( $notice_msg ) $this->p->notice->upd( $notice_msg );
 		}
 
 		private function check_product_image_urls( $mt_single ) {
 
-			if ( ! $mod = $this->p->og->get_product_retailer_item_mod( $mt_single ) ) {	// Just in case.
-
-				return;
-			}
+			if ( ! $mod = $this->p->og->get_product_retailer_item_mod( $mt_single ) ) return;	// Just in case.
 
 			$ref_msg_transl = __( 'checking facebook catalog feed images', 'wpsso-commerce-manager-catalog-feed' );
 			$size_names     = 'wpsso-cmcf';
