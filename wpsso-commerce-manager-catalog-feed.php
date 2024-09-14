@@ -12,8 +12,8 @@
  * License URI: https://www.gnu.org/licenses/gpl.txt
  * Description: Facebook and Instagram Commerce Manager Catalog Feed XMLs for WooCommerce and custom product pages.
  * Requires Plugins: wpsso
- * Requires PHP: 7.2.34
- * Requires At Least: 5.8
+ * Requires PHP: 7.4.33
+ * Requires At Least: 5.9
  * Tested Up To: 6.6.2
  * WC Tested Up To: 9.3.1
  * Version: 4.7.0
