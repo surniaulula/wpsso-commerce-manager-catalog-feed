@@ -106,6 +106,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 4.8.0-dev.1 (2024/10/28)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Moved the cache clearing process from 'wpsso_refresh_post_cache' to 'wpsso_clear_post_cache'.
+* **Requires At Least**
+	* PHP v7.4.33.
+	* WordPress v5.9.
+	* WPSSO Core v18.16.0-dev.1.
+
 **Version 4.7.0 (2024/08/25)**
 
 * **New Features**
@@ -122,6 +137,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v18.10.0.
 
 == Upgrade Notice ==
+
+= 4.8.0-dev.1 =
+
+(2024/10/28) Moved the cache clearing process from 'wpsso_refresh_post_cache' to 'wpsso_clear_post_cache'.
 
 = 4.7.0 =
 
