@@ -26,14 +26,19 @@ if ( ! class_exists( 'WpssoCmcfFiltersAdvanced' ) ) {
 			$this->a =& $addon;
 
 			$this->p->util->add_plugin_filters( $this, array(
-				'plugin_image_sizes_rows' => 3,
-			) );
+				'mb_advanced_plugin_image_sizes_rows' => 3,
+			), $prio = 100 );
 		}
 
 		/*
 		 * SSO > Advanced Settings > Plugin Settings > Image Sizes tab.
 		 */
-		public function filter_plugin_image_sizes_rows( $table_rows, $form, $network ) {
+		public function filter_mb_advanced_plugin_image_sizes_rows( $table_rows, $form, $network ) {
+
+			if ( $this->p->debug->enabled ) { 
+
+				$this->p->debug->mark();
+			}
 
 			$table_rows[ 'cmcf_img_size' ] = '' .
 				$form->get_th_html( _x( 'Commerce Manager Catalog Feed XML', 'option label', 'wpsso-commerce-manager-catalog-feed' ),

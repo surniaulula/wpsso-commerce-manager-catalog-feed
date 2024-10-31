@@ -9,3 +9,8 @@ WPSSOCMCF_PLUGINSLUG
 WPSSOCMCF_URLPATH
 WPSSOCMCF_VERSION
 
+
+/*
+ * Define in your wp-config.php file to change the default value.
+ */
+WPSSOCMCF_XML_INFO_DISABLE = false
