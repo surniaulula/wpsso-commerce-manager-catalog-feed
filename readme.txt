@@ -106,20 +106,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.8.0-b.7 (2024/10/30)**
+**Version 4.8.0-rc.1 (2024/10/31)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Added progress information to the notification message when refreshing the cache.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
 	* Moved the cache clearing process from 'wpsso_refresh_post_cache' to 'wpsso_clear_post_cache'.
+	* Updated `WpssoCmcfXml::cache_refreshed_notice()` to save progress information for each locale processed.
 * **Requires At Least**
 	* PHP v7.4.33.
 	* WordPress v5.9.
-	* WPSSO Core v18.16.0-b.7.
+	* WPSSO Core v18.16.0-rc.1.
 
 **Version 4.7.0 (2024/08/25)**
 
@@ -138,9 +139,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.8.0-b.7 =
+= 4.8.0-rc.1 =
 
-(2024/10/30) Moved the cache clearing process from 'wpsso_refresh_post_cache' to 'wpsso_clear_post_cache'.
+(2024/10/31) Added progress information to the notification message when refreshing the cache.
 
 = 4.7.0 =
 
