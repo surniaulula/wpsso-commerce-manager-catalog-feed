@@ -115,7 +115,8 @@ if ( ! class_exists( 'WpssoCmcfFiltersMessages' ) ) {
 					$def_value = $this->p->opt->get_defaults( str_replace( 'tooltip-', '', $msg_key ) );
 					$def_label = $this->p->cf[ 'form' ][ 'feed_formats' ][ $def_value ];
 
-					$text = sprintf( __( 'Choose the XML format for URLs shown in the settings page (default is %s).', 'wpsso-google-merchant-feed' ), $def_label ) . ' ';
+					$text = sprintf( __( 'Choose the XML format for URLs shown in the settings page (default is %s).',
+						'wpsso-commerce-manager-catalog-feed' ), $def_label ) . ' ';
 
 					break;
 

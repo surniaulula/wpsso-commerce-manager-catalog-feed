@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 4.8.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-commerce-manager-catalog-feed\n"
 "POT-Creation-Date: 2024-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-10-29 08:46-0700\n"
+"PO-Revision-Date: 2024-10-30 17:16-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -61,8 +61,8 @@ msgstr "RSS 2.0"
 msgid "checking facebook catalog feed"
 msgstr "vérification flux de catalogue facebook"
 
-#: lib/actions.php:89 lib/filters-messages.php:124
-#: lib/submenu/facebook-catalog.php:32 lib/xml.php:28
+#: lib/actions.php:89 lib/filters-messages.php:125
+#: lib/submenu/facebook-catalog.php:32 lib/xml.php:30
 msgctxt "metabox title"
 msgid "Commerce Manager Catalog Feed XML"
 msgstr "Flux XML de catalogue Gestionnaire des ventes"
@@ -138,27 +138,27 @@ msgstr "Lorsqu'un produit est mis à jour ou que le cache expire, le cache du fi
 msgid "Choose the XML format for URLs shown in the settings page (default is %s)."
 msgstr "Choisissez le format XML pour les URL affichées dans la page des paramètres (%s par défaut)."
 
-#: lib/filters-messages.php:126
+#: lib/filters-messages.php:127
 msgid "The %1$s includes all public WordPress post objects (ie. posts, pages, and custom post types) with an Open Graph type of \"product\" and a language of %2$s (ie. locale \"%3$s\")."
 msgstr "Le %1$s inclut tous les objets d'article WordPress publics (c'est-à-dire les articles, les pages et les types d'articles personnalisés) avec un type Open Graph \"produit\" et une langue de %2$s (c'est-à-dire les paramètres régionaux \"%3$s\")."
 
-#: lib/filters-messages.php:149
+#: lib/filters-messages.php:150
 msgid "A customized image ID for the Facebook catalog feed XML."
 msgstr "ID d'image personnalisé pour le flux XML de catalogue Facebook."
 
-#: lib/filters-messages.php:152 lib/filters-messages.php:165
+#: lib/filters-messages.php:153 lib/filters-messages.php:166
 msgid "The default value is inherited from the priority image."
 msgstr "La valeur par défaut est héritée de l'image prioritaire."
 
-#: lib/filters-messages.php:155
+#: lib/filters-messages.php:156
 msgid "This option is disabled if a custom image URL is entered."
 msgstr "Cette option est désactivée si une URL d'image personnalisée est fournie."
 
-#: lib/filters-messages.php:162
+#: lib/filters-messages.php:163
 msgid "A customized image URL (instead of an image ID) for the Facebook catalog feed XML."
 msgstr "Une URL d'image personnalisée (au lieu d'un ID d'image) pour le flux XML de catalogue Facebook."
 
-#: lib/filters-messages.php:168
+#: lib/filters-messages.php:169
 msgid "This option is disabled if a custom image ID is selected."
 msgstr "Cette option est désactivée si un ID d'image personnalisé est sélectionné."
 
@@ -228,11 +228,15 @@ msgctxt "option comment"
 msgid "%s KB file size"
 msgstr "%s Ko taille du fichier"
 
-#: lib/xml.php:42
+#: lib/xml.php:37
+msgid "Processing %1$s for %2$s."
+msgstr "Traitement de %1$s pour %2$s."
+
+#: lib/xml.php:49
 msgid "%1$s for %2$s locales has been refreshed."
 msgstr "%1$s pour %2$s locales a été actualisé."
 
-#: lib/xml.php:373
+#: lib/xml.php:381
 msgid "%1$s::%2$s() method does not exist."
 msgstr "La méthode %1$s::%2$s() n'existe pas."
 

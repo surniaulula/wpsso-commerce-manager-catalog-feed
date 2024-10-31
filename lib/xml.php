@@ -16,6 +16,8 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 		static public function cache_refreshed_notice( $notice_msg = '' ) {
 
+			$wpsso =& Wpsso::get_instance();
+
 			$current_locale = SucomUtilWP::get_locale();
 			$locale_names   = SucomUtilWP::get_available_feed_locale_names();
 
@@ -32,6 +34,9 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 
 				foreach ( $locale_names as $request_locale => $native_name ) {
 
+					$wpsso->util->cache->task_update( $task_name, sprintf( __( 'Processing %1$s for %2$s.', 'wpsso-commerce-manager-catalog-feed' ),
+						$metabox_title, $native_name ) );
+
 					self::clear_cache( $request_locale, $request_type );
 
 					WpssoCmcfXml::get( $request_locale, $request_type );
@@ -39,7 +44,10 @@ if ( ! class_exists( 'WpssoCmcfXml' ) ) {
 					$xml_count++;
 				}
 
-				$notice_msg .= sprintf( __( '%1$s for %2$s locales has been refreshed.', 'wpsso-google-merchant-feed' ), $metabox_title, $xml_count ) . ' ';
+				$wpsso->util->cache->task_update( $task_name );
+
+				$notice_msg .= sprintf( __( '%1$s for %2$s locales has been refreshed.', 'wpsso-commerce-manager-catalog-feed' ),
+					$metabox_title, $xml_count ) . ' ';
 			}
 
 			return $notice_msg;

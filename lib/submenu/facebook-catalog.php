@@ -46,7 +46,7 @@ if ( ! class_exists( 'WpssoCmcfSubmenuFacebookCatalog' ) && class_exists( 'Wpsso
 			/*
 			 * Add a "Refresh XML Cache" button.
 			 */
-			$form_button_rows[ 0 ][ 'refresh_feed_xml_cache' ] = _x( 'Refresh XML Cache', 'submit button', 'wpsso-google-merchant-feed' );
+			$form_button_rows[ 0 ][ 'refresh_feed_xml_cache' ] = _x( 'Refresh XML Cache', 'submit button', 'wpsso-commerce-manager-catalog-feed' );
 		}
 
 		protected function get_table_rows( $page_id, $metabox_id, $tab_key = '', $args = array() ) {
@@ -97,7 +97,7 @@ if ( ! class_exists( 'WpssoCmcfSubmenuFacebookCatalog' ) && class_exists( 'Wpsso
 							_x( 'seconds', 'option comment', 'wpsso-commerce-manager-catalog-feed' ) . '</td>';
 
 					$table_rows[ 'cmcf_feed_format' ] = $this->form->get_tr_hide( $in_view = 'basic', 'cmcf_feed_format' ) .
-						$this->form->get_th_html( _x( 'XML Format', 'option label', 'wpsso-google-merchant-feed' ),
+						$this->form->get_th_html( _x( 'XML Format', 'option label', 'wpsso-commerce-manager-catalog-feed' ),
 							$css_class = '', $css_id = 'cmcf_feed_format' ) .
 						'<td>' . $this->form->get_select( 'cmcf_feed_format', $this->p->cf[ 'form' ][ 'feed_formats' ], 'medium' ) . '</td>';
 
