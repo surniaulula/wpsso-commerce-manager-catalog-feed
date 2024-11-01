@@ -66,7 +66,7 @@ msgid "checking facebook catalog feed"
 msgstr ""
 
 #: lib/actions.php:89 lib/filters-messages.php:125
-#: lib/submenu/facebook-catalog.php:32 lib/xml.php:31
+#: lib/submenu/facebook-catalog.php:32 lib/xml.php:36
 msgctxt "metabox title"
 msgid "Commerce Manager Catalog Feed XML"
 msgstr ""
@@ -256,15 +256,15 @@ msgctxt "option comment"
 msgid "%s KB file size"
 msgstr ""
 
-#: lib/xml.php:38
+#: lib/xml.php:43
 msgid "Processing %1$s for %2$s."
 msgstr ""
 
-#: lib/xml.php:50
+#: lib/xml.php:55
 msgid "%1$s for %2$s locales has been refreshed."
 msgstr ""
 
-#: lib/xml.php:382
+#: lib/xml.php:387
 msgid "%1$s::%2$s() method does not exist."
 msgstr ""
 
