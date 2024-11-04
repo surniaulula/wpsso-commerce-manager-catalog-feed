@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 4.8.0\n"
+"Project-Id-Version: WPSSO Commerce Manager Catalog Feed XML 4.9.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-commerce-manager-catalog-feed\n"
 "POT-Creation-Date: 2024-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-10-30 17:16-0700\n"
+"PO-Revision-Date: 2024-11-04 15:24-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -41,7 +41,7 @@ msgctxt "plugin name"
 msgid "WPSSO Core"
 msgstr "WPSSO Core"
 
-#: gettext/gettext-lib-config.php:9 lib/filters-advanced.php:39
+#: gettext/gettext-lib-config.php:9 lib/filters-advanced.php:44
 #: lib/filters.php:62
 msgctxt "option label"
 msgid "Commerce Manager Catalog Feed XML"
@@ -62,20 +62,20 @@ msgid "checking facebook catalog feed"
 msgstr "vérification flux de catalogue facebook"
 
 #: lib/actions.php:89 lib/filters-messages.php:125
-#: lib/submenu/facebook-catalog.php:32 lib/xml.php:30
+#: lib/submenu/facebook-catalog.php:32 lib/xml.php:36
 msgctxt "metabox title"
 msgid "Commerce Manager Catalog Feed XML"
 msgstr "Flux XML de catalogue Gestionnaire des ventes"
 
-#: lib/actions.php:108
+#: lib/actions.php:116
 msgid "checking facebook catalog feed images"
 msgstr "vérification d'images flux de catalogue facebook"
 
-#: lib/actions.php:121
+#: lib/actions.php:129
 msgid "A Facebook catalog feed XML %1$s attribute could not be generated for %2$s ID %3$s."
 msgstr "Impossible de générer l'attribut %1$s de flux XML de catalogue Facebook pour l'identifiant %2$s %3$s."
 
-#: lib/actions.php:123
+#: lib/actions.php:131
 msgid "Facebook requires at least one %1$s attribute for each product variation in the Facebook catalog feed XML."
 msgstr "Facebook exige au moins un attribut %1$s pour chaque variante de produit dans le flux XML de catalogue Facebook."
 
@@ -208,35 +208,35 @@ msgctxt "option label"
 msgid "XML Format"
 msgstr "Format XML"
 
-#: lib/submenu/facebook-catalog.php:121
+#: lib/submenu/facebook-catalog.php:125
 msgctxt "option comment"
 msgid "%s feed items"
 msgstr "%s éléments de flux"
 
-#: lib/submenu/facebook-catalog.php:122
+#: lib/submenu/facebook-catalog.php:126
 msgctxt "option comment"
 msgid "%s image links"
 msgstr "%s liens d'image"
 
-#: lib/submenu/facebook-catalog.php:123
+#: lib/submenu/facebook-catalog.php:127
 msgctxt "option comment"
 msgid "%s additional image links"
 msgstr "%s liens d'images supplémentaires"
 
-#: lib/submenu/facebook-catalog.php:124
+#: lib/submenu/facebook-catalog.php:128
 msgctxt "option comment"
 msgid "%s KB file size"
 msgstr "%s Ko taille du fichier"
 
-#: lib/xml.php:37
+#: lib/xml.php:43
 msgid "Processing %1$s for %2$s."
 msgstr "Traitement de %1$s pour %2$s."
 
-#: lib/xml.php:49
+#: lib/xml.php:55
 msgid "%1$s for %2$s locales has been refreshed."
 msgstr "%1$s pour %2$s locales a été actualisé."
 
-#: lib/xml.php:381
+#: lib/xml.php:387
 msgid "%1$s::%2$s() method does not exist."
 msgstr "La méthode %1$s::%2$s() n'existe pas."
 
