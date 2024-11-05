@@ -106,7 +106,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.9.0-dev.5 (2024/11/04)**
+**Version 4.9.0-dev.6 (2024/11/05)**
 
 * **New Features**
 	* None.
@@ -115,11 +115,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* Added a call to `wp_suspend_cache_addition()` before refreshing the cache.
+	* None.
 * **Requires At Least**
 	* PHP v7.4.33.
 	* WordPress v5.9.
-	* WPSSO Core v18.17.0-dev.5.
+	* WPSSO Core v18.17.0-dev.6.
 
 **Version 4.8.0 (2024/11/01)**
 
@@ -155,9 +155,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.9.0-dev.5 =
+= 4.9.0-dev.6 =
 
-(2024/11/04) Added a call to `wp_suspend_cache_addition()` before refreshing the cache.
+(2024/11/05) None.
 
 = 4.8.0 =
 
