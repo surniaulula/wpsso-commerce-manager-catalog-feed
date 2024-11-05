@@ -96,6 +96,11 @@ if ( ! class_exists( 'WpssoCmcfActions' ) ) {
 
 		public function action_load_settings_page_refresh_feed_xml_cache( $pagehook, $menu_id, $menu_name, $menu_lib ) {
 
+			if ( $this->p->debug->enabled ) {
+
+				$this->p->debug->mark();
+			}
+
 			/*
 			 * Temporarily suspends WordPress cache additions.
 			 *
@@ -103,6 +108,8 @@ if ( ! class_exists( 'WpssoCmcfActions' ) ) {
 			 * such as imports, when a lot of data would otherwise be almost uselessly added to the cache.
 			 */
 			wp_suspend_cache_addition();
+
+			set_time_limit( WPSSOCMCF_CACHE_REFRESH_MAX_TIME );	// 10 mins by default.
 
 			$notice_msg = WpssoCmcfXml::cache_refreshed_notice();
 

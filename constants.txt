@@ -13,4 +13,6 @@ WPSSOCMCF_VERSION
 /*
  * Define in your wp-config.php file to change the default value.
  */
-WPSSOCMCF_XML_INFO_DISABLE = false
+WPSSOCMCF_XML_INFO_DISABLE       = false
+WPSSOCMCF_CACHE_REFRESH_MAX_TIME = 1800		// 10 mins by default.
+
