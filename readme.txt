@@ -13,7 +13,7 @@ Requires PHP: 7.4.33
 Requires At Least: 5.9
 Tested Up To: 6.7.0
 WC Tested Up To: 9.3.3
-Stable Tag: 4.8.0
+Stable Tag: 4.9.0
 
 Meta (Facebook and Instagram) Commerce Manager Catalog Feed XMLs for WooCommerce and custom product pages.
 
