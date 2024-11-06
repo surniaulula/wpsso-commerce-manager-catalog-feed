@@ -106,7 +106,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.9.0-rc.1 (2024/11/06)**
+**Version 4.9.0-rc.2 (2024/11/06)**
 
 * **New Features**
 	* None.
@@ -119,7 +119,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.4.33.
 	* WordPress v5.9.
-	* WPSSO Core v18.17.0-rc.1.
+	* WPSSO Core v18.17.0-rc.2.
 
 **Version 4.8.0 (2024/11/01)**
 
@@ -155,7 +155,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.9.0-rc.1 =
+= 4.9.0-rc.2 =
 
 (2024/11/06) Added support for a new `WPSSOCMCF_CACHE_REFRESH_MAX_TIME` constant.
 
