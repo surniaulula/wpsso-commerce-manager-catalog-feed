@@ -106,6 +106,22 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 4.10.0-dev.1 (2024/12/01)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Updated vendor libraries.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Updated vendor/sabre/uri v2.3.3 to v2.3.4.
+	* Updated vendor/sabre/xml v2.2.6 to v2.2.11.
+* **Requires At Least**
+	* PHP v7.4.33.
+	* WordPress v5.9.
+	* WPSSO Core v18.18.2.
+
 **Version 4.9.0 (2024/11/06)**
 
 * **New Features**
@@ -154,6 +170,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v18.10.0.
 
 == Upgrade Notice ==
+
+= 4.10.0-dev.1 =
+
+(2024/12/01) Updated vendor libraries.
 
 = 4.9.0 =
 
