@@ -106,7 +106,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.10.0-rc.1 (2024/12/01)**
+**Version 4.10.0 (2024/12/01)**
 
 * **New Features**
 	* None.
@@ -171,7 +171,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.10.0-rc.1 =
+= 4.10.0 =
 
 (2024/12/01) Added a check for the required PHP XMLReader and XMLWriter extensions.
 
