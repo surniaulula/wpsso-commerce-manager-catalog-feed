@@ -106,16 +106,15 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.10.0-dev.1 (2024/12/01)**
+**Version 4.10.0-rc.1 (2024/12/01)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* Updated vendor libraries.
+	* Added a check for the required PHP XMLReader and XMLWriter extensions.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* Added a check for the required PHP XMLReader and XMLWriter extensions.
 	* Updated vendor/sabre/uri v2.3.3 to v2.3.4.
 	* Updated vendor/sabre/xml v2.2.6 to v2.2.11.
 * **Requires At Least**
@@ -172,9 +171,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.10.0-dev.1 =
+= 4.10.0-rc.1 =
 
-(2024/12/01) Added a check for the required PHP XMLReader and XMLWriter extensions. Updated vendor libraries.
+(2024/12/01) Added a check for the required PHP XMLReader and XMLWriter extensions.
 
 = 4.9.0 =
 
