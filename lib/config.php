@@ -126,6 +126,18 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 					'cmcf_feed_format'   => 'atom',
 				),
 			),	// End of 'opt' array.
+			'php' => array(
+				'extensions'  => array(
+					'xmlreader' => array(	// PHP extension name.
+						'label' => 'XMLReader',
+						'url'   => 'https://www.php.net/manual/en/book.xmlreader.php',
+					),
+					'xmlwriter' => array(	// PHP extension name.
+						'label' => 'XMLWriter',
+						'url'   => 'https://www.php.net/manual/en/book.xmlwriter.php',
+					),
+				),
+			),	// End of 'php' array.
 			'form' => array(
 				'feed_formats' => array(
 					'atom' => 'Atom 1.0',
