@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssocmcf' => array(			// Plugin acronym.
-					'version'     => '4.11.0',	// Plugin version.
+					'version'     => '4.12.0-dev.1',	// Plugin version.
 					'opt_version' => '5',		// Increment when changing default option values.
 					'short'       => 'WPSSO CMCF',	// Short plugin name.
 					'name'        => 'WPSSO Commerce Manager Catalog Feed XML',
@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '18.19.5',
+							'min_version'   => '18.20.0',
 						),
 					),
 
@@ -239,8 +239,9 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 
 			$var_const = array();
 
-			$var_const[ 'WPSSOCMCF_PAGENAME' ]               = 'commerce-manager-catalog';
-			$var_const[ 'WPSSOCMCF_CACHE_REFRESH_MAX_TIME' ] = 600;		// 10 mins by default.
+			$var_const[ 'WPSSOCMCF_PAGENAME' ]               = 'commerce-manager-catalog';	// WordPress rewrite rules base page name.
+			$var_const[ 'WPSSOCMCF_ADMIN_FEED_XML_STATS' ]   = false;			// Show feed XML stats in the CMCF admin settings page.
+			$var_const[ 'WPSSOCMCF_CACHE_REFRESH_MAX_TIME' ] = 600;				// 10 mins by default.
 
 			/*
 			 * Maybe override the default constant value with a pre-defined constant value.
