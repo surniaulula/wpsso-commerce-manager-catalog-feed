@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssocmcf' => array(			// Plugin acronym.
-					'version'     => '4.12.0-rc.1',	// Plugin version.
+					'version'     => '4.12.0',	// Plugin version.
 					'opt_version' => '5',		// Increment when changing default option values.
 					'short'       => 'WPSSO CMCF',	// Short plugin name.
 					'name'        => 'WPSSO Commerce Manager Catalog Feed XML',
