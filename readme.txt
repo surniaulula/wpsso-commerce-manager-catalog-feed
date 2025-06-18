@@ -154,53 +154,6 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WordPress v5.9.
 	* WPSSO Core v18.18.2.
 
-**Version 4.9.0 (2024/11/06)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Added support for a new `WPSSOCMCF_CACHE_REFRESH_MAX_TIME` constant.
-* **Requires At Least**
-	* PHP v7.4.33.
-	* WordPress v5.9.
-	* WPSSO Core v18.17.0.
-
-**Version 4.8.0 (2024/11/01)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added progress information to the notification message when refreshing the cache.
-* **Bugfixes**
-	* Fixed missing image size option under the SSO &gt; Advanced &gt; Plugin Settings metabox &gt; Image Sizes tab.
-* **Developer Notes**
-	* Added a new `WPSSOCMCF_XML_INFO_DISABLE` constant.
-	* Moved the cache clearing process from 'wpsso_refresh_post_cache' to 'wpsso_clear_post_cache'.
-	* Updated `WpssoCmcfXml::cache_refreshed_notice()` to save progress information for each locale processed.
-* **Requires At Least**
-	* PHP v7.4.33.
-	* WordPress v5.9.
-	* WPSSO Core v18.16.0.
-
-**Version 4.7.0 (2024/08/25)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Changed the main instantiation action hook from 'init_objects' to 'init_objects_preloader'.
-* **Requires At Least**
-	* PHP v7.4.33.
-	* WordPress v5.9.
-	* WPSSO Core v18.10.0.
-
 == Upgrade Notice ==
 
 = 4.12.0 =
@@ -214,16 +167,4 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 = 4.10.0 =
 
 (2024/12/01) Added a check for the required PHP XMLReader and XMLWriter extensions.
-
-= 4.9.0 =
-
-(2024/11/06) Added support for a new `WPSSOCMCF_CACHE_REFRESH_MAX_TIME` constant.
-
-= 4.8.0 =
-
-(2024/11/01) Added progress information to the notification message when refreshing the cache.
-
-= 4.7.0 =
-
-(2024/08/25) Changed the main instantiation action hook from 'init_objects' to 'init_objects_preloader'.
 
