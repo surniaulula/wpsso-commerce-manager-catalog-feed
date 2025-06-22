@@ -75,6 +75,26 @@ if ( ! class_exists( 'WpssoCmcfFiltersMessages' ) ) {
 					$text .= '</p>';
 
 					break;
+
+				case 'info-cmcf-xml':
+
+					$feed            = _x( 'Commerce Manager Catalog Feed XML', 'metabox title', 'wpsso-commerce-manager-catalog-feed' );
+					$metabox_title   = _x( $this->p->cf[ 'meta' ][ 'title' ], 'metabox title', 'wpsso' );
+					$edit_general    = _x( 'Edit General', 'metabox tab', 'wpsso' );
+					$edit_schema     = _x( 'Edit Schema', 'metabox tab', 'wpsso' );
+					$edit_visibility = _x( 'Edit Visibility', 'metabox tab', 'wpsso' );
+
+					$text = '<blockquote class="top-info">';
+
+					$text .= '<p>';
+
+					$text .= sprintf( __( 'To be included in the %1$s, in the %2$s metabox when editing a product, the Open Graph type must be "%3$s" under the %4$s tab, have a matching language under the %5$s tab, and allowed to be indexed without a redirect URL under the %6$s tab.', 'wpsso-commerce-manager-catalog-feed' ), $feed, $metabox_title, 'product', $edit_general, $edit_schema, $edit_visibility ) . ' ';
+
+					 $text .= '</p>';
+
+					 $text .= '</blockquote>';
+
+					break;
 			}
 
 			return $text;

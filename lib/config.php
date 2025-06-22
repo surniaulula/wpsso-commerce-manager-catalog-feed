@@ -60,7 +60,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 					 */
 					'lib' => array(
 						'submenu' => array(
-							'facebook-catalog' => 'Meta Catalog',
+							'facebook-catalog' => 'Facebook Commerce Manager',
 						),
 					),
 

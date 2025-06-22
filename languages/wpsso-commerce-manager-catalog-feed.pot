@@ -25,7 +25,7 @@ msgstr ""
 
 #: gettext/gettext-lib-config.php:5
 msgctxt "lib file description"
-msgid "Meta Catalog"
+msgid "Facebook Commerce Manager"
 msgstr ""
 
 #: gettext/gettext-lib-config.php:6
@@ -65,7 +65,7 @@ msgstr ""
 msgid "checking facebook catalog feed"
 msgstr ""
 
-#: lib/actions.php:89 lib/filters-messages.php:125
+#: lib/actions.php:89 lib/filters-messages.php:81 lib/filters-messages.php:145
 #: lib/submenu/facebook-catalog.php:32 lib/xml.php:36
 msgctxt "metabox title"
 msgid "Commerce Manager Catalog Feed XML"
@@ -136,53 +136,76 @@ msgid ""
 "the main product image selected here."
 msgstr ""
 
-#: lib/filters-messages.php:96
+#: lib/filters-messages.php:83
+msgctxt "metabox tab"
+msgid "Edit General"
+msgstr ""
+
+#: lib/filters-messages.php:84
+msgctxt "metabox tab"
+msgid "Edit Schema"
+msgstr ""
+
+#: lib/filters-messages.php:85
+msgctxt "metabox tab"
+msgid "Edit Visibility"
+msgstr ""
+
+#: lib/filters-messages.php:91
+msgid ""
+"To be included in the %1$s, in the %2$s metabox when editing a product, the "
+"Open Graph type must be \"%3$s\" under the %4$s tab, have a matching "
+"language under the %5$s tab, and allowed to be indexed without a redirect "
+"URL under the %6$s tab."
+msgstr ""
+
+#: lib/filters-messages.php:116
 msgid ""
 "The dimensions used for the Facebook catalog feed XML image (default "
 "dimensions are %s)."
 msgstr ""
 
-#: lib/filters-messages.php:105
+#: lib/filters-messages.php:125
 msgid "The XML file cache expiration time in seconds (default is %s)."
 msgstr ""
 
-#: lib/filters-messages.php:108
+#: lib/filters-messages.php:128
 msgid ""
 "When a product is updated, or the cache expires, the XML file cache is "
 "automatically refreshed."
 msgstr ""
 
-#: lib/filters-messages.php:118
+#: lib/filters-messages.php:138
 msgid ""
 "Choose the XML format for URLs shown in the settings page (default is %s)."
 msgstr ""
 
-#: lib/filters-messages.php:127
+#: lib/filters-messages.php:147
 msgid ""
 "The %1$s includes all public WordPress post objects (ie. posts, pages, and "
 "custom post types) with an Open Graph type of \"product\" and a language of "
 "%2$s (ie. locale \"%3$s\")."
 msgstr ""
 
-#: lib/filters-messages.php:150
+#: lib/filters-messages.php:170
 msgid "A customized image ID for the Facebook catalog feed XML."
 msgstr ""
 
-#: lib/filters-messages.php:153 lib/filters-messages.php:166
+#: lib/filters-messages.php:173 lib/filters-messages.php:186
 msgid "The default value is inherited from the priority image."
 msgstr ""
 
-#: lib/filters-messages.php:156
+#: lib/filters-messages.php:176
 msgid "This option is disabled if a custom image URL is entered."
 msgstr ""
 
-#: lib/filters-messages.php:163
+#: lib/filters-messages.php:183
 msgid ""
 "A customized image URL (instead of an image ID) for the Facebook catalog "
 "feed XML."
 msgstr ""
 
-#: lib/filters-messages.php:169
+#: lib/filters-messages.php:189
 msgid "This option is disabled if a custom image ID is selected."
 msgstr ""
 
@@ -221,37 +244,37 @@ msgid ""
 "default."
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:94
+#: lib/submenu/facebook-catalog.php:96
 msgctxt "option label"
 msgid "XML Cache Expiration"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:97
+#: lib/submenu/facebook-catalog.php:99
 msgctxt "option comment"
 msgid "seconds"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:100
+#: lib/submenu/facebook-catalog.php:102
 msgctxt "option label"
 msgid "XML Format"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:125
+#: lib/submenu/facebook-catalog.php:127
 msgctxt "option comment"
 msgid "%s feed items"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:126
+#: lib/submenu/facebook-catalog.php:128
 msgctxt "option comment"
 msgid "%s image links"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:127
+#: lib/submenu/facebook-catalog.php:129
 msgctxt "option comment"
 msgid "%s additional image links"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:128
+#: lib/submenu/facebook-catalog.php:130
 msgctxt "option comment"
 msgid "%s KB file size"
 msgstr ""

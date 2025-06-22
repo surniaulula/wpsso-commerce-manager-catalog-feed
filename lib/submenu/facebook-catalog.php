@@ -90,6 +90,8 @@ if ( ! class_exists( 'WpssoCmcfSubmenuFacebookCatalog' ) && class_exists( 'Wpsso
 
 				case 'facebook-catalog-feed':
 
+					$table_rows[ 'cmcf_info_xml' ] = '<td colspan="2">' . $this->p->msgs->get( 'info-cmcf-xml' ) . '</td>';
+
 					$table_rows[ 'cmcf_feed_exp_secs' ] = $this->form->get_tr_hide( $in_view = 'basic', 'cmcf_feed_exp_secs' ) .
 						$this->form->get_th_html( _x( 'XML Cache Expiration', 'option label', 'wpsso-commerce-manager-catalog-feed' ),
 							$css_class = '', $css_id = 'cmcf_feed_exp_secs' ) .
