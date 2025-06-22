@@ -37,7 +37,7 @@ WooCommerce simple products, product variations, product attributes, product met
 
 The Meta (Facebook and Instagram) product catalog feed XMLs are automatically created in your site's language(s) from Polylang, qTranslate-XT, WPML, or the installed WordPress languages.
 
-After activating the WPSSO Commerce Manager Catalog Feed XML add-on, see the SSO &gt; Meta Catalog settings page for your feed URLs.
+After activating the WPSSO Commerce Manager Catalog Feed XML add-on, see the SSO &gt; Facebook Commerce Manager settings page for your feed URLs.
 
 **Meta (Facebook and Instagram) Commerce Manager Catalog Feed XML Attributes:**
 
