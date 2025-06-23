@@ -65,7 +65,7 @@ msgstr ""
 msgid "checking facebook catalog feed"
 msgstr ""
 
-#: lib/actions.php:89 lib/filters-messages.php:81 lib/filters-messages.php:145
+#: lib/actions.php:89 lib/filters-messages.php:81 lib/filters-messages.php:147
 #: lib/submenu/facebook-catalog.php:32 lib/xml.php:36
 msgctxt "metabox title"
 msgid "Commerce Manager Catalog Feed XML"
@@ -160,53 +160,53 @@ msgid ""
 "URL under the %6$s tab."
 msgstr ""
 
-#: lib/filters-messages.php:116
+#: lib/filters-messages.php:118
 msgid ""
 "The dimensions used for the Facebook catalog feed XML image (default "
 "dimensions are %s)."
 msgstr ""
 
-#: lib/filters-messages.php:125
+#: lib/filters-messages.php:127
 msgid "The XML file cache expiration time in seconds (default is %s)."
 msgstr ""
 
-#: lib/filters-messages.php:128
+#: lib/filters-messages.php:130
 msgid ""
 "When a product is updated, or the cache expires, the XML file cache is "
 "automatically refreshed."
 msgstr ""
 
-#: lib/filters-messages.php:138
+#: lib/filters-messages.php:140
 msgid ""
 "Choose the XML format for URLs shown in the settings page (default is %s)."
 msgstr ""
 
-#: lib/filters-messages.php:147
+#: lib/filters-messages.php:149
 msgid ""
 "The %1$s includes all public WordPress post objects (ie. posts, pages, and "
 "custom post types) with an Open Graph type of \"product\" and a language of "
 "%2$s (ie. locale \"%3$s\")."
 msgstr ""
 
-#: lib/filters-messages.php:170
+#: lib/filters-messages.php:172
 msgid "A customized image ID for the Facebook catalog feed XML."
 msgstr ""
 
-#: lib/filters-messages.php:173 lib/filters-messages.php:186
+#: lib/filters-messages.php:175 lib/filters-messages.php:188
 msgid "The default value is inherited from the priority image."
 msgstr ""
 
-#: lib/filters-messages.php:176
+#: lib/filters-messages.php:178
 msgid "This option is disabled if a custom image URL is entered."
 msgstr ""
 
-#: lib/filters-messages.php:183
+#: lib/filters-messages.php:185
 msgid ""
 "A customized image URL (instead of an image ID) for the Facebook catalog "
 "feed XML."
 msgstr ""
 
-#: lib/filters-messages.php:189
+#: lib/filters-messages.php:191
 msgid "This option is disabled if a custom image ID is selected."
 msgstr ""
 
