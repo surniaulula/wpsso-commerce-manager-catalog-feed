@@ -106,6 +106,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 4.14.0-rc.1 (2025/07/03)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Added information about the WPSSOCMCF_ADMIN_FEED_XML_STATS constant the SSO &gt; Google Merchant settings page.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v7.4.33.
+	* WordPress v5.9.
+	* WPSSO Core v21.0.0.
+
 **Version 4.13.0 (2025/06/22)**
 
 * **New Features**
@@ -170,6 +185,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v18.18.2.
 
 == Upgrade Notice ==
+
+= 4.14.0-rc.1 =
+
+(2025/07/03) Added information about the WPSSOCMCF_ADMIN_FEED_XML_STATS constant the SSO &gt; Google Merchant settings page.
 
 = 4.13.0 =
 
