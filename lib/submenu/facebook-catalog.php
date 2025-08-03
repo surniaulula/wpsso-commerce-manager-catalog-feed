@@ -112,8 +112,10 @@ if ( ! class_exists( 'WpssoCmcfSubmenuFacebookCatalog' ) && class_exists( 'Wpsso
 						$url         = WpssoCmcfRewrite::get_url( $locale, $feed_type, $feed_format );
 						$css_id      = SucomUtil::sanitize_css_id( 'cmcf_feed_xml_' . $locale );
 						$xml_info    = array();
+						$show_stats  = apply_filters( 'wpsso_cmcf_admin_feed_xml_stats',
+							SucomUtil::get_const( 'WPSSOCMCF_ADMIN_FEED_XML_STATS', false ) );
 
-						if ( SucomUtil::get_const( 'WPSSOCMCF_ADMIN_FEED_XML_STATS', false ) ) {
+						if ( $show_stats ) {
 
 							$xml         = WpssoCmcfXml::get( $locale, $feed_type, $feed_format );
 							$item_count  = substr_count( $xml, 'atom' === $feed_format? '<entry>' : '<item>' );

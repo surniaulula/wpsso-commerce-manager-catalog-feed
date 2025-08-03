@@ -160,6 +160,12 @@ msgid ""
 "URL under the %6$s tab."
 msgstr ""
 
+#: lib/filters-messages.php:93
+msgid ""
+"You can define the <code>%1$s</code> constant as <code>%2$s</code> to pre-"
+"generate each %3$s and show brief statistics below each URL."
+msgstr ""
+
 #: lib/filters-messages.php:118
 msgid ""
 "The dimensions used for the Facebook catalog feed XML image (default "
@@ -260,22 +266,22 @@ msgctxt "option label"
 msgid "XML Format"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:127
+#: lib/submenu/facebook-catalog.php:129
 msgctxt "option comment"
 msgid "%s feed items"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:128
+#: lib/submenu/facebook-catalog.php:130
 msgctxt "option comment"
 msgid "%s image links"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:129
+#: lib/submenu/facebook-catalog.php:131
 msgctxt "option comment"
 msgid "%s additional image links"
 msgstr ""
 
-#: lib/submenu/facebook-catalog.php:130
+#: lib/submenu/facebook-catalog.php:132
 msgctxt "option comment"
 msgid "%s KB file size"
 msgstr ""

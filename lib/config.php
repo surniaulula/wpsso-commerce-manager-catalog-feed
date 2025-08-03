@@ -240,7 +240,7 @@ if ( ! class_exists( 'WpssoCmcfConfig' ) ) {
 			$var_const = array();
 
 			$var_const[ 'WPSSOCMCF_PAGENAME' ]               = 'commerce-manager-catalog';	// WordPress rewrite rules base page name.
-			$var_const[ 'WPSSOCMCF_ADMIN_FEED_XML_STATS' ]   = false;			// Show feed XML stats in the CMCF admin settings page.
+			$var_const[ 'WPSSOCMCF_ADMIN_FEED_XML_STATS' ]   = false;			// Pre-generate and show feed XML stats in the CMCF admin settings page.
 			$var_const[ 'WPSSOCMCF_CACHE_REFRESH_MAX_TIME' ] = 600;				// 10 mins by default.
 
 			/*
