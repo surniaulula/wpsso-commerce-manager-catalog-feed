@@ -106,7 +106,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.14.0 (2025/07/03)**
+**Version 4.14.0 (2025/08/03)**
 
 * **New Features**
 	* None.
@@ -188,7 +188,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 4.14.0 =
 
-(2025/07/03) Added information about the WPSSOCMCF_ADMIN_FEED_XML_STATS constant the SSO &gt; Google Merchant settings page.
+(2025/08/03) Added information about the WPSSOCMCF_ADMIN_FEED_XML_STATS constant the SSO &gt; Google Merchant settings page.
 
 = 4.13.0 =
 
